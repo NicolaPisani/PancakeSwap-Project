@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Pgf Qualta";
+  src: url("/PancakeSwap-Project/css/font/pgf-qualta-bold.otf");
+}
+
+// font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &__text {
+    display: flex;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: "Pgf Qualta";
+    font-style: normal;
+    line-height: 1rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 15rem;
+      border-bottom: 2mm solid lightgrey;
+    }
+  }
+
+  &__content {
+    display: flex;
+    padding-top: 2rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+    &-l,
+    &-c,
+    &-r {
+      margin: 0 auto;
+    }
+
+    & .input-wrapper {
+      // border: 1px solid rgb(240, 248, 255);
+      border-radius: 8px;
+      transition: border-color 0.2s ease 0s;
+      display: inline-block;
+
+      &__input {
+        outline: none;
+        font-size: 16px;
+        font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-overflow: ellipsis;
+        color: rgb(38, 35, 39);
+        background: transparent;
+        padding: 17px 18px;
+        // width: 114%;
+        height: 100%;
+        border-radius: 5px;
+
+        // display: block;
+        // transform: scale(0.875);
+        // transform-origin: left center;
+      }
+    }
+    &-r .input-wrapper,
+    &-l .input-wrapper {
+      background: rgb(240, 248, 255);
+    }
+
+    &-l .input-wrapper .input-wrapper__input {
+      border: 1px solid rgb(54, 91, 234) !important;
+    }
+
+    &-c .input-wrapper .input-wrapper__input {
+      border: 1px solid rgb(255, 85, 85) !important;
+      background: rgb(255, 238, 238) !important;
+      color: rgb(38, 35, 39);
+    }
+
+    .error {
+      align-self: flex-start;
+      margin-top: 10px;
+      font-size: 12px;
+      pointer-events: none;
+      display: block;
+      transition: opacity 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s;
+      color: rgb(255, 85, 85);
+      font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    &-l,
+    &-c .button-wrapper {
+      opacity: 0.6;
+    }
+
+    & .button-wrapper {
+      margin-top: 30px;
+      padding: 15px 20px;
+      border-radius: 12px;
+      user-select: none;
+      outline: 0px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(54, 91, 234);
+      transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      cursor: not-allowed;
+      pointer-events: none;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+
+      &__text {
+        font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// .form-fields .input-wrapper {
+//   border: 1px solid rgb(240, 248, 255);
+//   border-radius: 8px;
+//   transition: border-color 0.2s ease 0s;
+//   display: inline-block;
+
+//   &__input {
+//     margin: 0 auto;
+//     font-size: 16px;
+//     font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//     text-overflow: ellipsis;
+//     color: rgb(38, 35, 39);
+//     background: transparent;
+//     padding: 17px 18px;
+//     width: 114%;
+//     height: 100%;
+//     border-radius: 3px;
+//     border: transparent;
+
+//     display: block;
+//     transform: scale(0.875);
+//     transform-origin: left center;
+//   }
+// }
+
+// .form-fields__content .button-wrapper {
+//   margin-top: 18px;
+//   padding: 15px 20px;
+//   border-radius: 12px;
+//   user-select: none;
+//   outline: 0px;
+//   color: rgb(255, 255, 255);
+//   background-color: rgb(54, 91, 234);
+//   transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+//   font-weight: 600;
+//   font-size: 16px;
+//   line-height: 22px;
+//   cursor: not-allowed;
+//   pointer-events: none;
+//   position: relative;
+//   z-index: 1;
+//   opacity: 0.6;
+// }
+
+// &__text {
+//   font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//   transition: opacity 0.2s ease 0s;
+//   opacity: 1;
+//   border-color: #e2e8f0;
+//   overflow-wrap: break-word;
+// }
+
+// @media screen and (max-width: 1919px) {
+//  main .icons {
+//   }
+// }
+
+// @media screen and (max-width: 1365px) {
+//     main .icons {
+//   }
+// }
+// @media screen and (max-width: 767px) {
+//   main .icons {
+//   }
+// }
+
+// @media (max-width: 479px) {
+//   main .icons {
+//   }
+// }
