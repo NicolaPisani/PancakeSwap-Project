@@ -13,7 +13,7 @@ Team members:
 
 - Antonino Alampi (https://github.com/xTony2108)
 - Nicola Pisani (https://github.com/NicolaPisani)
-- Simone Strati ()
+- Simone Strati (https://github.com/simonello95)
 - Jonna Geronimo (https://github.com/JCGrnm) 
 - Stack used: HTML, CSS, SASS, JavaScript.
 
