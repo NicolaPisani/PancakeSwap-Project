@@ -43,7 +43,6 @@
 }
 .form-fields__content .input-wrapper {
   border-radius: 8px;
-  transition: border-color 0.2s ease 0s;
   display: inline-block;
 }
 .form-fields__content .input-wrapper__input {
@@ -80,6 +79,10 @@
 }
 .form-fields__content-l, .form-fields__content-c .button-wrapper {
   opacity: 0.6;
+  cursor: not-allowed;
+}
+.form-fields__content-r {
+  cursor: pointer;
 }
 .form-fields__content .button-wrapper {
   margin-top: 30px;
@@ -89,11 +92,9 @@
   outline: 0px;
   color: rgb(255, 255, 255);
   background-color: rgb(54, 91, 234);
-  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  cursor: not-allowed;
   pointer-events: none;
   position: relative;
   z-index: 1;
