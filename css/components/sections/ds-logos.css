@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Pgf Qualta";
+  src: url("/PancakeSwap-Project/css/font/pgf-qualta-bold.otf");
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #8d60f0;
+}
+.logo__content {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.logo__text {
+  display: flex;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-family: "Pgf Qualta";
+  font-style: normal;
+  line-height: 1rem;
+}
+.logo__text :after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 8rem;
+  border-bottom: 2mm solid lightgrey;
+}
+
+.logo__svg .logo__svg-content .logo__svg-content--main {
+  display: flex;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=ds-logos.css.map */
