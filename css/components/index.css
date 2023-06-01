@@ -1,2 +1,11 @@
+
 @import url(./sections/ds-icons.css);
 @import url(./sections/ds-form-fields.css);
+@import url(./sections/design-system-components.css);
+@import url(./sections/card-prizes-container.css);
+
+@import url(./shared/popup.css);
+@import url(./shared/dropdown.css);
+@import url(./shared/card-details.css);
+@import url(./shared/card-prizes.css);
+@import url(./shared/nft-card--lg.css);
