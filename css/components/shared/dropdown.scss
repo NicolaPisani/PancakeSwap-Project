@@ -1,0 +1,40 @@
+.dropdown {
+  .dropbtn {
+    text-decoration: none;
+    color: #7a6eaa;
+    padding: 0 16px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 16px;
+    margin: 4px 0;
+    &:hover {
+      background-color: #eff4f5;
+    }
+  }
+  &__content {
+    display: none;
+    flex-direction: column;
+    width: 175px; //da cambiare in base alle esigenze
+    padding: 4px 0;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e7e3eb;
+    a {
+      padding: 12px 16px;
+      text-decoration: none;
+      color: #7a6eaa;
+
+      &:hover {
+        background-color: #eff4f5;
+      }
+    }
+  }
+  &:hover {
+    .dropdown__content {
+      display: flex;
+    }
+  }
+}
