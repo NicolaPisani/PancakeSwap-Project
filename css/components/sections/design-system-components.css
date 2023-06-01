@@ -1,5 +1,6 @@
 .components {
   padding: 10px;
+  width: 33%;
 }
 .components h2 {
   text-decoration: underline;
@@ -9,6 +10,7 @@
 }
 .components__content {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .components__description .components__text {

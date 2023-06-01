@@ -1,5 +1,6 @@
 .components {
   padding: 10px;
+  width: 33%;
   h2 {
     text-decoration: underline;
     text-underline-offset: 10px;
@@ -8,6 +9,7 @@
   }
   &__content {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
   }
   &__description {
