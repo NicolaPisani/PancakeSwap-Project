@@ -37,12 +37,14 @@
       rgb(255, 235, 55) 59.55%
     );
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background-clip: unset;
     -webkit-background-clip: text;
+    width: fit-content;
 
     &--small {
       font-size: 19px;
       margin: 0;
+      padding: 0;
     }
   }
   &__links {
@@ -56,7 +58,6 @@
       font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.03em;
-
       height: 48px;
       display: flex;
       align-items: center;
