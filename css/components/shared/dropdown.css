@@ -1,3 +1,7 @@
+.dropdown {
+  width: fit-content;
+  height: fit-content;
+}
 .dropdown .dropbtn {
   text-decoration: none;
   color: #7a6eaa;
