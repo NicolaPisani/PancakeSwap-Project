@@ -1,0 +1,79 @@
+.container-tipography {
+  box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: space-evenly;
+  height: 600px;
+}
+.container-tipography__title {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: lightgray;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+.container-tipography__intest {
+  font-size: 16px;
+}
+.container-tipography__intest--fs48 {
+  font-size: 48px;
+  color: #7645d9;
+}
+.container-tipography__intest--fs20 {
+  font-size: 20px;
+}
+.container-tipography__intest--fs20__turquoise {
+  color: #1fc7d4;
+}
+.container-tipography__intest--fs20__violet {
+  color: #7645d9;
+}
+.container-tipography__intest--fs20__darkviolet {
+  color: #452a7a;
+}
+.container-tipography__intest--fs20__purpledark {
+  color: #280d5f;
+}
+.container-tipography__intest--purple {
+  color: #7a6eaa;
+}
+.container-tipography__intest--skyblue {
+  color: white;
+  background-color: #1fc7d4;
+}
+.container-tipography__intest--violet {
+  color: #7645d9;
+}
+.container-tipography__intest--white {
+  color: white;
+  background-color: #27262c;
+}
+.container-tipography__first-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-tipography__space {
+  border-bottom: 1px solid black;
+}
+.container-tipography__space--body {
+  padding-top: 30px;
+}
+.container-tipography__second-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-tipography__third-column {
+  display: flex;
+}
+.container-tipography__font-family {
+  font-weight: bold;
+  margin: 0;
+}
+
+/*# sourceMappingURL=typography.css.map */

@@ -8,5 +8,5 @@
 @import url(./shared/card-details.css);
 @import url(./shared/card-prizes.css);
 @import url(./shared/nft-card--lg.css);
-@import url(./shared/typography.css);
-@import url(./shared/button-style.css);
+@import url(./shared/design-system-typography/typography.css);
+@import url(./shared/ds-button-style/button-style.css);
