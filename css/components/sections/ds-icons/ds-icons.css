@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
 }
-.icons .icons__text {
+.icons__text {
   display: flex;
   position: relative;
   font-size: 1.5rem;
@@ -21,7 +21,6 @@
   text-decoration-thickness: 4px;
   text-underline-offset: 8px;
 }
-
 .icons__svg {
   display: flex;
   padding-top: 3rem;
