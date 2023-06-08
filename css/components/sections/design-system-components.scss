@@ -5,11 +5,15 @@
   max-height: 100vh;
   height: 100%;
   overflow: hidden;
-  h2 {
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-style: normal;
     text-decoration: underline;
-    text-underline-offset: 10px;
+    text-decoration-color: lightgray;
     text-decoration-thickness: 4px;
-    margin-bottom: 15px;
+    text-underline-offset: 8px;
   }
   &__content {
     display: flex;
