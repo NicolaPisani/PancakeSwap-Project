@@ -1,6 +1,10 @@
 .components {
-  padding: 10px;
-  width: 33%;
+  padding: 0 10px;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
+  overflow: hidden;
 }
 .components h2 {
   text-decoration: underline;
@@ -11,9 +15,30 @@
 .components__content {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px 0;
 }
-.components__description .components__text {
+.components__description:nth-child(6) {
+  width: 175px;
+}
+.components__description--width {
+  width: 100%;
+}
+.components__description--carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.components__description--carousel .components__text {
+  margin: 0;
+}
+.components__text {
   font-size: 16px;
   margin-bottom: 15px;
-}/*# sourceMappingURL=design-system-components.css.map */
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
