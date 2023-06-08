@@ -1,0 +1,39 @@
+body {
+  border: solid 1px black;
+  box-shadow: 2px 2px 2px 5px;
+}
+body h1 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  margin-left: 80px;
+}
+body .container-tipography {
+  display: flex;
+  justify-content: space-evenly;
+  height: 600px;
+}
+body .container-tipography .first-column-tipog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .container-tipography .space {
+  border-bottom: 1px solid black;
+}
+body .container-tipography .second-column-tipog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .container-tipography .third-column-tipog {
+  display: flex;
+}
+body .container-tipography .intest {
+  font-size: 30px;
+}
+body .container-tipography .font-family {
+  font-weight: bold;
+  margin: 0;
+}
+
+/*# sourceMappingURL=typography.css.map */

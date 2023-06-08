@@ -1,4 +1,3 @@
-
 @import url(./sections/ds-icons.css);
 @import url(./sections/ds-form-fields.css);
 @import url(./sections/design-system-components.css);
@@ -9,3 +8,5 @@
 @import url(./shared/card-details.css);
 @import url(./shared/card-prizes.css);
 @import url(./shared/nft-card--lg.css);
+@import url(./shared/typography.css);
+@import url(./shared/button-style.css);
