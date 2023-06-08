@@ -9,6 +9,7 @@
   height: 48px;
   display: flex;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 16px;
   margin: 4px 0;
@@ -36,6 +37,4 @@
 }
 .dropdown:hover .dropdown__content {
   display: flex;
-}
-
-/*# sourceMappingURL=dropdown.css.map */
+}/*# sourceMappingURL=dropdown.css.map */
