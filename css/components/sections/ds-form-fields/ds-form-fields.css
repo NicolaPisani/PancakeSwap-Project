@@ -1,0 +1,73 @@
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.form-fields__text {
+  display: flex;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: lightgray;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+.form-fields__content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 2rem;
+  gap: 2rem;
+}
+.form-fields__content-description {
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 1rem;
+  color: #000;
+}
+.form-fields__content-d {
+  float: left;
+  padding-right: 2rem;
+}
+.form-fields__content-l {
+  float: left;
+}
+.form-fields .input-wrapper-di,
+.form-fields .input-wrapper-da,
+.form-fields .input-wrapper-li,
+.form-fields .input-wrapper-la {
+  border-radius: 5px;
+  outline: none;
+  font-size: 20px;
+  box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+}
+.form-fields .input-wrapper-di__input,
+.form-fields .input-wrapper-da__input,
+.form-fields .input-wrapper-li__input,
+.form-fields .input-wrapper-la__input {
+  display: block;
+  font-size: 16px;
+  height: 40px;
+  padding: 1rem;
+  width: 24rem;
+  border: 1px solid #262130;
+  border-radius: 16px;
+}
+.form-fields .input-wrapper-di__input,
+.form-fields .input-wrapper-da__input {
+  background-color: #372f47;
+  color: #eeeaf4;
+}
+.form-fields .input-wrapper-li__input,
+.form-fields .input-wrapper-la__input {
+  color: rgb(38, 35, 39);
+}
+.form-fields .input-wrapper-da__input,
+.form-fields .input-wrapper-la__input {
+  box-shadow: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+}/*# sourceMappingURL=ds-form-fields.css.map */

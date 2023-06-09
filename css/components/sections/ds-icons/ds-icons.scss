@@ -1,0 +1,104 @@
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  &__content {
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    display: flex;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: lightgray;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+  }
+
+  &__svg {
+    display: flex;
+    padding-top: 3rem;
+
+    &-content,
+    span {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+
+      svg,
+      img {
+        height: 2rem;
+      }
+    }
+
+    &-content-arrow--white {
+      background-color: rgb(31, 199, 212);
+      border-radius: 30px;
+      padding: 3px;
+      box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    &-content-arrow--black {
+      background-color: rgb(226, 225, 227);
+      border-radius: 30px;
+      padding: 3px;
+      box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    &-content--light,
+    &-content--dark {
+      display: flex;
+      justify-content: space-between;
+      background-color: rgb(102, 97, 113);
+      border-radius: 50px;
+      box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .sun,
+    .moon {
+      display: flex;
+      border-radius: 50%;
+      background-color: black;
+      border-color: blueviolet;
+      border-style: solid;
+      border-width: thick;
+      box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+
+      &-alt {
+        border-radius: 50%;
+        border-color: transparent;
+        border-style: solid;
+      }
+    }
+
+    &-content--sns {
+      background-color: rgb(39, 38, 44);
+      border-radius: 35px;
+      padding: 5px;
+      box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    &-content--other {
+      background-color: rgb(226, 225, 227);
+      border-radius: 35px;
+      padding: 5px;
+      box-shadow: 0 1px 3px rgba(46, 46, 46, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+  }
+}
