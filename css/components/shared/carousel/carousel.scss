@@ -1,0 +1,283 @@
+.carousel {
+  padding: 20px;
+  position: relative;
+  max-width: 1152px;
+  width: 100%;
+  &__protector {
+    position: relative;
+    border-radius: 32px;
+  }
+  &__domains {
+    border-radius: 32px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      216.04deg,
+      rgb(69, 77, 223) 11.27%,
+      rgb(51, 95, 215) 84.57%,
+      rgb(80, 158, 225) 138.09%
+    );
+  }
+  &__trade {
+    border-radius: 32px;
+    background: linear-gradient(
+        64.41deg,
+        rgba(214, 126, 10, 0.26) 44.37%,
+        rgba(255, 235, 55, 0) 102.8%
+      ),
+      radial-gradient(
+        55.22% 134.13% at 57.59% 0%,
+        rgb(245, 223, 142) 0%,
+        rgb(252, 198, 49) 33.21%,
+        rgb(255, 157, 0) 79.02%
+      );
+  }
+  &__item--selected {
+    display: block;
+  }
+  &__item {
+    display: none;
+  }
+  &__bg {
+    max-width: 1112px;
+    border-radius: 32px;
+    position: absolute;
+    overflow: hidden;
+    &-image {
+      transform: translateX(-14px);
+      display: block;
+      max-width: 1126px;
+      object-position: center;
+    }
+  }
+  &__left {
+    position: relative;
+    padding: 24px;
+    max-height: 192px;
+    min-height: 181px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo-img {
+    max-height: 20px;
+    margin-bottom: 10px;
+    img {
+      max-width: 119px;
+    }
+    &--usn {
+      max-height: 32px;
+      margin-bottom: 20px;
+      img {
+        max-width: 525px;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    width: 100%;
+    max-height: 144px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__trade-text {
+    font-weight: 600;
+    font-style: normal;
+    line-height: 110%;
+    color: white;
+    &--sm {
+      font-size: 21px;
+      text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    }
+    &--big {
+      font-size: 40px;
+      text-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
+      margin-bottom: 12px;
+    }
+  }
+  &__gradient-text {
+    font-weight: 600;
+    line-height: 98%;
+    font-style: normal;
+    letter-spacing: 0.01em;
+    filter: drop-shadow(rgba(0, 0, 0, 0.3) 1px 1px 2px);
+    font-size: 29px;
+    padding-right: 200px;
+    margin-bottom: 10px;
+    text-align: start;
+    background: linear-gradient(
+      349.27deg,
+      rgb(255, 178, 55) -8.6%,
+      rgb(255, 235, 55) 59.55%
+    );
+    -webkit-text-fill-color: transparent;
+    background-clip: unset;
+    -webkit-background-clip: text;
+
+    &--small {
+      font-size: 19px;
+      margin: 0;
+      padding: 0;
+    }
+    &--orange {
+      font-size: 19px;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(
+        56.1deg,
+        rgb(255, 169, 55) -21.08%,
+        rgb(255, 235, 55) 89.71%
+      );
+      -webkit-text-fill-color: transparent;
+      background-clip: unset;
+      -webkit-background-clip: text;
+      margin-bottom: 10px;
+    }
+  }
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 4px 8px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      border-radius: 16px;
+      transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+      &:first-child {
+        padding-left: 0;
+      }
+      svg {
+        fill: white;
+      }
+      &:hover {
+        opacity: 0.65;
+      }
+    }
+    &--trade {
+      gap: 8px;
+      a {
+        &:first-child {
+          box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+          gap: 4px;
+          letter-spacing: 0.02245em;
+          background-color: #1fc7d4;
+          padding: 4px 8px;
+        }
+        &:last-child {
+          background-color: white;
+          color: #1fc7d4;
+          gap: 4px;
+          letter-spacing: 0.02245em;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+          svg {
+            fill: #1fc7d4;
+          }
+        }
+      }
+    }
+  }
+  &__separator-line {
+    background: rgb(255, 255, 255);
+    height: 10px;
+    width: 2px;
+    border-radius: 1px;
+  }
+  &__right-image {
+    position: absolute;
+    bottom: 0;
+    right: 26px;
+    &--usn {
+      bottom: -22px;
+      right: 48px;
+      position: absolute;
+      img {
+        display: block;
+        max-width: 206px;
+      }
+    }
+    &--protector {
+      position: absolute;
+      bottom: 0;
+      right: 26px;
+      img {
+        max-width: 193px;
+        display: block;
+      }
+    }
+  }
+  &__right-usn-logo {
+    position: absolute;
+    right: 204px;
+    top: 82px;
+    z-index: 2;
+    img {
+      max-width: 162px;
+    }
+  }
+  &__right-star {
+    position: absolute;
+    z-index: 2;
+    animation: 3s ease-in-out 0.5s infinite normal none running starTransparent;
+    &--sm {
+      top: 30px;
+      right: 338px;
+      img {
+        max-width: 25px;
+      }
+    }
+    &--big {
+      right: 64px;
+      bottom: 21px;
+      transform: rotate(-22deg);
+      img {
+        max-width: 30px;
+      }
+    }
+  }
+  &__blue-ball {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 273px;
+    top: 57px;
+    border-radius: 50%;
+    background: rgb(13, 103, 254);
+  }
+  &__nav {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 108px;
+    display: flex;
+  }
+  &__button {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    opacity: 0.2;
+    flex-basis: 108px;
+    height: 8px;
+    &:first-child {
+      border-radius: 4px 0px 0px 4px;
+    }
+    &:last-child {
+      border-radius: 0px 4px 4px 0px;
+    }
+    &--active {
+      opacity: 1;
+    }
+  }
+}
