@@ -44,5 +44,13 @@
   margin-bottom: 10px;
   text-align: center;
 }
+.components__carousel-container {
+  display: flex;
+  max-width: 1200px;
+  padding: 0 24px;
+  justify-content: center;
+  margin-bottom: 31px;
+  width: 100%;
+}
 
 /*# sourceMappingURL=design-system-components.css.map */

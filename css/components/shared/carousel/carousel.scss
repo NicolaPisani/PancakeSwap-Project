@@ -3,6 +3,7 @@
   position: relative;
   max-width: 1152px;
   width: 100%;
+  display: flex;
   &__protector {
     position: relative;
     border-radius: 32px;
@@ -20,6 +21,7 @@
     );
   }
   &__trade {
+    z-index: -2;
     border-radius: 32px;
     background: linear-gradient(
         64.41deg,
@@ -35,9 +37,11 @@
   }
   &__item--selected {
     display: block;
+    width: 100%;
   }
   &__item {
     display: none;
+    position: relative;
   }
   &__bg {
     max-width: 1112px;
@@ -49,6 +53,15 @@
       display: block;
       max-width: 1126px;
       object-position: center;
+    }
+    &--trade {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      img {
+        max-width: 100%;
+        display: block;
+      }
     }
   }
   &__left {
@@ -65,13 +78,6 @@
     margin-bottom: 10px;
     img {
       max-width: 119px;
-    }
-    &--usn {
-      max-height: 32px;
-      margin-bottom: 20px;
-      img {
-        max-width: 525px;
-      }
     }
   }
   &__text {
@@ -194,19 +200,11 @@
     width: 2px;
     border-radius: 1px;
   }
-  &__right-image {
+  &__bunny-image {
     position: absolute;
     bottom: 0;
     right: 26px;
-    &--usn {
-      bottom: -22px;
-      right: 48px;
-      position: absolute;
-      img {
-        display: block;
-        max-width: 206px;
-      }
-    }
+
     &--protector {
       position: absolute;
       bottom: 0;
@@ -216,16 +214,17 @@
         display: block;
       }
     }
-  }
-  &__right-usn-logo {
-    position: absolute;
-    right: 204px;
-    top: 82px;
-    z-index: 2;
-    img {
-      max-width: 162px;
+    &--trade {
+      position: absolute;
+      bottom: 20px;
+      right: 75px;
+      img {
+        max-width: 220px;
+        display: block;
+      }
     }
   }
+
   &__right-star {
     position: absolute;
     z-index: 2;

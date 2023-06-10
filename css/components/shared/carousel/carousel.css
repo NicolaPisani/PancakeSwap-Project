@@ -3,6 +3,7 @@
   position: relative;
   max-width: 1152px;
   width: 100%;
+  display: flex;
 }
 .carousel__protector {
   position: relative;
@@ -16,14 +17,17 @@
   background: linear-gradient(216.04deg, rgb(69, 77, 223) 11.27%, rgb(51, 95, 215) 84.57%, rgb(80, 158, 225) 138.09%);
 }
 .carousel__trade {
+  z-index: -2;
   border-radius: 32px;
   background: linear-gradient(64.41deg, rgba(214, 126, 10, 0.26) 44.37%, rgba(255, 235, 55, 0) 102.8%), radial-gradient(55.22% 134.13% at 57.59% 0%, rgb(245, 223, 142) 0%, rgb(252, 198, 49) 33.21%, rgb(255, 157, 0) 79.02%);
 }
 .carousel__item--selected {
   display: block;
+  width: 100%;
 }
 .carousel__item {
   display: none;
+  position: relative;
 }
 .carousel__bg {
   max-width: 1112px;
@@ -36,6 +40,15 @@
   display: block;
   max-width: 1126px;
   object-position: center;
+}
+.carousel__bg--trade {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.carousel__bg--trade img {
+  max-width: 100%;
+  display: block;
 }
 .carousel__left {
   position: relative;
@@ -52,13 +65,6 @@
 }
 .carousel__logo-img img {
   max-width: 119px;
-}
-.carousel__logo-img--usn {
-  max-height: 32px;
-  margin-bottom: 20px;
-}
-.carousel__logo-img--usn img {
-  max-width: 525px;
 }
 .carousel__text {
   position: relative;
@@ -169,37 +175,28 @@
   width: 2px;
   border-radius: 1px;
 }
-.carousel__right-image {
+.carousel__bunny-image {
   position: absolute;
   bottom: 0;
   right: 26px;
 }
-.carousel__right-image--usn {
-  bottom: -22px;
-  right: 48px;
-  position: absolute;
-}
-.carousel__right-image--usn img {
-  display: block;
-  max-width: 206px;
-}
-.carousel__right-image--protector {
+.carousel__bunny-image--protector {
   position: absolute;
   bottom: 0;
   right: 26px;
 }
-.carousel__right-image--protector img {
+.carousel__bunny-image--protector img {
   max-width: 193px;
   display: block;
 }
-.carousel__right-usn-logo {
+.carousel__bunny-image--trade {
   position: absolute;
-  right: 204px;
-  top: 82px;
-  z-index: 2;
+  bottom: 20px;
+  right: 75px;
 }
-.carousel__right-usn-logo img {
-  max-width: 162px;
+.carousel__bunny-image--trade img {
+  max-width: 220px;
+  display: block;
 }
 .carousel__right-star {
   position: absolute;
