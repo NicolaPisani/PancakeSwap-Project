@@ -1,0 +1,109 @@
+
+.brandColor {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33.33%;
+
+  &__content {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__container {
+    display: flex;
+    flex-basis: 25%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  &__text {
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: #ada2a2;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+  }
+}
+
+.card-color {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%; /* Dimensione fissa per i cardGroup */
+  margin: 10px;
+
+  &__info {
+    color: #fff9f9;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    background-color: #ada2a2;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    height: 120px;
+
+    &--1 {
+      background: #784fd1;
+    }
+    &--2 {
+      background: #ffffff;
+    }
+    &--3 {
+      background: #27262c;
+    }
+    &--4 {
+      background: #1fc7d4;
+    }
+    &--5 {
+      background: radial-gradient(
+        103.12%50%at 50%50%,
+        #21193a 0%,
+        #191326 100%
+      );
+    }
+    &--6 {
+      background: linear-gradient(180deg, #09070c 22%, #201335 100%);
+    }
+    &--7 {
+      background: linear-gradient(166.77deg, #3b4155, #3a3045);
+    }
+    &--8 {
+      background: linear-gradient(180deg, #0b4576 0%, #091115 100%);
+    }
+
+    &--9 {
+      background: #f0b90b;
+    }
+    &--10 {
+      background: #633001;
+    }
+    &--11 {
+      background: #0000ee;
+    }
+    &--12 {
+      background: #ffb237;
+    }
+  }
+  span {
+    display: flex;
+    padding: 2px 20px;
+    font-size: larger;
+  }
+}

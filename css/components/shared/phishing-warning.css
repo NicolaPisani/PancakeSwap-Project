@@ -1,0 +1,58 @@
+.phishing-popup {
+  max-height: 70px;
+  height: 70px;
+  width: 100%;
+}
+.phishing-popup__content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+  overflow: hidden;
+}
+.phishing-popup__main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phishing-popup__main img {
+  height: auto;
+  width: 92px;
+  max-width: 100%;
+}
+.phishing-popup__text {
+  background: rgba(39, 38, 44, 0.4);
+  border-radius: 16px;
+  padding: 8px;
+  width: 60%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  color: rgb(189, 194, 196);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.phishing-popup__text--orange {
+  color: #ffb237;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.phishing-popup__text--white {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.phishing-popup__close {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=phishing-warning.css.map */
