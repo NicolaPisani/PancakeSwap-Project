@@ -1,170 +1,155 @@
-h1{
-    text-decoration: underline;
-    
+span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-span{
-    font-weight: bold;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
-    
-    
-    }
+.title-button-style {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: lightgray;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
 
-    .title-button-style{
-        margin-left: 30px;
-    }
+.button {
+  margin-top: 10px;
+}
 
-    .button{
-        margin-top: 10px;
-    }
+.container-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 376px;
+}
 
-    .container-button{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 376px;
-    }
+.prima-fila-butt {
+  display: flex;
+  flex-direction: column;
+  .connect-wallet-button {
+    padding-bottom: 10px;
+  }
 
+  .trade-now-button {
+    padding-bottom: 10px;
+  }
 
-    .prima-fila-butt{
-        display: flex;
-        flex-direction: column;
+  .play-button {
+    padding-bottom: 10px;
+  }
 
-        .connect-wallet-button{
-            padding-bottom: 10px;
-        }
+  #btn-wallet {
+    width: 128px;
+    height: 26px;
+    color: white;
+    border: none;
+    background-color: rgb(31, 199, 212);
+    border-radius: 10px 10px;
+    font-weight: 600;
+  }
 
-        .trade-now-button{
-            padding-bottom: 10px;
-        }
+  #button-trade {
+    width: 128px;
+    height: 26px;
+    color: rgb(31, 199, 212);
+    border: solid 1px rgb(31, 199, 212);
+    background-color: transparent;
+    border-radius: 10px 10px;
+    font-weight: 600;
+  }
 
-        .play-button{
-            padding-bottom: 10px;
-        }
+  #btn-play {
+    width: 128px;
+    height: 26px;
+    color: white;
+    border: none;
+    background-color: rgb(31, 199, 212);
+    border-radius: 10px 10px;
+    font-weight: 600;
+  }
 
-        #btn-wallet{
-            width: 128px;
-            height: 26px;
-            color: white;
-            border: none;
-            background-color: rgb(31, 199, 212);
-            border-radius: 10px 10px;
-            font-weight: 600;
-            
-        }
+  #btn-tickets {
+    width: 128px;
+    height: 26px;
+    color: white;
+    border: none;
+    background-color: rgb(31, 199, 212);
+    border-radius: 10px 10px;
+    font-weight: 600;
+  }
+}
 
-        #button-trade{
-            width: 128px;
-            height: 26px;
-            color: rgb(31, 199, 212);
-            border:solid 1px rgb(31, 199, 212);
-            background-color: transparent;
-            border-radius: 10px 10px;
-            font-weight: 600;
-        }
+.seconda-fila-button {
+  .enter-up {
+    padding-bottom: 10px;
+  }
 
-        #btn-play{
-            width: 128px;
-            height: 26px;
-            color: white;
-            border: none;
-            background-color: rgb(31, 199, 212);
-            border-radius: 10px 10px;
-            font-weight: 600;
+  .enter-down {
+    padding-bottom: 10px;
+  }
 
-        }
+  #btn-enter-up {
+    width: 200px;
+    height: 50px;
+    color: white;
+    border: none;
+    background-color: #31d0aa;
+    border-radius: 10px 10px;
+    font-weight: 600;
+  }
 
-        #btn-tickets{
-            width: 128px;
-            height: 26px;
-            color: white;
-            border: none;
-            background-color: rgb(31, 199, 212);
-            border-radius: 10px 10px;
-            font-weight: 600;
-        }
+  #btn-enter-down {
+    width: 200px;
+    height: 50px;
+    color: white;
+    border: none;
+    background-color: #ed4b9e;
+    border-radius: 10px 10px;
+    font-weight: 600;
+  }
+}
 
-    }
+.terza-fila-button {
+  .cup {
+    padding-bottom: 10px;
+  }
 
-    .seconda-fila-button{
+  .punto-inter {
+    padding-bottom: 10px;
+  }
 
-        .enter-up{
-            padding-bottom: 10px;
-        }
+  .arrow-up {
+    padding-bottom: 10px;
+  }
 
-        .enter-down{
-            padding-bottom: 10px;
-        }
+  #btn-cup {
+    height: 48px;
+    width: 48px;
+    border-radius: 10px 10px;
+    border: none;
+    background-color: #7a6eaa;
+    fill: white;
+  }
 
-        
+  #btn-question-mark {
+    height: 48px;
+    width: 48px;
+    border-radius: 10px 10px;
+    border: none;
+    background-color: #7a6eaa;
+    fill: white;
+  }
 
-        #btn-enter-up{
-            width: 200px;
-            height: 50px;
-            color: white;
-            border: none;
-            background-color: #31d0aa;
-            border-radius: 10px 10px;
-            font-weight: 600;
-        }
-
-        #btn-enter-down{
-            width: 200px;
-            height: 50px;
-            color: white;
-            border: none;
-            background-color: #ed4b9e;
-            border-radius: 10px 10px;
-            font-weight: 600;
-        }
-
-
-
-
-    }
-
-    .terza-fila-button{
-
-        .cup{
-            padding-bottom: 10px;
-        }
-
-        .punto-inter{
-            padding-bottom: 10px;
-        }
-
-        .arrow-up{
-            padding-bottom: 10px;
-        }
-
-    #btn-cup{
-        height: 48px;
-        width: 48px;
-        border-radius: 10px 10px;
-        border: none;
-        background-color: #7a6eaa;
-        fill: white;
-        
-    }
-
-    #btn-question-mark{
-        height: 48px;
-        width: 48px;
-        border-radius: 10px 10px;
-        border: none;
-        background-color: #7a6eaa;
-        fill: white;
-    }
-
-    #btn-arrow-up{
-        height: 48px;
-        width: 48px;
-        border-radius: 10px 10px;
-        border: none;
-        background-color: rgb(31, 199, 212);
-        color: white;
-    }
-        
-    }
-
-   
+  #btn-arrow-up {
+    height: 48px;
+    width: 48px;
+    border-radius: 10px 10px;
+    border: none;
+    background-color: rgb(31, 199, 212);
+    color: white;
+  }
+}
