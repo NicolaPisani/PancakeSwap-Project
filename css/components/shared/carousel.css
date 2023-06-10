@@ -36,6 +36,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: unset;
   -webkit-background-clip: text;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .carousel__gradient-text--small {
@@ -107,6 +108,4 @@
 }
 .carousel__button--selected {
   opacity: 1;
-}
-
-/*# sourceMappingURL=carousel.css.map */
+}/*# sourceMappingURL=carousel.css.map */
