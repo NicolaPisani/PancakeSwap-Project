@@ -14,3 +14,5 @@
 @import url(./shared/nft-card--lg.css);
 @import url(./shared/phishing-warning.css);
 @import url(./shared/carousel.css);
+@import url(./shared/design-system-typography/typography.css);
+@import url(./shared/ds-button-style/button-style.css);
