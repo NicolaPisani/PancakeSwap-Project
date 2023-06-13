@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 121px;
+  padding-top: 65px;
   padding-bottom: 49px;
   background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
   position: relative;
@@ -173,7 +173,7 @@
 }
 @media screen and (max-width: 967px) {
   .hero-section {
-    padding-top: 105px;
+    padding-top: 49px;
   }
   .hero-section__left h1 {
     font-size: 48px;
@@ -181,7 +181,7 @@
 }
 @media screen and (max-width: 851px) {
   .hero-section {
-    padding-top: 73px;
+    padding-top: 17px;
   }
   .hero-section__cta {
     flex-direction: column;
@@ -203,7 +203,7 @@
 }
 @media screen and (max-width: 575px) {
   .hero-section {
-    padding-top: 103px;
+    padding-top: 47px;
   }
 }
 

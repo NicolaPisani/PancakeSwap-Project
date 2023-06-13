@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: calc(65px + 56px);
+  padding-top: 65px;
   padding-bottom: 49px;
   background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
   position: relative;
@@ -178,7 +178,7 @@
 
 @media screen and (max-width: 967px) {
   .hero-section {
-    padding-top: calc(49px + 56px);
+    padding-top: 49px;
     &__left {
       h1 {
         font-size: 48px;
@@ -188,7 +188,7 @@
 }
 @media screen and (max-width: 851px) {
   .hero-section {
-    padding-top: calc(17px + 56px);
+    padding-top: 17px;
     &__cta {
       flex-direction: column;
       gap: 24px;
@@ -213,6 +213,6 @@
 
 @media screen and (max-width: 575px) {
   .hero-section {
-    padding-top: calc(47px + 56px);
+    padding-top: 47px;
   }
 }
