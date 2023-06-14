@@ -1,14 +1,19 @@
-h1 {
-  text-decoration: underline;
-}
-
 span {
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .title-button-style {
-  margin-left: 30px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: lightgray;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
 }
 
 .button {
@@ -129,4 +134,6 @@ span {
   border: none;
   background-color: rgb(31, 199, 212);
   color: white;
-}/*# sourceMappingURL=button-style.css.map */
+}
+
+/*# sourceMappingURL=button-style.css.map */
