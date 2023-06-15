@@ -1,0 +1,21 @@
+.card-prediction {
+  display: flex;
+  flex-direction: column;
+  &__header {
+    display: flex;
+    padding: 8px;
+  }
+  &__progress-bar {
+    height: 8px;
+    &--outer {
+      position: relative;
+      background-color: #eeeaf4;
+    }
+    &--inner {
+      position: absolute;
+      height: 100%;
+      width: 0%;
+      background-color: #7645d9;
+    }
+  }
+}

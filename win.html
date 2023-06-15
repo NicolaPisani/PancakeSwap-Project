@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | PancakeSwap</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="phishing-popup">
+      <div class="phishing-popup__content">
+        <div class="phishing-popup__main">
+          <img src="./assets/images/other/phishing-warning-bunny.png" />
+          <div class="phishing-popup__text">
+            <p>
+              <span class="phishing-popup__text--orange"
+                >PHISHING WARNING:</span
+              >
+              please make sure you're visiting
+              <span class="phishing-popup__text--white"
+                >https://pancakeswap.finance</span
+              >
+              - check the URL carefully.
+            </p>
+          </div>
+        </div>
+        <button class="phishing-popup__close">
+          <svg
+            viewBox="0 0 24 24"
+            color="#FFFFFF"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+            class="sc-231a1e38-0 iNUyNs"
+          >
+            <path
+              fill="currentColor"
+              d="M18.3 5.70997C17.91 5.31997 17.28 5.31997 16.89 5.70997L12 10.59L7.10997 5.69997C6.71997 5.30997 6.08997 5.30997 5.69997 5.69997C5.30997 6.08997 5.30997 6.71997 5.69997 7.10997L10.59 12L5.69997 16.89C5.30997 17.28 5.30997 17.91 5.69997 18.3C6.08997 18.69 6.71997 18.69 7.10997 18.3L12 13.41L16.89 18.3C17.28 18.69 17.91 18.69 18.3 18.3C18.69 17.91 18.69 17.28 18.3 16.89L13.41 12L18.3 7.10997C18.68 6.72997 18.68 6.08997 18.3 5.70997Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav></nav>
+    <div class="nav-bottom">
+      <a href="#" class="nav-bottom__item">Trading Reward</a>
+      <a href="#" class="nav-bottom__item">Trading Competition</a>
+      <a href="#" class="nav-bottom__item nav-bottom__item--active"
+        >Prediction (BETA)</a
+      >
+      <a href="#" class="nav-bottom__item">Lottery</a>
+      <a href="#" class="nav-bottom__item">Pottery (BETA)</a>
+    </div>
+    <div class="prediction-section">
+      <div class="prediction-section__content">
+        <div class="prediction-section__top">
+          <div class="prediction-section__card-container">
+            <div class="prediction-section__nav">
+              <div class="prediction-section__currency">
+                <p class="prediction-section__currency-name">CAKEUSD</p>
+                <p class="prediction-section__currency-price">$1.3424</p>
+              </div>
+            </div>
+            <div class="prediction-section__cards">
+              <div class="card-prediction card-prediction--live">
+                <div class="card-prediction__header"></div>
+                <div
+                  class="card-prediction__progress-bar card-prediction__progress-bar--outer"
+                >
+                  <div
+                    class="card-prediction__progress-bar card-prediction__progress-bar--inner"
+                  ></div>
+                </div>
+                <div class="card-prediction__body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="prediction-section__charts-container">
+          <div class="prediction-section__resize-bar">
+            <div class="prediction-section__buttons">
+              <button
+                id="tradingView"
+                class="prediction-section__chart-button prediction-section__chart-button--selected"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  color="text"
+                  width="20px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="sc-231a1e38-0 bfRLUD"
+                >
+                  <path
+                    d="M5 7C5 6.44772 4.55228 6 4 6C3.44772 6 3 6.44772 3 7V18C3 19.1046 3.89543 20 5 20H20C20.5523 20 21 19.5523 21 19C21 18.4477 20.5523 18 20 18H5V7Z"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19 17H7C6.44772 17 6 16.5523 6 16V12C6 11.4477 6.44772 11 7 11H10V10C10 9.44772 10.4477 9 11 9H14V7C14 6.44772 14.4477 6 15 6H19C19.5523 6 20 6.44772 20 7V16C20 16.5523 19.5523 17 19 17ZM16 8H18V15H16V8ZM12 15H14V11H12V15ZM10 13H8V15H10V13Z"
+                  ></path>
+                </svg>
+                TradingView Chart
+              </button>
+              <button id="chainLink" class="prediction-section__chart-button">
+                <svg
+                  viewBox="0 0 24 24"
+                  color="text"
+                  width="20px"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="sc-231a1e38-0 bfRLUD"
+                >
+                  <path
+                    d="M5 7C5 6.44772 4.55228 6 4 6C3.44772 6 3 6.44772 3 7V18C3 19.1046 3.89543 20 5 20H20C20.5523 20 21 19.5523 21 19C21 18.4477 20.5523 18 20 18H5V7Z"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19 17H7C6.44772 17 6 16.5523 6 16V12C6 11.4477 6.44772 11 7 11H10V10C10 9.44772 10.4477 9 11 9H14V7C14 6.44772 14.4477 6 15 6H19C19.5523 6 20 6.44772 20 7V16C20 16.5523 19.5523 17 19 17ZM16 8H18V15H16V8ZM12 15H14V11H12V15ZM10 13H8V15H10V13Z"
+                  ></path>
+                </svg>
+                Chainlink Chart
+              </button>
+            </div>
+            <a
+              href="https://chain.link/"
+              class="prediction-section__chainlink-anchor"
+              ><img
+                src="./assets/images/win-page/powered-by-chainlink.svg"
+                alt="chainlink"
+            /></a>
+            <div
+              id="minimize"
+              class="prediction-section__ref prediction-section__ref--minimize"
+            >
+              <p>CAKE/USD Chart by</p>
+              <a id="anchor" href="https://chain.link/data-feeds"></a>
+            </div>
+          </div>
+        </div>
+        <div id="chart" class="prediction-section__chart"></div>
+      </div>
+    </div>
+    <footer></footer>
+    <script src="script/charts.js"></script>
+  </body>
+</html>

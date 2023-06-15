@@ -1,0 +1,155 @@
+nav {
+  padding-bottom: 57px;
+}
+.prediction-section {
+  height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #cbd7ef, #9a9fd0);
+  display: flex;
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 24px 0px;
+    flex: 1 1 0%;
+    overflow: hidden;
+  }
+  &__top {
+    overflow: hidden auto;
+  }
+  &__resize-bar {
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 10px;
+      margin-left: -32px;
+      height: 4px;
+      width: 64px;
+      border-radius: 8px;
+      background-color: #7a6eaa;
+    }
+  }
+  &__chainlink-anchor {
+    position: absolute;
+    right: 16px;
+    top: -60px;
+    img {
+      width: 170px;
+      height: 48px;
+    }
+  }
+  &__buttons {
+    position: absolute;
+    bottom: 24px;
+    left: 32px;
+    display: inline-flex;
+  }
+
+  &__chart-button {
+    border: none;
+    cursor: pointer;
+    border-radius: 24px 24px 0px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #7a6eaa;
+    background-color: #eeeaf4;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 42px;
+    gap: 10px;
+    svg {
+      display: none;
+    }
+    &:first-child {
+      letter-spacing: 0.00009em;
+    }
+    &--selected {
+      color: #280d5f;
+      background-color: white;
+      svg {
+        display: initial;
+      }
+    }
+  }
+  &__ref {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 24px;
+    gap: 4px;
+    p {
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 14px;
+      color: #280d5f;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1fc7d4;
+      font-weight: 600;
+      line-height: 1.5;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    &--minimize {
+      display: none;
+    }
+  }
+  &__charts-container {
+    user-select: none;
+  }
+  &__chart--trading-view {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+  &__chart {
+    background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+    width: 100%;
+    height: 100%;
+    svg {
+      height: 100%;
+      width: 100%;
+      display: block;
+      circle {
+        fill: #7645d9;
+      }
+      .yAxis {
+        .recharts-cartesian-axis-tick-value {
+          color: #7a6eaa;
+          font-size: 12px;
+          stroke: none;
+          fill: #7a6eaa;
+          text-anchor: start;
+        }
+      }
+      .xAxis {
+        .recharts-cartesian-axis-tick {
+          .recharts-cartesian-axis-tick-value {
+            color: #280d5f;
+            font-size: 12px;
+            stroke: none;
+            fill: #280d5f;
+            text-anchor: middle;
+          }
+        }
+      }
+    }
+    &--active {
+      display: block;
+    }
+  }
+  &__graph {
+    height: 100%;
+    width: 100%;
+  }
+}

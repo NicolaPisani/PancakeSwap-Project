@@ -1,0 +1,151 @@
+nav {
+  padding-bottom: 57px;
+}
+
+.prediction-section {
+  height: calc(100vh - 100px);
+  background: linear-gradient(180deg, #cbd7ef, #9a9fd0);
+  display: flex;
+}
+.prediction-section__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 24px 0px;
+  flex: 1 1 0%;
+  overflow: hidden;
+}
+.prediction-section__top {
+  overflow: hidden auto;
+}
+.prediction-section__resize-bar {
+  position: relative;
+  cursor: pointer;
+  background-color: white;
+  height: 100%;
+}
+.prediction-section__resize-bar::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  margin-left: -32px;
+  height: 4px;
+  width: 64px;
+  border-radius: 8px;
+  background-color: #7a6eaa;
+}
+.prediction-section__chainlink-anchor {
+  position: absolute;
+  right: 16px;
+  top: -60px;
+}
+.prediction-section__chainlink-anchor img {
+  width: 170px;
+  height: 48px;
+}
+.prediction-section__buttons {
+  position: absolute;
+  bottom: 24px;
+  left: 32px;
+  display: inline-flex;
+}
+.prediction-section__chart-button {
+  border: none;
+  cursor: pointer;
+  border-radius: 24px 24px 0px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #7a6eaa;
+  background-color: #eeeaf4;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 42px;
+  gap: 10px;
+}
+.prediction-section__chart-button svg {
+  display: none;
+}
+.prediction-section__chart-button:first-child {
+  letter-spacing: 0.00009em;
+}
+.prediction-section__chart-button--selected {
+  color: #280d5f;
+  background-color: white;
+}
+.prediction-section__chart-button--selected svg {
+  display: initial;
+}
+.prediction-section__ref {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 24px;
+  gap: 4px;
+}
+.prediction-section__ref p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #280d5f;
+}
+.prediction-section__ref a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1fc7d4;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 14px;
+  text-decoration: none;
+}
+.prediction-section__ref--minimize {
+  display: none;
+}
+.prediction-section__charts-container {
+  user-select: none;
+}
+.prediction-section__chart--trading-view {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+.prediction-section__chart {
+  background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+  width: 100%;
+  height: 100%;
+}
+.prediction-section__chart svg {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.prediction-section__chart svg circle {
+  fill: #7645d9;
+}
+.prediction-section__chart svg .yAxis .recharts-cartesian-axis-tick-value {
+  color: #7a6eaa;
+  font-size: 12px;
+  stroke: none;
+  fill: #7a6eaa;
+  text-anchor: start;
+}
+.prediction-section__chart svg .xAxis .recharts-cartesian-axis-tick .recharts-cartesian-axis-tick-value {
+  color: #280d5f;
+  font-size: 12px;
+  stroke: none;
+  fill: #280d5f;
+  text-anchor: middle;
+}
+.prediction-section__chart--active {
+  display: block;
+}
+.prediction-section__graph {
+  height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=prediction-section.css.map */

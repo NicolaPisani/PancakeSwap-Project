@@ -6,6 +6,7 @@
 @import url(./sections/card-prizes-container.css);
 @import url(./sections/ds-icons/ds-icons.css);
 @import url(./sections/ds-form-fields/ds-form-fields.css);
+@import url(./sections/prediction-section/prediction-section.css);
 
 @import url(./shared/popup.css);
 @import url(./shared/dropdown.css);
@@ -16,3 +17,5 @@
 @import url(./shared/carousel.css);
 @import url(./shared/design-system-typography/typography.css);
 @import url(./shared/ds-button-style/button-style.css);
+@import url(./shared/nav-bottom/nav-bottom.css);
+@import url(./shared/card-prediction/card-prediction.css);
