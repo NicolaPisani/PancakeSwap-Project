@@ -6,7 +6,6 @@
 }
 .crypto-section__bg-image {
   overflow: hidden;
-  padding-bottom: 48px;
   max-height: 48px;
 }
 .crypto-section__bg-image svg {
