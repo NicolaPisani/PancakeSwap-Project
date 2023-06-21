@@ -1,5 +1,5 @@
-@import url(./sections/ds-icons.css);
-@import url(./sections/ds-form-fields.css);
+@import url(./sections/ds-icons/ds-icons.css);
+@import url(./sections/ds-form-fields/ds-form-fields.css);
 @import url(./sections/ds-logos.css);
 @import url(./sections/ds-brandcolor.css);
 @import url(./sections/design-system-components.css);
