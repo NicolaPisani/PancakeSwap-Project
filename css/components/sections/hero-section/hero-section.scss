@@ -1,0 +1,218 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65px;
+  padding-bottom: 49px;
+  background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &__carousel-container {
+    display: flex;
+    padding: 0 24px;
+    max-width: 1200px;
+    justify-content: center;
+    margin-bottom: 31px;
+    width: 100%;
+  }
+  &__cta {
+    max-width: 1200px;
+    padding: 0 24px;
+    padding-bottom: 48px;
+    display: flex;
+  }
+  &__left {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: 64px;
+      color: #7645d9;
+      font-weight: 600;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.1;
+      color: #280d5f;
+      margin-bottom: 24px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    gap: 8px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      height: 48px;
+      padding: 0 24px;
+      border: none;
+      background-color: #1fc7d4;
+      box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1fc7d4;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      height: 48px;
+      padding: 0 24px;
+      border: none;
+      background-color: transparent;
+      border: 2px solid #1fc7d4;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+  &__right {
+    position: relative;
+    display: flex;
+    flex: 1 1 0%;
+  }
+  &__main-image {
+    position: relative;
+    animation: astronaut 3.5s ease-in-out 0s infinite normal none running;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  &__absolute-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__relative-container {
+    position: relative;
+    img {
+      max-width: 100%;
+      max-height: 512px;
+      display: block;
+    }
+  }
+  &__star-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    &--left {
+      animation: starTransparent 2s ease-in-out 1s infinite normal none running;
+      img {
+        max-width: 100%;
+        max-height: 512px;
+        display: block;
+      }
+    }
+    &--right {
+      animation: starTransparent 5s ease-in-out 0.66s infinite normal none
+        running;
+      img {
+        max-width: 100%;
+        max-height: 512px;
+        display: block;
+      }
+    }
+    &--top {
+      animation: starTransparent 2.5s ease-in-out 0.33s infinite normal none
+        running;
+      img {
+        max-width: 100%;
+        max-height: 512px;
+        display: block;
+      }
+    }
+  }
+  &__image-curve--light {
+    position: absolute;
+    width: 100%;
+    bottom: -3px;
+    z-index: -3;
+    fill: #280d5f;
+    color: #280d5f;
+    svg {
+      display: block;
+    }
+  }
+}
+
+@keyframes starTransparent {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes astronaut {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media screen and (max-width: 967px) {
+  .hero-section {
+    padding-top: 49px;
+    &__left {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 851px) {
+  .hero-section {
+    padding-top: 17px;
+    &__cta {
+      flex-direction: column;
+      gap: 24px;
+    }
+    &__left {
+      order: 2;
+    }
+    &__right {
+      max-width: 192px;
+      align-self: flex-end;
+    }
+    &__main-image {
+      max-width: 192px;
+    }
+    &__relative-container {
+      img {
+        max-height: 192px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero-section {
+    padding-top: 47px;
+  }
+}

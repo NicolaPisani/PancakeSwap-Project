@@ -40,9 +40,7 @@
   display: flex;
 }
 .popup__checkbox .checkbox {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   width: 24px;
   height: 24px;
   flex-shrink: 0;
@@ -93,4 +91,6 @@
   color: #bdc2c4;
   letter-spacing: 0.48px;
   cursor: not-allowed;
-}/*# sourceMappingURL=popup.css.map */
+}
+
+/*# sourceMappingURL=popup.css.map */
