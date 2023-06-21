@@ -8,6 +8,7 @@ body {
   gap: 20px;
   background-color: hsla(0, 0%, 100%, 0.7);
   box-shadow: rgba(133, 133, 133, 0.1) 0px -2px 0px -8px inset;
+  position: relative;
 }
 .nav-bottom__item {
   line-height: 38px;
@@ -16,6 +17,9 @@ body {
   color: #7a6eaa;
   text-decoration: none;
   padding: 4px 4px 0 4px;
+}
+.nav-bottom__item:hover {
+  background-color: #eff4f5;
 }
 .nav-bottom__item--active {
   color: #7645d9;

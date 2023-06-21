@@ -7,6 +7,9 @@ body {
   gap: 20px;
   background-color: hsla(0, 0%, 100%, 0.7);
   box-shadow: rgba(133, 133, 133, 0.1) 0px -2px 0px -8px inset;
+  position: relative;
+  // margin-top: 127px; da aggiungere quando nav e warning sono in fixed
+
   &__item {
     line-height: 38px;
     font-size: 16px;
@@ -14,6 +17,9 @@ body {
     color: #7a6eaa;
     text-decoration: none;
     padding: 4px 4px 0 4px;
+    &:hover {
+      background-color: #eff4f5;
+    }
     &--active {
       color: #7645d9;
       font-weight: 600;

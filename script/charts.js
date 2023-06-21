@@ -1,7 +1,7 @@
 const $tradingViewButton = document.querySelector("#tradingView");
 const $chainLinkButton = document.querySelector("#chainLink");
 const $buttons = document.querySelectorAll(".prediction-section__chart-button");
-const $chart = document.querySelector("#chart");
+var $chart = document.querySelector("#chart");
 const $resizeBar = document.querySelector(".prediction-section__resize-bar");
 const $content = document.querySelector(".prediction-section__content");
 const $minimizeText = document.querySelector("#minimize");
@@ -2355,11 +2355,9 @@ svgDiv.innerHTML = `<svg
     </g>
   </svg>`;
 
-const rows = {
-  firstColumn: 1.2,
-  thirdColumn: 0.8,
-};
-let newRows = "";
+var firstColumn = 1.2;
+var thirdColumn = 0.8;
+var isMouseDragging = false;
 
 $buttons.forEach((button, i) => {
   button.addEventListener("click", () => {
@@ -2375,16 +2373,15 @@ $buttons.forEach((button, i) => {
 
       if ($chart.firstChild === null) {
         $chart.append(frame);
-        rows.firstColumn = 1.2;
-        rows.thirdColumn = 0.8;
-        newRows = `${rows.firstColumn}fr 24px ${rows.thirdColumn}fr`;
+        firstColumn = 1.2;
+        thirdColumn = 0.8;
+        newRows = `${firstColumn}fr 24px ${thirdColumn}fr`;
         $content.style.gridTemplateRows = newRows;
       } else if ($chart.firstChild !== frame) {
         $chart.replaceChild(frame, $chart.firstChild);
       } else {
         $chart.append(frame);
       }
-      dragFunc();
     } else {
       $buttons[0].classList.remove(
         "prediction-section__chart-button--selected"
@@ -2396,67 +2393,71 @@ $buttons.forEach((button, i) => {
       $chart.classList.add("open");
 
       if ($chart.firstChild === null) {
-        rows.firstColumn = 1.2;
-        rows.thirdColumn = 0.8;
-        newRows = `${rows.firstColumn}fr 24px ${rows.thirdColumn}fr`;
-        $content.style.gridTemplateRows = newRows;
         $chart.append(svgDiv);
+        firstColumn = 1.2;
+        thirdColumn = 0.8;
+        newRows = `${firstColumn}fr 24px ${thirdColumn}fr`;
+        $content.style.gridTemplateRows = newRows;
       } else if ($chart.firstChild !== svgDiv) {
         $chart.replaceChild(svgDiv, $chart.firstChild);
       } else {
         $chart.append(svgDiv);
       }
-      dragFunc();
     }
   });
 });
 
 function onDrag({ movementY }) {
-  if (movementY >= 0) {
-    newRows = `${(rows.firstColumn +=
-      0.00246 * movementY)}fr 24px ${(rows.thirdColumn -=
-      0.00246 * movementY)}fr`;
-    $content.style.gridTemplateRows = newRows;
-    $resizeBar.requestPointerLock();
-    maxHeight();
-    minHeight();
-  } else {
-    newRows = `${(rows.firstColumn -=
-      0.00246 * Math.abs(movementY))}fr 24px ${(rows.thirdColumn +=
-      0.00246 * Math.abs(movementY))}fr`;
-    $content.style.gridTemplateRows = newRows;
-    $resizeBar.requestPointerLock();
+  if (isMouseDragging) {
+    if (movementY >= 0) {
+      newRows = `${(firstColumn +=
+        0.00246 * movementY)}fr 24px ${(thirdColumn -= 0.00246 * movementY)}fr`;
+      $content.style.gridTemplateRows = newRows;
+      $resizeBar.requestPointerLock();
+      maxHeight();
+      minHeight();
+    } else {
+      newRows = `${(firstColumn -=
+        0.00246 * Math.abs(movementY))}fr 24px ${(thirdColumn +=
+        0.00246 * Math.abs(movementY))}fr`;
+      $content.style.gridTemplateRows = newRows;
+      $resizeBar.requestPointerLock();
+    }
   }
 }
 
-function dragFunc() {
-  if ($chart.classList.contains("open")) {
-    $resizeBar.addEventListener("mousedown", () => {
-      $resizeBar.addEventListener("mousemove", onDrag);
-    });
-    $resizeBar.addEventListener("mouseup", () => {
-      $resizeBar.removeEventListener("mousemove", onDrag);
-      document.exitPointerLock();
-    });
+function mouseUp() {
+  if (isMouseDragging) {
+    isMouseDragging = false;
+    document.exitPointerLock();
   }
 }
 
 function maxHeight() {
-  if (rows.firstColumn < 0.25002) {
-    rows.firstColumn = 0;
-    rows.thirdColumn = 2.00001;
-    let lockTop = `${rows.firstColumn}fr 24px ${rows.thirdColumn}fr`;
+  if (firstColumn < 0.25002) {
+    firstColumn = 0;
+    thirdColumn = 2.00001;
+    let lockTop = `${firstColumn}fr 24px ${thirdColumn}fr`;
     $content.style.gridTemplateRows = lockTop;
   }
 }
 
 function minHeight() {
-  if (rows.thirdColumn < 0.50002) {
+  if (thirdColumn < 0.50002) {
     let lockBottom = `2.00001fr 24px 0fr`;
     $content.style.gridTemplateRows = lockBottom;
     if ($chart.hasChildNodes()) {
+      $chart.classList.remove("open");
       $chart.removeChild($chart.children[0]);
       $resizeBar.style.cursor = "pointer";
     }
   }
 }
+
+$resizeBar.addEventListener("mousedown", () => {
+  if ($chart.classList.contains("open")) {
+    isMouseDragging = true;
+    $resizeBar.addEventListener("mousemove", onDrag);
+    $resizeBar.addEventListener("mouseup", mouseUp);
+  }
+});
