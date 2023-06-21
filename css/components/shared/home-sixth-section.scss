@@ -1,0 +1,128 @@
+
+.first__container__section__six{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section__six__first__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    &__h2{
+        color: #280d5f;
+        font-size: 40px;
+    }
+    &--violet{
+        color: #7645d9;
+    }
+    &__title__descr{
+    color: #7a6eaa;
+    font-weight: 400;
+    font-size: 16px;
+    }
+    &__container__btn__and__link{
+        display: flex;
+        &__cont-link-svg{
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+    }
+
+}
+
+.first__item{
+    &__button{
+    background-color: #1fc7d4;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 130px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px 10px;
+    }
+    &__span{
+        color: #1fc7d4;
+    }
+    &__svg{
+        fill: #1fc7d4;
+    }
+    
+}
+
+
+
+.section__six__second__item{
+    position: relative;
+    &__image1{
+        height: 300px;
+        position: absolute;
+    }
+    &__image2{
+        height: 300px;
+        position: absolute;
+    }
+    &__image3{
+        height: 300px;
+        position: absolute;
+    }
+    &__image4{
+        height: 300px;
+        position: absolute300;
+    }
+}
+
+.second__container__section__six{
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-around;
+    &__first__column{
+        display: flex;
+        flex-direction: column;
+        &__second-item{
+            padding-top: 20px;
+        }
+    }
+
+    &__second__column{
+        &__first-item{
+            border-left: solid 1px #d7caec;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        &__second-item{
+            border-left: solid 1px #d7caec;
+            padding-left: 16px;
+            
+        }
+
+    }
+    &__third__column{
+        &__first-item{
+            border-left: solid 1px #d7caec;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        &__second-item{
+            border-left: solid 1px #d7caec;
+            padding-left: 16px;
+        }
+
+    }
+
+
+    &__text{
+        color: #7a6eaa;
+        font-size: 16px;
+        font-weight:400 ;
+        &__subtitle-span{
+            color: #280d5f;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+    
+}
+
