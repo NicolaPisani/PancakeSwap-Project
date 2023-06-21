@@ -1,0 +1,111 @@
+.first__container__section__six {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.section__six__first__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 400px;
+}
+.section__six__first__item__h2 {
+  color: #280d5f;
+  font-size: 40px;
+}
+.section__six__first__item--violet {
+  color: #7645d9;
+}
+.section__six__first__item__title__descr {
+  color: #7a6eaa;
+  font-weight: 400;
+  font-size: 16px;
+}
+.section__six__first__item__container__btn__and__link {
+  display: flex;
+}
+.section__six__first__item__container__btn__and__link__cont-link-svg {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.first__item__button {
+  background-color: #1fc7d4;
+  border: none;
+  color: white;
+  height: 50px;
+  width: 130px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px 10px;
+}
+.first__item__span {
+  color: #1fc7d4;
+}
+.first__item__svg {
+  fill: #1fc7d4;
+}
+
+.section__six__second__item {
+  position: relative;
+}
+.section__six__second__item__image1 {
+  height: 300px;
+  position: absolute;
+}
+.section__six__second__item__image2 {
+  height: 300px;
+  position: absolute;
+}
+.section__six__second__item__image3 {
+  height: 300px;
+  position: absolute;
+}
+.section__six__second__item__image4 {
+  height: 300px;
+  position: absolute300;
+}
+
+.second__container__section__six {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-around;
+}
+.second__container__section__six__first__column {
+  display: flex;
+  flex-direction: column;
+}
+.second__container__section__six__first__column__second-item {
+  padding-top: 20px;
+}
+.second__container__section__six__second__column__first-item {
+  border-left: solid 1px #d7caec;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+.second__container__section__six__second__column__second-item {
+  border-left: solid 1px #d7caec;
+  padding-left: 16px;
+}
+.second__container__section__six__third__column__first-item {
+  border-left: solid 1px #d7caec;
+  padding-left: 15px;
+  margin-bottom: 25px;
+}
+.second__container__section__six__third__column__second-item {
+  border-left: solid 1px #d7caec;
+  padding-left: 16px;
+}
+.second__container__section__six__text {
+  color: #7a6eaa;
+  font-size: 16px;
+  font-weight: 400;
+}
+.second__container__section__six__text__subtitle-span {
+  color: #280d5f;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=home-sixth-section.css.map */
