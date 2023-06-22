@@ -1,7 +1,3 @@
-nav {
-  padding-bottom: 57px;
-}
-
 .prediction-section {
   height: calc(100vh - 100px);
   background: linear-gradient(180deg, #cbd7ef, #9a9fd0);
