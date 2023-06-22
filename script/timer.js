@@ -22,59 +22,51 @@ function move() {
 }
 move();
 
-var timeoutHandle;
-
-function countdown(minutes, seconds) {
-  const $timeLeft = document.querySelector("#time-left");
-  const $firstEntry = document.querySelector("#first-entry");
-  function tick() {
-    $timeLeft.innerHTML = `
-      ${minutes < 10 ? "0" : ""}${minutes.toString()}:${
-      seconds < 10 ? "0" : ""
-    }${String(seconds)}`;
-    $firstEntry.innerHTML = `
-      ~${minutes < 10 ? "0" : ""}${minutes.toString()}:${
-      seconds < 10 ? "0" : ""
-    }${String(seconds)}`;
-    seconds--;
+class CountDown {
+  constructor(clock, selector) {
+    this.selector = selector;
+    this.item;
+    this.clock = clock;
+    this.timeoutHandle;
+  }
+  countdown(minutes, seconds) {
+    this.tick(minutes, seconds);
+  }
+  tick(minutes, seconds) {
+    this.item = document.querySelector(this.selector);
+    if (this.clock) {
+      this.item.innerHTML = `
+      ${minutes < 10 ? "0" : ""}${String(minutes)}:${
+        seconds < 10 ? "0" : ""
+      }${String(seconds)}`;
+      seconds--;
+    } else {
+      this.item.innerHTML = `
+      ~${minutes < 10 ? "0" : ""}${String(minutes)}:${
+        seconds < 10 ? "0" : ""
+      }${String(seconds)}`;
+      seconds--;
+    }
     if (seconds >= 0) {
-      timeoutHandle = setTimeout(tick, 1000);
+      this.timeoutHandle = setTimeout(() => {
+        this.tick(minutes, seconds);
+      }, 1000);
     } else {
       if (minutes >= 1) {
-        setTimeout(function () {
-          countdown(minutes - 1, 59);
+        setTimeout(() => {
+          this.countdown(minutes - 1, 59);
         }, 1000);
       } else {
-        if ($timeLeft.classList.contains("prediction-section__time-left")) {
-          $timeLeft.innerHTML = "Closing";
+        if (this.item.classList.contains("prediction-section__time-left")) {
+          this.item.innerHTML = "Closing";
         }
       }
     }
   }
-  tick();
 }
-
-countdown(5, 0);
-
-function secondCountdown(otherMinutes, otherSeconds) {
-  const $secondEntry = document.querySelector("#second-entry");
-  function secondTick() {
-    $secondEntry.innerHTML = `
-      ~${otherMinutes < 10 ? "0" : ""}${otherMinutes.toString()}:${
-      otherSeconds < 10 ? "0" : ""
-    }${String(otherSeconds)}`;
-    otherSeconds--;
-    if (otherSeconds >= 0) {
-      timeoutHandle = setTimeout(secondTick, 1000);
-    } else {
-      if (otherMinutes >= 1) {
-        setTimeout(function () {
-          secondCountdown(otherMinutes - 1, 59);
-        }, 1000);
-      }
-    }
-  }
-  secondTick();
-}
-
-secondCountdown(10, 0);
+const timeLeft = new CountDown(true, "#time-left");
+const firstEntry = new CountDown(false, "#first-entry");
+const secondEntry = new CountDown(false, "#second-entry");
+timeLeft.countdown(5, 0);
+firstEntry.countdown(5, 0);
+secondEntry.countdown(10, 0);
