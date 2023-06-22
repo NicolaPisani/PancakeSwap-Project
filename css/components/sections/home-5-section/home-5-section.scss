@@ -1,0 +1,335 @@
+//-root to transfer in root page if/when done
+:root {
+  --move-duration: 3s;
+  --move-amount-x: 2%;
+  --move-amount-y: 2%;
+  --star-blink-duration: 2s;
+}
+
+.section-5 {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #6fb6f1 0%, #eaf2f6 100%);
+
+  z-index: 0;
+
+  &-wrapper {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    position: relative;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 1;
+    padding: 48px 0px;
+
+    .glass {
+      backdrop-filter: blur(12px);
+      border-radius: 4.5rem;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+      gap: 2rem;
+      max-width: 968px;
+      display: flex;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: auto;
+        height: 100%;
+        width: 100%;
+        border-radius: 4.5rem;
+
+        opacity: 0.33;
+        z-index: -1;
+        pointer-events: none;
+      }
+      &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: inherit;
+      }
+      &-text .small-title {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1.1;
+        color: #280d5f;
+
+        &-color {
+          color: #7645d9;
+        }
+        &-sub {
+          color: #280d5f;
+          font-weight: 400;
+          line-height: 1.5;
+          font-size: 16px;
+          text-align: center;
+          padding-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .animation {
+    &-box {
+      display: flex;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: -1;
+      &-balls {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: -2.25rem;
+        z-index: -2;
+        pointer-events: none;
+        --move-duration: 1.5s;
+        --move-amount-x: 1%;
+        max-width: 32rem;
+        max-height: 32rem;
+        height: 100%;
+        width: 100%;
+      }
+      &-tickets {
+        display: flex;
+        position: absolute;
+        left: 0px;
+        bottom: -64px;
+        z-index: -2;
+        pointer-events: none;
+        --move-duration: 1.5s;
+        --move-amount-x: 1%;
+        pointer-events: none;
+        max-width: 32rem;
+        max-height: 32rem;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    //include balls e tickets
+    &-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      animation: 3s ease-in-out alternate infinite move;
+      pointer-events: none;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(var(--move-amount-x), var(--move-amount-y));
+  }
+  100% {
+    transform: translate(
+      0rem - var(--move-amount-x),
+      0rem - var(--move-amount-y)
+    );
+  }
+}
+.card-prizes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
+  flex: 1 1 0%;
+
+  &-container {
+    display: flex;
+    gap: 24px;
+    max-width: 600px;
+  }
+  &--purple {
+    transform: rotate(1.43deg);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      border-radius: 24px;
+      background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -4px;
+      border-radius: 24px;
+      background: rgb(60, 23, 134);
+      z-index: -99;
+    }
+    .card-prizes__image svg {
+      fill: white;
+    }
+    .card-prizes__text {
+      p {
+        &:first-child {
+          color: white;
+        }
+        &:nth-child(2) {
+          color: rgb(255, 178, 55);
+        }
+        &:nth-child(3) {
+          color: white;
+        }
+        &:last-child {
+          color: white;
+        }
+      }
+    }
+  }
+  &--orange {
+    transform: rotate(-2.36deg);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      border-radius: 24px;
+      background: linear-gradient(
+        rgb(255, 178, 55) 0%,
+        rgb(255, 205, 81) 51.17%,
+        rgb(255, 231, 106) 100%
+      );
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -4px;
+      border-radius: 24px;
+      background-color: rgb(255, 178, 55);
+      z-index: -99;
+    }
+  }
+  &__image {
+    align-self: flex-end;
+    margin-bottom: 6px;
+  }
+  &__text {
+    p {
+      margin-bottom: 8px;
+      &:first-child {
+        color: rgb(40, 13, 95);
+        font-size: 16px;
+        font-weight: 600;
+      }
+      &:nth-child(2) {
+        font-size: 40px;
+        color: rgb(40, 13, 95);
+        font-weight: 600;
+        line-height: 1.1;
+      }
+      &:nth-child(3) {
+        color: rgb(40, 13, 95);
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+      &:last-child {
+        color: rgb(40, 13, 95);
+        font-weight: 400;
+        margin-bottom: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+  &__button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    gap: 4px;
+    color: white;
+    background-color: #1fc7d4;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.48px;
+    transition: opacity 0.2s ease 0s;
+    width: 16rem;
+    &:hover {
+      opacity: 0.65;
+    }
+    svg {
+      fill: white;
+    }
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .glass {
+    margin-right: 48px;
+    margin-left: 48px;
+  }
+}
+@media screen and (max-width: 851px) {
+  .glass {
+    padding: 40px;
+  }
+  .card-prizes {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    &--orange,
+    &--purple {
+      max-width: 275px;
+      position: static;
+      transform: rotate(0);
+    }
+
+    &--orange {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .glass {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 370px) {
+  .glass {
+    min-height: auto;
+    padding: 16px 24px;
+  }
+}
