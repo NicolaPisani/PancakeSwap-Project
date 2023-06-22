@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 40px;
+  background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
 
   .logo-and-text {
     display: flex;
@@ -48,11 +49,11 @@
     gap: 20px;
     margin-top: 20px;
   }
- &{
+  & {
     .font-color-trades,
     .svg-color-trades {
       color: #1fc7d4;
-      fill:#1fc7d4; 
+      fill: #1fc7d4;
     }
 
     .font-color-staked,
@@ -62,4 +63,3 @@
     }
   }
 }
-

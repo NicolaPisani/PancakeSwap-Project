@@ -67,7 +67,6 @@ ul {
   vertical-align: baseline;
   position: relative;
   margin-bottom: -10px;
-
 }
 .telegram-dropdown:hover .language-menu {
   opacity: 1;
@@ -82,7 +81,6 @@ ul {
   max-width: 300px;
   overflow-y: auto;
   overflow-y: auto;
-  
 }
 .telegram-svg {
   margin-right: 24px;
@@ -171,15 +169,15 @@ ul {
     fill: rgb(184, 173, 210);
     flex-shrink: 0;
     margin-right: 0.5rem;
-
+  }
+  :nth-child(2) {
+    color: rgb(184, 173, 210);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
   }
 }
-:nth-child(2) {
-  color: rgb(184, 173, 210);
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: 16px;
-}
+
 .language-change-selector {
   vertical-align: baseline;
   width: max-content;
@@ -330,4 +328,3 @@ ul {
 //     border-bottom: none;
 //   }
 // }
-

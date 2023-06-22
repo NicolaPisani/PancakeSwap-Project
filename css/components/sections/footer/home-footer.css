@@ -93,7 +93,6 @@ ul {
 }
 
 .language-menu {
-  width: -moz-max-content;
   width: max-content;
   display: flex;
   flex-direction: column;
@@ -123,14 +122,12 @@ ul {
   line-height: 1.5;
   display: flex;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
 .svg-container a {
   display: flex;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   font-weight: 600;
   line-height: 1.5;
@@ -141,11 +138,13 @@ ul {
   order: 3;
   display: flex;
   flex-direction: row;
+  -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
 .left-bottom-container {
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
   align-content: flex-end;
   flex-direction: row;
@@ -158,6 +157,7 @@ ul {
 
 .eng-svg-button {
   position: relative;
+  -webkit-box-align: center;
   align-items: center;
   border: 0px;
   border-radius: 16px;
@@ -166,6 +166,7 @@ ul {
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
+  -webkit-box-pack: center;
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1;
@@ -182,8 +183,7 @@ ul {
   flex-shrink: 0;
   margin-right: 0.5rem;
 }
-
-:nth-child(2) {
+.eng-svg-button :nth-child(2) {
   color: rgb(184, 173, 210);
   font-weight: 400;
   line-height: 1.5;
@@ -192,7 +192,6 @@ ul {
 
 .language-change-selector {
   vertical-align: baseline;
-  width: -moz-max-content;
   width: max-content;
   display: flex;
   flex-direction: column;
@@ -214,6 +213,7 @@ ul {
 }
 .language-change-selector button {
   position: relative;
+  -webkit-box-align: center;
   align-items: center;
   border: 0px;
   cursor: pointer;
@@ -221,6 +221,7 @@ ul {
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
+  -webkit-box-pack: center;
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1;
@@ -263,7 +264,9 @@ ul {
 
 .right-bottom-container {
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
   align-items: center;
   flex-direction: row;
   order: 2;
@@ -299,6 +302,7 @@ ul {
 
 .buy-cake {
   position: relative;
+  -webkit-box-align: center;
   align-items: center;
   border: 0px;
   margin-left: 0.5rem;
@@ -326,4 +330,6 @@ ul {
 .buy-cake:hover {
   opacity: 0.65;
   transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
-}/*# sourceMappingURL=home-footer.css.map */
+}
+
+/*# sourceMappingURL=home-footer.css.map */

@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 40px;
+  background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
 }
 .section-2 .logo-and-text {
   display: flex;
@@ -52,4 +53,6 @@
 .section-2 .svg-color-staked {
   color: #ed4b9e;
   fill: #ed4b9e;
-}/*# sourceMappingURL=home-2-section.css.map */
+}
+
+/*# sourceMappingURL=home-2-section.css.map */
