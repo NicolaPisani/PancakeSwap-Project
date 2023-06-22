@@ -27,14 +27,26 @@
   flex-direction: column;
   .connect-wallet-button {
     padding-bottom: 10px;
+    span {
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
   }
 
   .trade-now-button {
     padding-bottom: 10px;
+    span {
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
   }
 
   .play-button {
     padding-bottom: 10px;
+    span {
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
   }
 
   #btn-wallet {
@@ -75,6 +87,12 @@
     background-color: rgb(31, 199, 212);
     border-radius: 10px 10px;
     font-weight: 600;
+  }
+  .buy-tickets-button {
+    span {
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
   }
 }
 

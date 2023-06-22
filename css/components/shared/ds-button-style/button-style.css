@@ -29,11 +29,23 @@
 .prima-fila-butt .connect-wallet-button {
   padding-bottom: 10px;
 }
+.prima-fila-butt .connect-wallet-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .prima-fila-butt .trade-now-button {
   padding-bottom: 10px;
 }
+.prima-fila-butt .trade-now-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .prima-fila-butt .play-button {
   padding-bottom: 10px;
+}
+.prima-fila-butt .play-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .prima-fila-butt #btn-wallet {
   width: 128px;
@@ -70,6 +82,10 @@
   background-color: rgb(31, 199, 212);
   border-radius: 10px 10px;
   font-weight: 600;
+}
+.prima-fila-butt .buy-tickets-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .seconda-fila-button .enter-up {
