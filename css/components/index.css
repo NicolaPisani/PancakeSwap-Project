@@ -10,6 +10,7 @@
 @import url(./sections/hero-section/hero-section.css);
 @import url(./sections/home-2-section/home-2-section.css);
 @import url(./sections/home-3-section/home-3-section.css);
+@import url(./sections/nft-section/nft-section.css);
 
 @import url(./shared/popup/popup.css);
 @import url(./shared/dropdown/dropdown.css);
@@ -28,3 +29,4 @@
 @import url(./shared/navbar/navbar.css);
 @import url(./sections/home-5-section/home-5-section.css);
 @import url(./shared/popup-wallet/popup-wallet.css);
+@import url(./shared/card-nft/card-nft.css);

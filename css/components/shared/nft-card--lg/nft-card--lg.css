@@ -3,6 +3,7 @@
   background-color: white;
   border-radius: 8px;
   position: relative;
+  flex: 1 1 20%;
 }
 .card-nft--lg a {
   text-decoration: none;
@@ -26,7 +27,12 @@
   margin-bottom: 8px;
 }
 .card-nft--lg .card-nft__image img {
-  max-width: 258px;
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+.card-nft--lg .card-nft__image video {
+  max-width: 100%;
   border-radius: 8px;
   display: block;
 }
@@ -71,4 +77,6 @@
   color: #280d5f;
   font-weight: 600;
   font-size: 16px;
-}/*# sourceMappingURL=nft-card--lg.css.map */
+}
+
+/*# sourceMappingURL=nft-card--lg.css.map */

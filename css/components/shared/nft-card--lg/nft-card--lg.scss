@@ -3,6 +3,7 @@
   background-color: white;
   border-radius: 8px;
   position: relative;
+  flex: 1 1 20%;
   a {
     text-decoration: none;
     transition: opacity 200ms ease 0s;
@@ -25,7 +26,12 @@
     &__image {
       margin-bottom: 8px;
       img {
-        max-width: 258px;
+        max-width: 100%;
+        border-radius: 8px;
+        display: block;
+      }
+      video {
+        max-width: 100%;
         border-radius: 8px;
         display: block;
       }
