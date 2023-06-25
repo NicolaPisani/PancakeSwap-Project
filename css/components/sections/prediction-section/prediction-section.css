@@ -132,18 +132,20 @@
 .prediction-section__currency-name {
   background-color: white;
   border-radius: 24px;
-  padding: 8px 8px 8px 40px;
   width: fit-content;
   margin-left: 40px;
+  display: flex;
+  padding: 8px 8px 8px 40px;
+  align-items: center;
+  justify-content: center;
+}
+.prediction-section__currency-name span:first-child {
   font-size: 20px;
   line-height: 22px;
   font-weight: 600;
   color: #280d5f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.prediction-section__currency-name span {
+.prediction-section__currency-name span:last-child {
   font-weight: 400;
   line-height: 1.5;
   font-size: 12px;
@@ -160,7 +162,7 @@
   width: 128px;
   position: relative;
 }
-.prediction-section__carousel-buttons button {
+.prediction-section__button {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -184,6 +186,62 @@
 .prediction-section__button--center svg {
   display: block;
 }
+.prediction-section__mobile-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 0;
+}
+.prediction-section__buttons-container--center {
+  display: flex;
+  background-color: #eeeaf4;
+  border-radius: 16px;
+  border: 1px solid #d7caec;
+  gap: 2px;
+}
+.prediction-section__center-mobile-button {
+  border: none;
+  background-color: transparent;
+  padding: 6px 16px;
+  display: flex;
+  align-self: center;
+  border-radius: 16px;
+}
+.prediction-section__center-mobile-button svg {
+  fill: #7a6eaa;
+}
+.prediction-section__center-mobile-button--active {
+  background-color: #7a6eaa;
+}
+.prediction-section__center-mobile-button--active svg {
+  fill: white;
+}
+.prediction-section__center-mobile-button:active {
+  opacity: 0.85;
+  transform: translateY(1px);
+  box-shadow: none;
+}
+.prediction-section__mobile-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.prediction-section__mobile-button--left, .prediction-section__mobile-button--right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.prediction-section__mobile-button--left svg, .prediction-section__mobile-button--right svg {
+  fill: #1fc7d4;
+  flex-shrink: 0;
+}
+.prediction-section__mobile-button:active {
+  opacity: 0.85;
+  transform: translateY(1px);
+  box-shadow: none;
+}
 .prediction-section__resize-bar {
   position: relative;
   cursor: pointer;
@@ -202,13 +260,22 @@
   background-color: #7a6eaa;
 }
 .prediction-section__chainlink-anchor {
+  max-width: 170px;
+}
+.prediction-section__chainlink-anchor img {
+  display: block;
+  max-width: 100%;
+}
+.prediction-section__chainlink-anchor--desktop {
   position: absolute;
   right: 16px;
   top: -60px;
 }
-.prediction-section__chainlink-anchor img {
-  width: 170px;
-  height: 48px;
+.prediction-section__chainlink-anchor--mobile {
+  display: none;
+  width: 100%;
+  align-self: flex-end;
+  margin-right: 16px;
 }
 .prediction-section__buttons {
   position: absolute;
@@ -362,6 +429,89 @@
 }
 .carousel-prediction__item:nth-child(4) .card-prediction__arrow-container--up svg {
   fill: #31d0aa;
+}
+
+@media screen and (max-width: 967px) {
+  .prediction-section {
+    height: unset;
+  }
+  .prediction-section__carousel-buttons {
+    display: none;
+  }
+  .prediction-section__content {
+    display: flex;
+    flex-direction: column;
+  }
+  .prediction-section__timer {
+    flex-direction: column;
+    padding: 0 28px 0 8px;
+    border-radius: 8px 8px 8px 24px;
+    align-items: flex-end;
+  }
+  .prediction-section__timer svg {
+    top: -5px;
+    max-width: 48px;
+    max-height: 48px;
+  }
+  .prediction-section__mobile-nav {
+    display: flex;
+  }
+  .prediction-section__time-left {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .prediction-section__total-time {
+    padding: 0;
+  }
+  .prediction-section__history-util {
+    display: none;
+  }
+  .prediction-section__coin-container {
+    width: unset;
+  }
+  .prediction-section__currency-name {
+    margin-left: 20px;
+    padding: 0 8px 0 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px 8px 24px 8px;
+  }
+  .prediction-section__currency-name span:first-child {
+    line-height: 21px;
+    font-size: 16px;
+  }
+  .prediction-section__currency-name span:last-child {
+    padding: 0;
+  }
+  .prediction-section__charts-container {
+    display: none;
+  }
+  .prediction-section__chart {
+    display: none;
+  }
+  .prediction-section__chainlink-anchor--desktop {
+    display: none;
+  }
+  .prediction-section__chainlink-anchor--mobile {
+    display: block;
+  }
+}
+@media screen and (max-width: 575px) {
+  .prediction-section__nav {
+    gap: 8px;
+  }
+  .prediction-section__timer {
+    order: 3;
+  }
+  .prediction-section__utils-buttons {
+    gap: unset;
+  }
+  .prediction-section__info-util {
+    margin-right: 2px;
+  }
+  .prediction-section__leaderboard-util {
+    margin-right: 8px;
+  }
 }
 
 /*# sourceMappingURL=prediction-section.css.map */

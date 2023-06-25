@@ -5,6 +5,7 @@ body {
   padding-top: 1px;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   gap: 20px;
   background-color: hsla(0, 0%, 100%, 0.7);
   box-shadow: rgba(133, 133, 133, 0.1) 0px -2px 0px -8px inset;
@@ -14,10 +15,12 @@ body {
   &__item {
     line-height: 42px;
     font-size: 16px;
+    white-space: nowrap;
     font-weight: 400;
     color: #7a6eaa;
     text-decoration: none;
-    padding: 0px 4px 0 4px;
+    padding: 0 4px;
+    scroll-snap-align: start;
     &:hover {
       background-color: #eff4f5;
     }

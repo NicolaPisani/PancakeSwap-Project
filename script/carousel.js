@@ -4,6 +4,9 @@ class Carousel {
     this.slides = Array.from(this.carousel.children);
     this.middleIndex = Math.ceil((this.slides.length - 1) / 2);
     this.buttons = document.querySelectorAll(".prediction-section__button");
+    this.mobileButtons = document.querySelectorAll(
+      ".prediction-section__mobile-button"
+    );
     this.currentSlideIndex = this.middleIndex;
     this.currentSlide = this.slides[this.currentSlideIndex];
     this.slideRect = this.currentSlide.getBoundingClientRect();
@@ -29,7 +32,21 @@ class Carousel {
       "mousemove",
       this.handleMouseMove.bind(this)
     );
+    this.carousel.addEventListener(
+      "touchstart",
+      this.handleTouchDown.bind(this)
+    );
+    this.carousel.addEventListener("touchend", this.handleTouchUp.bind(this));
+    this.carousel.addEventListener(
+      "touchmove",
+      this.handleTouchMove.bind(this)
+    );
     this.buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        this.buttonScroll(button);
+      });
+    });
+    this.mobileButtons.forEach((button) => {
       button.addEventListener("click", () => {
         this.buttonScroll(button);
       });
@@ -38,8 +55,7 @@ class Carousel {
 
   buttonScroll(button) {
     this.carousel.style.transitionDuration = "300ms";
-
-    if (button === this.buttons[0]) {
+    if (button === this.buttons[0] || button === this.mobileButtons[0]) {
       if (this.currentSlideIndex <= 0) {
         this.currentSlideIndex = 0;
       } else {
@@ -79,7 +95,26 @@ class Carousel {
     this.carousel.style.transitionDuration = "0ms";
   }
 
+  handleTouchDown(event) {
+    event.preventDefault();
+    this.isDragging = true;
+    this.dragStartX = event.changedTouches[0].clientX;
+    this.carousel.style.transitionDuration = "0ms";
+  }
+
   handleMouseUp(event) {
+    event.preventDefault();
+    if (this.isDragging) {
+      this.isDragging = false;
+      if (this.dragDistance > 0) {
+        this.scroll(1);
+      } else {
+        this.scroll(-1);
+      }
+    }
+  }
+
+  handleTouchUp(event) {
     event.preventDefault();
     if (this.isDragging) {
       this.isDragging = false;
@@ -98,6 +133,23 @@ class Carousel {
       this.dragDistance = dragCurrentX - this.dragStartX;
       this.carousel.scrollLeft = this.scrollLeftStart - this.dragDistance;
       this.totalDistance = this.dragDistance + this.scrollPx;
+      if (this.totalDistance >= this.maxScroll) {
+        this.totalDistance = this.maxScroll;
+      } else if (this.totalDistance <= -this.maxScroll) {
+        this.totalDistance = -this.maxScroll;
+      }
+      this.carousel.style.transform = `translate3d(${this.totalDistance}px, 0, 0)`;
+    }
+  }
+
+  handleTouchMove(event) {
+    event.preventDefault();
+    if (this.isDragging) {
+      const dragCurrentX = event.changedTouches[0].clientX;
+      this.dragDistance = dragCurrentX - this.dragStartX;
+      this.carousel.scrollLeft = this.scrollLeftStart - this.dragDistance;
+      this.totalDistance = this.dragDistance + this.scrollPx;
+
       if (this.totalDistance >= this.maxScroll) {
         this.totalDistance = this.maxScroll;
       } else if (this.totalDistance <= -this.maxScroll) {
@@ -127,7 +179,6 @@ class Carousel {
         this.firstScrolls = true;
       }
       if (this.firstScrolls === true) {
-        console.log(this.currentSlideIndex);
         this.scrollCount -= deltaY;
         if (delta > 0) {
           this.newPosition -= deltaY;
@@ -169,17 +220,20 @@ class Carousel {
         if (this.updatedPosition >= updatedMaxWidth) {
           this.updatedPosition -= updatedMaxWidth;
           this.currentSlideIndex -= delta;
+
           if (this.currentSlideIndex < 0) {
             this.currentSlideIndex = 0;
           }
         } else if (this.updatedPosition <= -updatedMaxWidth) {
           this.updatedPosition += updatedMaxWidth;
           this.currentSlideIndex -= delta;
+
           if (this.currentSlideIndex >= this.slides.length) {
             this.currentSlideIndex = this.slides.length - 1;
           }
         }
       }
+
       this.scrollToCurrentSlide();
     }
   }
@@ -218,7 +272,6 @@ class Carousel {
           this.scrollPx = lock * -1;
           this.newPosition = 0;
           this.scrollCount = 0;
-
           this.carousel.style.transform = `translate3d(${this.scrollPx}px, 0px, 0px)`;
           this.carousel.style.transitionDuration = "300ms";
         }
@@ -232,8 +285,9 @@ class Carousel {
             this.carousel.scrollLeft -
             (this.carousel.offsetWidth - this.currentSlide.offsetWidth) / 2;
           this.scrollPx = lock * -1;
-
           this.scrollCount = 0;
+          this.newPosition = 0;
+          this.dragDistance = 0;
           this.carousel.style.transform = `translate3d(${this.scrollPx}px,0,0)`;
           this.carousel.style.transitionDuration = "300ms";
         }
