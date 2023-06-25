@@ -59,6 +59,7 @@ class CountDown {
       } else {
         if (this.item.classList.contains("prediction-section__time-left")) {
           this.item.innerHTML = "Closing";
+          this.item.style.fontSize = "9px";
         }
       }
     }
