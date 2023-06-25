@@ -1,0 +1,602 @@
+.card-prediction {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  background-color: white;
+  position: relative;
+  border: 1px solid;
+  border-bottom: 3px solid;
+  flex-shrink: 0;
+}
+.card-prediction--live {
+  animation: 3s ease 0s infinite normal none running borderColor;
+}
+.card-prediction--next {
+  width: 100%;
+  border: none;
+  background-color: white;
+}
+.card-prediction--next::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: -3px;
+  left: -1px;
+  background: linear-gradient(#7645d9 38px, #e7e3eb 38px);
+  border-radius: 24px;
+  z-index: -2;
+}
+.card-prediction--expired {
+  opacity: 0.7;
+  border-color: #e7e3eb;
+  font-weight: 400;
+}
+.card-prediction--expired:hover {
+  opacity: 1;
+}
+.card-prediction--later {
+  border-color: #e7e3eb;
+  overflow: hidden;
+}
+.card-prediction--flipped {
+  height: 100%;
+  position: relative;
+}
+.card-prediction__height-container {
+  height: 404px;
+}
+.card-prediction__relative-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 600ms ease 0s;
+}
+.card-prediction-front {
+  align-items: center;
+  backface-visibility: hidden;
+  display: flex;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  transition: transform 600ms ease 0s;
+  width: 100%;
+  transform: rotateY(0deg);
+}
+.card-prediction-back {
+  display: flex;
+  flex-direction: column;
+  transition: transform 600ms ease 0s;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  height: 100%;
+  border: 1px solid #e7e3eb;
+  border-bottom: 3px solid #e7e3eb;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.card-prediction-back__header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
+}
+.card-prediction-back__enter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.card-prediction-back__enter--up {
+  background-color: #31d0aa;
+}
+.card-prediction-back__enter--down {
+  background-color: #ed4b9e;
+}
+.card-prediction-back__svg {
+  display: flex;
+  align-items: center;
+}
+.card-prediction-back__svg svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.card-prediction-back__down-up {
+  color: white;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.card-prediction-back__left {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.card-prediction-back__flip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  background-color: transparent;
+}
+.card-prediction-back__flip svg {
+  fill: #280d5f;
+  flex-shrink: 0;
+}
+.card-prediction-back__position {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #280d5f;
+}
+.card-prediction-back__body {
+  padding: 24px;
+  background-color: white;
+  flex-grow: 1;
+}
+.card-prediction-back__entry-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.card-prediction-back__commit {
+  color: #7a6eaa;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.card-prediction-back__coin-img {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.card-prediction-back__input {
+  padding: 8px 16px;
+  border: 1px solid #d7caec;
+  background-color: #eeeaf4;
+  border-radius: 16px;
+  box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+  margin-bottom: 34px;
+}
+.card-prediction-back__input input {
+  border: none;
+  background-color: #e9eaeb;
+  font-size: 16px;
+  color: #280d5f;
+  height: 40px;
+  outline: 0px;
+  width: 100%;
+  text-align: right;
+  cursor: not-allowed;
+}
+.card-prediction-back__input input::placeholder {
+  color: #7a6eaa;
+  font-size: 16px;
+}
+.card-prediction-back__range {
+  width: 100%;
+  height: 48px;
+  margin-bottom: 4px;
+}
+.card-prediction-back__range input {
+  width: 100%;
+}
+.card-prediction-back__buttons {
+  display: flex;
+  margin-bottom: 16px;
+}
+.card-prediction-back__button {
+  flex: 1 1 0%;
+  align-items: center;
+  border: 0px;
+  border-radius: 16px;
+  background-color: #e9eaeb;
+  color: #bdc2c4;
+  cursor: not-allowed;
+  display: inline-flex;
+  font-family: inherit;
+  font-weight: 600;
+  -webkit-box-pack: center;
+  justify-content: center;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  opacity: 1;
+  outline: 0px;
+  transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  height: 20px;
+  font-size: 12px;
+  padding: 0px 8px;
+}
+.card-prediction-back__button:last-child {
+  flex: 0 0 0;
+}
+.card-prediction-back__wallet {
+  width: 100%;
+  border: none;
+  color: white;
+  background-color: #1fc7d4;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 16px 24px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.card-prediction-back__wallet:hover {
+  opacity: 0.65;
+}
+.card-prediction-back__wallet:active {
+  opacity: 0.85;
+  transform: translateY(1px);
+  box-shadow: none;
+}
+.card-prediction-back__warning {
+  color: #7a6eaa;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+}
+.card-prediction__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6.5px 16px;
+  max-height: 37px;
+}
+.card-prediction__header--expired {
+  background-color: #e7e3eb;
+  padding: 8px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card-prediction__header--next {
+  background-color: #7645d9;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 8px;
+}
+.card-prediction__header--next .card-prediction__state svg {
+  fill: white;
+}
+.card-prediction__header--next .card-prediction__number {
+  color: white;
+  font-size: 12px;
+}
+.card-prediction__header--later {
+  background-color: #e7e3eb;
+  padding: 8px;
+}
+.card-prediction__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-prediction__arrow-container {
+  position: relative;
+}
+.card-prediction__arrow-container--up {
+  margin-bottom: -1px;
+}
+.card-prediction__arrow-container--down {
+  margin-top: -1px;
+}
+.card-prediction__arrow-container svg {
+  display: block;
+  fill: #eff4f5;
+}
+.card-prediction__payout-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  gap: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-prediction__payout-container--down {
+  color: white;
+}
+.card-prediction__gradient-border {
+  border-radius: 16px;
+  background: linear-gradient(rgb(83, 222, 233) 0%, rgb(118, 69, 217) 100%);
+  padding: 2px;
+  width: 100%;
+}
+.card-prediction__content {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: white;
+}
+.card-prediction__content--up {
+  border: 2px solid #31d0aa;
+}
+.card-prediction__content--down {
+  border: 2px solid #ed4b9e;
+}
+.card-prediction__content--next {
+  border: none;
+  border-radius: 14px;
+}
+.card-prediction__content--later {
+  border: 2px solid #e7e3eb;
+}
+.card-prediction__enter-btn {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  cursor: pointer;
+}
+.card-prediction__enter-btn:hover {
+  opacity: 0.65;
+}
+.card-prediction__enter-btn:active {
+  opacity: 0.85;
+  transform: translateY(1px);
+  box-shadow: none;
+}
+.card-prediction__enter-btn--up {
+  margin-bottom: 4px;
+  background-color: #31d0aa;
+}
+.card-prediction__enter-btn--down {
+  background-color: #ed4b9e;
+}
+.card-prediction__price-type {
+  color: #7a6eaa;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.card-prediction__price-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.card-prediction__price-diff {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.card-prediction__price-diff svg {
+  fill: white;
+  flex-shrink: 0;
+}
+.card-prediction__price-diff--up {
+  background-color: #31d0aa;
+}
+.card-prediction__price-diff--down {
+  background-color: #ed4b9e;
+}
+.card-prediction__diff {
+  color: white;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.card-prediction__price {
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 24px;
+  text-decoration-line: underline;
+  text-decoration-thickness: initial;
+  text-decoration-style: dotted;
+  text-decoration-color: #7a6eaa;
+  text-underline-offset: 0.1em;
+  position: relative;
+}
+.card-prediction__price--up {
+  color: #31d0aa;
+}
+.card-prediction__price--down {
+  color: #ed4b9e;
+}
+.card-prediction__price::after {
+  content: "Last price from Chainlink Oracle";
+  display: none;
+  position: absolute;
+  line-height: 130%;
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #27262c;
+  color: #f4eeff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1);
+  bottom: -62.8px;
+  left: -93px;
+  font-weight: initial;
+}
+.card-prediction__price:before {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: -10px;
+  left: 35px;
+  border-bottom: 5px solid #27262c;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+}
+.card-prediction__price:hover:after, .card-prediction__price:hover:before {
+  display: initial;
+}
+.card-prediction__text-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-prediction__text-container--next {
+  margin-bottom: 8px;
+}
+.card-prediction__locked-price {
+  color: #280d5f;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.card-prediction__up {
+  color: #31d0aa;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 21px;
+  margin-top: 8px;
+}
+.card-prediction__up--gray {
+  color: #bdc2c4;
+}
+.card-prediction__down {
+  color: #ed4b9e;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 21px;
+  margin-bottom: 8px;
+}
+.card-prediction__down--gray {
+  color: #bdc2c4;
+}
+.card-prediction__payout {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-prediction__multiplier {
+  color: #7a6eaa;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 14px;
+}
+.card-prediction__multiplier--name {
+  color: #7a6eaa;
+  font-weight: 400;
+  font-size: 14px;
+}
+.card-prediction__state {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.card-prediction__state svg {
+  fill: #7645d9;
+}
+.card-prediction__state--expired svg {
+  fill: #bdc2c4;
+}
+.card-prediction__state--later svg {
+  fill: #280d5f;
+}
+.card-prediction__state-name {
+  color: #7645d9;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+.card-prediction__state-name--expired {
+  font-weight: 400;
+  color: #bdc2c4;
+}
+.card-prediction__state-name--next {
+  color: white;
+  font-weight: 400;
+}
+.card-prediction__state-name--later {
+  color: #280d5f;
+  font-weight: 400;
+}
+.card-prediction__number {
+  color: #7645d9;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.card-prediction__number--expired {
+  color: #bdc2c4;
+  font-size: 12px;
+}
+.card-prediction__number--later {
+  color: #7a6eaa;
+  font-size: 12px;
+}
+.card-prediction__progress-bar {
+  height: 8px;
+}
+.card-prediction__progress-bar--outer {
+  position: relative;
+  background-color: #eeeaf4;
+}
+.card-prediction__progress-bar--inner {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background-color: #7645d9;
+}
+.card-prediction__prize-pool {
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.card-prediction__entry-start {
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 16px;
+  text-align: center;
+}
+.card-prediction__entry-timer {
+  display: block;
+  color: #280d5f;
+  font-weight: 600;
+  line-height: 1.5;
+  width: 100%;
+  font-size: 24px;
+  text-align: center;
+}
+
+@keyframes borderColor {
+  0% {
+    border-color: #7645d9;
+  }
+  50% {
+    border-color: #1fc7d4;
+  }
+  100% {
+    border-color: #7645d9;
+  }
+}
+
+/*# sourceMappingURL=card-prediction.css.map */

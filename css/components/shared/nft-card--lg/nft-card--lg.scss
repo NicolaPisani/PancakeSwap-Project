@@ -1,0 +1,98 @@
+.card-nft--lg {
+  padding: 8px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  flex: 1 1 calc(25% - 16px);
+  border: 1px solid #e7e3eb;
+  border-bottom: 3px solid #e7e3eb;
+  max-width: 320px;
+  min-width: 0;
+  a {
+    text-decoration: none;
+    transition: opacity 200ms ease 0s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  .card-nft {
+    &__image {
+      margin-bottom: 8px;
+      img {
+        max-width: 100%;
+        border-radius: 8px;
+        display: block;
+      }
+      video {
+        max-width: 100%;
+        border-radius: 8px;
+        display: block;
+      }
+    }
+    &__name {
+      border-bottom: 1px solid #e7e3eb;
+      p {
+        &:first-child {
+          font-size: 12px;
+          color: #7a6eaa;
+          margin-bottom: 8px;
+        }
+        &:last-child {
+          color: #280d5f;
+          margin-bottom: 8px;
+          font-weight: 600;
+        }
+      }
+    }
+    &__price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+    &__left {
+      min-width: 0;
+      p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 120px;
+        font-size: 12px;
+        color: #7a6eaa;
+      }
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 12px;
+        color: #7a6eaa;
+      }
+    }
+    &__bnb-price {
+      display: flex;
+      align-items: center;
+      svg {
+        margin: 0 4px;
+        height: 16px;
+      }
+      p {
+        color: #280d5f;
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 851px) {
+  .card-nft--lg {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 369px) {
+  .card-nft--lg {
+    flex: 1 1 100%;
+  }
+}

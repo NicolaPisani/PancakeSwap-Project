@@ -1,0 +1,95 @@
+.card-nft--lg {
+  padding: 8px;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  flex: 1 1 calc(25% - 16px);
+  border: 1px solid #e7e3eb;
+  border-bottom: 3px solid #e7e3eb;
+  max-width: 320px;
+  min-width: 0;
+}
+.card-nft--lg a {
+  text-decoration: none;
+  transition: opacity 200ms ease 0s;
+}
+.card-nft--lg a:hover {
+  opacity: 0.6;
+}
+.card-nft--lg .card-nft__image {
+  margin-bottom: 8px;
+}
+.card-nft--lg .card-nft__image img {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+.card-nft--lg .card-nft__image video {
+  max-width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+.card-nft--lg .card-nft__name {
+  border-bottom: 1px solid #e7e3eb;
+}
+.card-nft--lg .card-nft__name p:first-child {
+  font-size: 12px;
+  color: #7a6eaa;
+  margin-bottom: 8px;
+}
+.card-nft--lg .card-nft__name p:last-child {
+  color: #280d5f;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.card-nft--lg .card-nft__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+.card-nft--lg .card-nft__left {
+  min-width: 0;
+}
+.card-nft--lg .card-nft__left p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 120px;
+  font-size: 12px;
+  color: #7a6eaa;
+}
+.card-nft--lg .card-nft__right {
+  display: flex;
+  align-items: center;
+}
+.card-nft--lg .card-nft__right p {
+  font-size: 12px;
+  color: #7a6eaa;
+}
+.card-nft--lg .card-nft__bnb-price {
+  display: flex;
+  align-items: center;
+}
+.card-nft--lg .card-nft__bnb-price svg {
+  margin: 0 4px;
+  height: 16px;
+}
+.card-nft--lg .card-nft__bnb-price p {
+  color: #280d5f;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 851px) {
+  .card-nft--lg {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+@media screen and (max-width: 369px) {
+  .card-nft--lg {
+    flex: 1 1 100%;
+  }
+}
+
+/*# sourceMappingURL=nft-card--lg.css.map */

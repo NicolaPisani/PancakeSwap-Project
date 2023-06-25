@@ -1,0 +1,183 @@
+.wallet-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+  width: 100%;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+}
+.wallet-section__wrapper {
+  max-width: 968px;
+  padding: 48px 24px;
+  position: relative;
+  width: 100%;
+}
+.wallet-section__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wallet-section__text h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  color: white;
+}
+.wallet-section__info--upper {
+  color: white;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 16px;
+}
+.wallet-section__info--bottom {
+  color: white;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.wallet-section__bg-position {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.wallet-section__bg-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.wallet-section__bg-image svg {
+  height: 400%;
+  width: 400%;
+}
+.wallet-section__images-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 24px;
+  margin: auto;
+}
+.wallet-section__animated-images {
+  position: absolute;
+}
+.wallet-section__animated-images--left {
+  left: 0px;
+  top: 0px;
+}
+.wallet-section__animated-images--right {
+  right: 0px;
+  bottom: 0px;
+}
+.wallet-section__pancake-image-left {
+  animation: 3s ease-in-out 0.66s infinite normal none running stonks;
+}
+.wallet-section__pancake-image-top--right {
+  animation: 3s ease-in-out 0.66s infinite normal none running stonks;
+}
+.wallet-section__pancake-image-top--left {
+  animation: 3s ease-in-out 0.33s infinite normal none running folder;
+}
+.wallet-section__pancake-image-right {
+  animation: 3s ease-in-out 0.33s infinite normal none running folder;
+  z-index: 1;
+}
+.wallet-section__pancake-image-bottom {
+  animation: 3s ease-in-out 1s infinite normal none running cake;
+}
+.wallet-section__pancake-image-bottom img {
+  max-height: 256px;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.wallet-section__pancake-image-left, .wallet-section__pancake-image-right, .wallet-section__pancake-image-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.wallet-section__pancake-image-left img, .wallet-section__pancake-image-right img, .wallet-section__pancake-image-top img {
+  max-height: 256px;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+.wallet-section__btn {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+.wallet-section__btn--learn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #1fc7d4;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.wallet-section__btn--learn svg {
+  flex-shrink: 0;
+  fill: #1fc7d4;
+}
+.wallet-section__btn--learn:hover {
+  text-decoration: underline;
+}
+.wallet-section__btn--connect {
+  background-color: #1fc7d4;
+  color: white;
+  line-height: 48px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  padding: 0 24px;
+  letter-spacing: 0.03em;
+}
+.wallet-section__btn--connect:hover {
+  opacity: 0.65;
+}
+.wallet-section__btn--connect:active {
+  opacity: 0.85;
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+@media screen and (max-width: 1079px) {
+  .wallet-section__bg-image svg {
+    width: 350%;
+    height: 350%;
+  }
+}
+@media screen and (max-width: 967px) {
+  .wallet-section__wrapper {
+    padding: 32px 24px;
+  }
+  .wallet-section__text h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 851px) {
+  .wallet-section__images-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .wallet-section__wrapper {
+    padding: 16px 24px;
+  }
+}
+
+/*# sourceMappingURL=seventh-section.css.map */
