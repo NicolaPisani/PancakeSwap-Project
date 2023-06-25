@@ -1,0 +1,322 @@
+.nft-searchbox {
+  padding-top: 32px;
+  padding-bottom: 18px;
+  margin-bottom: -18px;
+  background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+  form {
+    input {
+      padding: 0 40px 0 16px;
+      border: 1px solid #d7caec;
+      border-radius: 16px;
+      box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+      outline: none;
+      color: #280d5f;
+      font-size: 16px;
+      line-height: 38px;
+      background-color: #eeeaf4;
+      max-height: 40px;
+      width: 100%;
+      &::placeholder {
+        color: #280d5f;
+        opacity: 0.67;
+      }
+      &:focus {
+        box-shadow: 0px 0px 0px 1px #7645d9,
+          0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+  }
+  &__title {
+    h1 {
+      font-size: 64px;
+      margin-bottom: 24px;
+      font-weight: 600;
+      line-height: 1.1;
+      color: #7645d9;
+    }
+    p {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.1;
+      color: #280d5f;
+    }
+  }
+}
+.nft-section {
+  padding: 14px 0 48px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__cards-wrapper {
+    padding: 48px 24px;
+    max-width: 1200px;
+  }
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 64px;
+    &--lg {
+      gap: 24px 16px;
+      margin-bottom: 0;
+      justify-content: space-evenly;
+    }
+  }
+  &__cards-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      text-decoration: none;
+      padding: 2px 16px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 16px;
+      min-width: 132px;
+      border: 2px solid #1fc7d4;
+      color: #1fc7d4;
+      gap: 8px;
+      transition: opacity 0.2s ease 0s;
+      svg {
+        flex-shrink: 0;
+        fill: #1fc7d4;
+      }
+      &:hover {
+        opacity: 0.65;
+      }
+      &:active {
+        opacity: 0.85;
+        transform: translateY(1px);
+        box-shadow: none;
+      }
+    }
+  }
+  &__section-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #280d5f;
+  }
+}
+
+.nft-curve-bg {
+  width: 100%;
+  height: 20px;
+  clip-path: url(#topConcaveCurve);
+  background-color: #faf9fa;
+  transform: translate(0px, 1px);
+  z-index: 1;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+}
+.faq-section {
+  padding: 64px 0;
+  background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__questions-box {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e7e3eb;
+    border-bottom: 3px solid #e7e3eb;
+    border-radius: 24px;
+  }
+  &__body {
+    padding: 24px;
+  }
+  &__wrapper {
+    max-width: 888px;
+    width: 100%;
+  }
+  &__header {
+    background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
+    padding: 24px;
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.1;
+      color: #7645d9;
+    }
+  }
+  &__container {
+    margin-bottom: 24px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__shown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    cursor: pointer;
+  }
+
+  &__question {
+    color: #280d5f;
+    opacity: 0.99;
+    line-height: 1.5;
+    font-weight: 600;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+  &__button {
+    display: flex;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    background-color: transparent;
+    font-size: 16px;
+    gap: 8px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    line-height: 48px;
+    color: #1fc7d4;
+    padding: 0px 24px;
+    svg {
+      fill: #1fc7d4;
+      flex-shrink: 0;
+    }
+    &:hover {
+      opacity: 0.65;
+    }
+    &:active {
+      opacity: 0.85;
+      transform: translateY(1px);
+      box-shadow: none;
+    }
+  }
+  &__hidden {
+    display: none;
+    padding-bottom: 16px;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+      color: #1fc7d4;
+      font-weight: 600;
+      line-height: 1.5;
+      font-size: 16px;
+      svg {
+        flex-shrink: 0;
+        fill: #1fc7d4;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &-text {
+      color: #7a6eaa;
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 16px;
+    }
+  }
+  &__footer-link {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #1fc7d4;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    svg {
+      flex-shrink: 0;
+      fill: #1fc7d4;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 967px) {
+  .nft-searchbox {
+    &__title {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+  .nft-section {
+    &__cards-wrapper {
+      padding: 32px 24px;
+    }
+    &__cards-header {
+      &--arrivals {
+        margin-bottom: 26px;
+      }
+    }
+    &__section-title {
+      &--arrivals {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .nft-searchbox {
+    &__content {
+      flex-direction: column;
+    }
+    &__title {
+      order: 1;
+    }
+    &__searchbar {
+      order: 0;
+      align-self: flex-end;
+      margin-bottom: 32px;
+    }
+  }
+  .nft-section {
+    &__cards-wrapper {
+      padding: 16px 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 369px) {
+  .nft-searchbox {
+    &__content {
+      padding: 0 16px;
+    }
+  }
+  .nft-section {
+    &__cards-wrapper {
+      padding: 16px;
+    }
+    &__cards-container {
+      &--lg {
+        justify-content: unset;
+      }
+    }
+  }
+}
