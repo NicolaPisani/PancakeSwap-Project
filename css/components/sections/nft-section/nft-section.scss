@@ -15,6 +15,7 @@
       line-height: 38px;
       background-color: #eeeaf4;
       max-height: 40px;
+      width: 100%;
       &::placeholder {
         color: #280d5f;
         opacity: 0.67;
@@ -51,7 +52,7 @@
   }
 }
 .nft-section {
-  padding: 14px 48px;
+  padding: 14px 0 48px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,6 +65,11 @@
     flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 64px;
+    &--lg {
+      gap: 24px 16px;
+      margin-bottom: 0;
+      justify-content: space-evenly;
+    }
   }
   &__cards-header {
     display: flex;
@@ -71,12 +77,6 @@
     margin-bottom: 32px;
     align-items: center;
 
-    h2 {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 1.1;
-      color: #280d5f;
-    }
     a {
       display: flex;
       align-items: center;
@@ -107,6 +107,12 @@
       }
     }
   }
+  &__section-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #280d5f;
+  }
 }
 
 .nft-curve-bg {
@@ -123,7 +129,7 @@
   width: 100%;
 }
 .faq-section {
-  padding: 48px 0;
+  padding: 64px 0;
   background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
   display: flex;
   flex-direction: column;
@@ -169,8 +175,11 @@
 
   &__question {
     color: #280d5f;
+    opacity: 0.99;
     line-height: 1.5;
-    font-weight: bold;
+    font-weight: 600;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
     font-size: 16px;
   }
   &__button {
@@ -244,6 +253,70 @@
     }
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 967px) {
+  .nft-searchbox {
+    &__title {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+  .nft-section {
+    &__cards-wrapper {
+      padding: 32px 24px;
+    }
+    &__cards-header {
+      &--arrivals {
+        margin-bottom: 26px;
+      }
+    }
+    &__section-title {
+      &--arrivals {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .nft-searchbox {
+    &__content {
+      flex-direction: column;
+    }
+    &__title {
+      order: 1;
+    }
+    &__searchbar {
+      order: 0;
+      align-self: flex-end;
+      margin-bottom: 32px;
+    }
+  }
+  .nft-section {
+    &__cards-wrapper {
+      padding: 16px 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 369px) {
+  .nft-searchbox {
+    &__content {
+      padding: 0 16px;
+    }
+  }
+  .nft-section {
+    &__cards-wrapper {
+      padding: 16px;
+    }
+    &__cards-container {
+      &--lg {
+        justify-content: unset;
+      }
     }
   }
 }
