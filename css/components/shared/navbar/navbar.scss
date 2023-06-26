@@ -23,7 +23,7 @@
 
     &__menu {
       display: flex;
-      gap: 2rem;
+      gap: 5px;
       margin-left: 2rem;
       text-decoration: none;
     }
@@ -36,13 +36,13 @@
     &btn__link {
       text-decoration: none;
       color: #7a6eaa;
-
       height: 48px;
       display: flex;
       align-items: center;
       width: fit-content;
       border-radius: 16px;
       margin: 4px 0;
+      padding: 0 1rem;
 
       &:hover {
         background-color: #eff4f5;
@@ -52,7 +52,6 @@
       display: none;
       flex-direction: column;
       width: 250px;
-
       background-color: white;
       border-radius: 16px;
       border: 1px solid #e7e3eb;
@@ -90,6 +89,7 @@
   }
   img,
   svg {
+    display: block;
     height: 1.5rem;
   }
 
@@ -120,11 +120,14 @@
   }
 
   &-l__menu .dropdown:nth-child(6) {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem;
     -webkit-box-align: center;
     align-items: center;
     fill: #7a6eaa;
+    &:hover {
+      border-radius: 16px;
+      background-color: #eff4f5;
+    }
   }
 
   &-r {
@@ -449,6 +452,7 @@
             color: #7a6eaa;
             > .icona {
               size: 10px;
+              display: block !important;
             }
           }
           &__content {
