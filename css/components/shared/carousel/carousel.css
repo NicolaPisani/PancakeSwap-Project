@@ -27,15 +27,27 @@
 .carousel__perpetual {
   background: linear-gradient(to bottom, rgb(118, 69, 217) 0%, rgb(69, 42, 122) 100%);
 }
+.carousel__item {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 32px;
+  opacity: 0;
+  transition: opacity 500ms;
+}
 .carousel__item--selected {
+  position: relative;
   display: block;
+  top: 0;
+  left: 0;
   width: 100%;
   border-radius: 32px;
   max-height: max-content;
-}
-.carousel__item {
-  display: none;
-  position: relative;
+  right: unset;
+  bottom: unset;
+  opacity: 1;
 }
 .carousel__bg-container {
   width: 100%;
@@ -63,8 +75,8 @@
   max-height: 100%;
 }
 .carousel__bg--trade {
-  bottom: 18px;
-  right: 20px;
+  bottom: -2px;
+  right: 0px;
   z-index: 0;
 }
 .carousel__bg--trade img {
@@ -73,24 +85,19 @@
 }
 .carousel__v3-moon {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 0px;
+  right: 0px;
   z-index: 1;
 }
 .carousel__v3-moon img {
-  width: 595px;
-  height: 183.91px;
-}
-.carousel__v3-moon img {
   max-width: 595px;
-  display: block;
 }
 .carousel__staking-coin {
   position: absolute;
 }
 .carousel__staking-coin--center {
-  top: 20px;
-  right: 410px;
+  top: 0px;
+  right: 390px;
 }
 .carousel__staking-coin--center img {
   max-width: 140px;
@@ -100,8 +107,8 @@
   position: absolute;
   overflow: hidden;
   border-bottom-right-radius: 32px;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0px;
+  right: 0px;
 }
 .carousel__staking-coin--right img {
   max-width: 61px;
@@ -111,8 +118,8 @@
   position: absolute;
 }
 .carousel__animated-image--top {
-  top: -38px;
-  right: 373px;
+  top: -58px;
+  right: 353px;
   animation: 3.5s ease-in-out 0s infinite normal none running astronaut;
 }
 .carousel__animated-image--top img {
@@ -120,8 +127,8 @@
   display: block;
 }
 .carousel__animated-image--bottom {
-  bottom: 55px;
-  right: 331px;
+  bottom: 35px;
+  right: 311px;
   animation: 2.5s ease-in-out 0s infinite normal none running astronaut;
 }
 .carousel__animated-image--bottom img {
@@ -129,8 +136,8 @@
   display: block;
 }
 .carousel__animated-image--right {
-  top: 22px;
-  right: -2px;
+  top: 2px;
+  right: -22px;
   animation: 5.5s ease-in-out 0s infinite normal none running astronaut;
 }
 .carousel__animated-image--right img {
@@ -138,8 +145,8 @@
   display: block;
 }
 .carousel__animated-image--staking-star-sm {
-  top: 76px;
-  right: 518px;
+  top: 56px;
+  right: 498px;
   animation: 3s ease-in-out 1.2s infinite normal none running starTransparent;
 }
 .carousel__animated-image--staking-star-sm img {
@@ -147,8 +154,8 @@
   max-width: 21px;
 }
 .carousel__animated-image--staking-star-big {
-  top: 105px;
-  right: 412px;
+  top: 85px;
+  right: 392px;
   animation: 3s ease-in-out 0.5s infinite normal none running starTransparent;
 }
 .carousel__animated-image--staking-star-big img {
@@ -156,8 +163,8 @@
   display: block;
 }
 .carousel__animated-image--v3-eth {
-  top: 20px;
-  right: 443px;
+  top: 0px;
+  right: 423px;
   animation: 10.5s ease-in-out 1.5s infinite normal none running eth;
 }
 .carousel__animated-image--v3-eth img {
@@ -165,8 +172,8 @@
   display: block;
 }
 .carousel__animated-image--v3-flag {
-  top: 20px;
-  right: 92px;
+  top: 0px;
+  right: 72px;
   z-index: 0;
   animation: 5.5s ease-in-out 1.5s infinite normal none running flag;
 }
@@ -175,8 +182,8 @@
   display: block;
 }
 .carousel__animated-image--v3-coin {
-  top: 20px;
-  right: 20px;
+  top: 0px;
+  right: 0px;
   animation: 12.5s ease-in-out 0s infinite normal none running coin;
   z-index: 2;
 }
@@ -583,8 +590,6 @@
 }
 .carousel__bunny-image {
   position: absolute;
-  bottom: 0;
-  right: 26px;
 }
 .carousel__bunny-image--protector {
   bottom: 0;
@@ -595,24 +600,24 @@
   display: block;
 }
 .carousel__bunny-image--trade {
-  bottom: 20px;
-  right: 75px;
+  bottom: 0px;
+  right: 55px;
 }
 .carousel__bunny-image--trade img {
   max-width: 220px;
   display: block;
 }
 .carousel__bunny-image--staking {
-  bottom: 20px;
-  right: 46px;
+  bottom: 0px;
+  right: 26px;
 }
 .carousel__bunny-image--staking img {
   max-width: 334px;
   display: block;
 }
 .carousel__bunny-image--v3 {
-  right: 173px;
-  bottom: -11px;
+  right: 153px;
+  bottom: -31px;
   z-index: 2;
 }
 .carousel__bunny-image--v3 img {
@@ -620,16 +625,16 @@
   display: block;
 }
 .carousel__bunny-image--migrate {
-  bottom: 20px;
-  right: 40px;
+  bottom: 0px;
+  right: 20px;
 }
 .carousel__bunny-image--migrate img {
   max-width: 300px;
   display: block;
 }
 .carousel__bunny-image--teams {
-  right: 20px;
-  bottom: 2px;
+  right: 0px;
+  bottom: -18px;
 }
 .carousel__bunny-image--teams img {
   max-width: 930px;
@@ -637,8 +642,8 @@
   display: block;
 }
 .carousel__bunny-image--perpetual {
-  right: 20px;
-  bottom: 20px;
+  right: 0px;
+  bottom: 0px;
 }
 .carousel__bunny-image--perpetual img {
   max-width: 392px;
@@ -738,8 +743,8 @@
     display: none;
   }
   .carousel__bunny-image--trade {
-    bottom: 20px;
-    right: 20px;
+    bottom: 0px;
+    right: 0px;
   }
   .carousel__bunny-image--trade img {
     max-width: 145px;
@@ -749,17 +754,17 @@
     max-width: 159px;
   }
   .carousel__bunny-image--migrate {
-    right: 20px;
+    right: 0px;
   }
   .carousel__bunny-image--migrate img {
     content: url("../../../../assets/images/body-image/farmV3MigrationMobileBunny.png");
     max-width: 200px;
   }
   .carousel__bunny-image--teams {
-    bottom: 5px;
+    bottom: -15px;
   }
   .carousel__bunny-image--perpetual {
-    right: 20px;
+    right: 0px;
   }
   .carousel__bunny-image--perpetual img {
     content: url("../../../../assets/images/body-image/perpetualMobile.webp");
@@ -777,11 +782,11 @@
     display: none;
   }
   .carousel__animated-image--right {
-    right: 140px;
-    top: 0;
+    right: 120px;
+    top: -20px;
   }
   .carousel__nav {
-    bottom: 45px;
+    bottom: 25px;
   }
 }
 @media screen and (max-width: 851px) {
@@ -826,9 +831,12 @@
     width: 219px;
     height: 219px;
   }
+  .carousel__bunny-image--v3 {
+    bottom: -39px;
+  }
   .carousel__animated-image--staking-star-sm {
-    right: 45px;
-    bottom: 46px;
+    right: 25px;
+    bottom: 26px;
     top: unset;
   }
   .carousel__animated-image--staking-star-big {
@@ -838,7 +846,7 @@
     display: none;
   }
   .carousel__staking-coin--center {
-    right: 120px;
+    right: 100px;
   }
   .carousel__gradient-text {
     margin-bottom: 8px;
@@ -853,6 +861,9 @@
   }
   .carousel__v3-text {
     order: 1;
+  }
+  .carousel__v3-moon img {
+    max-width: 570px;
   }
   .carousel__nav {
     bottom: 24px;
@@ -961,7 +972,7 @@
   }
   .carousel__v3-moon {
     top: unset;
-    bottom: 0;
+    bottom: -6px;
     right: 0;
   }
   .carousel__v3-moon img {
