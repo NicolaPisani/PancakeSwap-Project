@@ -133,6 +133,7 @@
   background-color: white;
   border-radius: 24px;
   padding: 8px 8px 8px 40px;
+  width: -moz-fit-content;
   width: fit-content;
   margin-left: 40px;
   font-size: 20px;
@@ -271,7 +272,9 @@
   display: none;
 }
 .prediction-section__charts-container {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .prediction-section__chart--trading-view {
   width: 100%;
@@ -362,6 +365,4 @@
 }
 .carousel-prediction__item:nth-child(4) .card-prediction__arrow-container--up svg {
   fill: #31d0aa;
-}
-
-/*# sourceMappingURL=prediction-section.css.map */
+}/*# sourceMappingURL=prediction-section.css.map */

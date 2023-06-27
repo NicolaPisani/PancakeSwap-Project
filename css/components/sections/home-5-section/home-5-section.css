@@ -16,13 +16,13 @@
   max-width: 62.5rem;
   position: relative;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
   z-index: 1;
   padding: 48px 0px;
 }
 .section-5-wrapper .glass {
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   border-radius: 4.5rem;
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
@@ -112,7 +112,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
   animation: 3s ease-in-out alternate infinite move;
@@ -301,6 +302,4 @@
     min-height: auto;
     padding: 16px 24px;
   }
-}
-
-/*# sourceMappingURL=home-5-section.css.map */
+}/*# sourceMappingURL=home-5-section.css.map */
