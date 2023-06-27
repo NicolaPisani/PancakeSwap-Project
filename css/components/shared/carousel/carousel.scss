@@ -67,15 +67,27 @@
       rgb(69, 42, 122) 100%
     );
   }
-  &__item--selected {
-    display: block;
-    width: 100%;
-    border-radius: 32px;
-    max-height: max-content;
-  }
   &__item {
-    display: none;
-    position: relative;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 32px;
+    opacity: 0;
+    transition: opacity 500ms;
+    &--selected {
+      position: relative;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 32px;
+      max-height: max-content;
+      right: unset;
+      bottom: unset;
+      opacity: 1;
+    }
   }
   &__bg-container {
     width: 100%;
@@ -102,8 +114,8 @@
       max-height: 100%;
     }
     &--trade {
-      bottom: 18px;
-      right: 20px;
+      bottom: -2px;
+      right: 0px;
       z-index: 0;
       img {
         max-width: 100%;
@@ -113,23 +125,18 @@
   }
   &__v3-moon {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
     z-index: 1;
     img {
-      width: 595px;
-      height: 183.91px;
-    }
-    img {
       max-width: 595px;
-      display: block;
     }
   }
   &__staking-coin {
     position: absolute;
     &--center {
-      top: 20px;
-      right: 410px;
+      top: 0px;
+      right: 390px;
       img {
         max-width: 140px;
         display: block;
@@ -139,8 +146,8 @@
       position: absolute;
       overflow: hidden;
       border-bottom-right-radius: 32px;
-      bottom: 20px;
-      right: 20px;
+      bottom: 0px;
+      right: 0px;
       img {
         max-width: 61px;
         display: block;
@@ -150,8 +157,8 @@
   &__animated-image {
     position: absolute;
     &--top {
-      top: -38px;
-      right: 373px;
+      top: -58px;
+      right: 353px;
       animation: 3.5s ease-in-out 0s infinite normal none running astronaut;
       img {
         max-width: 147px;
@@ -159,8 +166,8 @@
       }
     }
     &--bottom {
-      bottom: 55px;
-      right: 331px;
+      bottom: 35px;
+      right: 311px;
       animation: 2.5s ease-in-out 0s infinite normal none running astronaut;
       img {
         max-width: 70px;
@@ -168,8 +175,8 @@
       }
     }
     &--right {
-      top: 22px;
-      right: -2px;
+      top: 2px;
+      right: -22px;
       animation: 5.5s ease-in-out 0s infinite normal none running astronaut;
       img {
         max-width: 72px;
@@ -177,8 +184,8 @@
       }
     }
     &--staking-star-sm {
-      top: 76px;
-      right: 518px;
+      top: 56px;
+      right: 498px;
       animation: 3s ease-in-out 1.2s infinite normal none running
         starTransparent;
       img {
@@ -187,8 +194,8 @@
       }
     }
     &--staking-star-big {
-      top: 105px;
-      right: 412px;
+      top: 85px;
+      right: 392px;
       animation: 3s ease-in-out 0.5s infinite normal none running
         starTransparent;
       img {
@@ -197,8 +204,8 @@
       }
     }
     &--v3-eth {
-      top: 20px;
-      right: 443px;
+      top: 0px;
+      right: 423px;
       animation: 10.5s ease-in-out 1.5s infinite normal none running eth;
       img {
         max-width: 208px;
@@ -206,8 +213,8 @@
       }
     }
     &--v3-flag {
-      top: 20px;
-      right: 92px;
+      top: 0px;
+      right: 72px;
       z-index: 0;
       animation: 5.5s ease-in-out 1.5s infinite normal none running flag;
       img {
@@ -216,8 +223,8 @@
       }
     }
     &--v3-coin {
-      top: 20px;
-      right: 20px;
+      top: 0px;
+      right: 0px;
       animation: 12.5s ease-in-out 0s infinite normal none running coin;
       z-index: 2;
       img {
@@ -671,9 +678,6 @@
   }
   &__bunny-image {
     position: absolute;
-    bottom: 0;
-    right: 26px;
-
     &--protector {
       bottom: 0;
       right: 26px;
@@ -683,24 +687,24 @@
       }
     }
     &--trade {
-      bottom: 20px;
-      right: 75px;
+      bottom: 0px;
+      right: 55px;
       img {
         max-width: 220px;
         display: block;
       }
     }
     &--staking {
-      bottom: 20px;
-      right: 46px;
+      bottom: 0px;
+      right: 26px;
       img {
         max-width: 334px;
         display: block;
       }
     }
     &--v3 {
-      right: 173px;
-      bottom: -11px;
+      right: 153px;
+      bottom: -31px;
       z-index: 2;
       img {
         max-width: 221px;
@@ -708,16 +712,16 @@
       }
     }
     &--migrate {
-      bottom: 20px;
-      right: 40px;
+      bottom: 0px;
+      right: 20px;
       img {
         max-width: 300px;
         display: block;
       }
     }
     &--teams {
-      right: 20px;
-      bottom: 2px;
+      right: 0px;
+      bottom: -18px;
       img {
         max-width: 930px;
         width: 100%;
@@ -725,8 +729,8 @@
       }
     }
     &--perpetual {
-      right: 20px;
-      bottom: 20px;
+      right: 0px;
+      bottom: 0px;
       img {
         max-width: 392px;
         display: block;
@@ -834,8 +838,8 @@
     }
     &__bunny-image {
       &--trade {
-        bottom: 20px;
-        right: 20px;
+        bottom: 0px;
+        right: 0px;
         img {
           max-width: 145px;
         }
@@ -847,17 +851,17 @@
         }
       }
       &--migrate {
-        right: 20px;
+        right: 0px;
         img {
           content: url("../../../../assets/images/body-image/farmV3MigrationMobileBunny.png");
           max-width: 200px;
         }
       }
       &--teams {
-        bottom: 5px;
+        bottom: -15px;
       }
       &--perpetual {
-        right: 20px;
+        right: 0px;
         img {
           content: url("../../../../assets/images/body-image/perpetualMobile.webp");
           width: 221px;
@@ -884,11 +888,11 @@
       display: none;
     }
     &__animated-image--right {
-      right: 140px;
-      top: 0;
+      right: 120px;
+      top: -20px;
     }
     &__nav {
-      bottom: 45px;
+      bottom: 25px;
     }
   }
 }
@@ -945,11 +949,14 @@
           height: 219px;
         }
       }
+      &--v3 {
+        bottom: -39px;
+      }
     }
     &__animated-image {
       &--staking-star-sm {
-        right: 45px;
-        bottom: 46px;
+        right: 25px;
+        bottom: 26px;
         top: unset;
       }
       &--staking-star-big {
@@ -960,7 +967,7 @@
       }
     }
     &__staking-coin--center {
-      right: 120px;
+      right: 100px;
     }
     &__gradient-text {
       margin-bottom: 8px;
@@ -975,6 +982,11 @@
     }
     &__v3-text {
       order: 1;
+    }
+    &__v3-moon {
+      img {
+        max-width: 570px;
+      }
     }
     &__nav {
       bottom: 24px;
@@ -1092,7 +1104,7 @@
     }
     &__v3-moon {
       top: unset;
-      bottom: 0;
+      bottom: -6px;
       right: 0;
       img {
         max-width: 232px;
