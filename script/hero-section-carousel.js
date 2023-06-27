@@ -3,7 +3,6 @@ const $items = document.querySelectorAll(".carousel__item");
 const buttonsHTML = Array.from($items, () => {
   return `<button class="carousel__button"></button>`;
 });
-
 $carousel.insertAdjacentHTML(
   "beforeend",
   `
@@ -14,24 +13,6 @@ $carousel.insertAdjacentHTML(
 );
 
 const $buttons = document.querySelectorAll(".carousel__button");
-
-$buttons.forEach((button, i) => {
-  button.addEventListener("click", () => {
-    $items.forEach((item) => {
-      item.classList.remove("carousel__item--selected");
-      item.style.opacity = "0";
-    });
-    $buttons.forEach((button) =>
-      button.classList.remove("carousel__button--active")
-    );
-    currentIndex = i;
-    $items[i].classList.add("carousel__item--selected");
-    $items[i].style.opacity = "1";
-    button.classList.add("carousel__button--active");
-  });
-  $items[0].classList.add("carousel__item--selected");
-  $buttons[0].classList.add("carousel__button--active");
-});
 
 let isDragging = false;
 let dragStartX = 0;
@@ -48,6 +29,7 @@ let currentButton;
 let nextButton;
 let mouseScroll = 0;
 let isScrolling = false;
+let intervalId;
 
 const indexFunction = () => {
   if (currentIndex >= $items.length - 1) {
@@ -73,6 +55,49 @@ const indexFunction = () => {
     nextButton = $buttons[currentIndex + 1];
   }
 };
+
+const scrollAuto = () => {
+  indexFunction();
+  if (currentIndex >= $items.length - 1) {
+    currentIndex = 0;
+  } else {
+    currentIndex += 1;
+  }
+  currentButton.classList.remove("carousel__button--active");
+  currentSlide.classList.remove("carousel__item--selected");
+  currentSlide.style.opacity = "0";
+
+  currentButton = $buttons[currentIndex];
+  currentSlide = $items[currentIndex];
+
+  currentButton.classList.add("carousel__button--active");
+  currentSlide.classList.add("carousel__item--selected");
+  currentSlide.style.opacity = "1";
+};
+
+const startAuto = () => {
+  intervalId = setInterval(scrollAuto, 4000);
+};
+
+$buttons.forEach((button, i) => {
+  button.addEventListener("click", () => {
+    $items.forEach((item) => {
+      item.classList.remove("carousel__item--selected");
+      item.style.opacity = "0";
+    });
+    $buttons.forEach((button) =>
+      button.classList.remove("carousel__button--active")
+    );
+    currentIndex = i;
+    $items[i].classList.add("carousel__item--selected");
+    $items[i].style.opacity = "1";
+    button.classList.add("carousel__button--active");
+  });
+  $items[0].classList.add("carousel__item--selected");
+  $buttons[0].classList.add("carousel__button--active");
+});
+
+startAuto();
 
 const handleMouseDown = (event) => {
   event.preventDefault();
