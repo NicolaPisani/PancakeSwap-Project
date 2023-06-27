@@ -1301,8 +1301,8 @@
       </div>
       <div class="crypto-section__statistics">
         <div class="crypto-section__title">
-          <p>Top <span>Farms</span></p>
-          <button>
+          <p>Top <span id="title">Farms</span></p>
+          <button class="crypto-section__btn">
             <svg
               viewBox="0 0 24 25"
               height="24px"
@@ -1318,57 +1318,57 @@
           </button>
         </div>
         <div class="crypto-section__bottom">
-          <div class="crypto-section__content crypto-section__content--farm">
+          <div class="crypto-section__content crypto-section__content--active">
             <div class="crypto-section__item crypto-section__item--first">
               <p class="crypto-section__item-name">PLAY-USDT LP v3</p>
-              <p class="crypto-section__item-percentage">294.151%</p>
+              <p class="crypto-section__item-percentage">294.151</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item">
               <p class="crypto-section__item-name">unshETH-USH LP v3</p>
-              <p class="crypto-section__item-percentage">232.912%</p>
+              <p class="crypto-section__item-percentage">232.912</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item crypto-section__item--width">
               <p class="crypto-section__item-name">CGPT-BUSD LP v3</p>
-              <p class="crypto-section__item-percentage">199.727%</p>
+              <p class="crypto-section__item-percentage">199.727</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item">
               <p class="crypto-section__item-name">AXL-USDT LP v3</p>
-              <p class="crypto-section__item-percentage">159.726%</p>
+              <p class="crypto-section__item-percentage">159.726</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item">
               <p class="crypto-section__item-name">AOG-BUSD LP v3</p>
-              <p class="crypto-section__item-percentage">146.543%</p>
+              <p class="crypto-section__item-percentage">146.543</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
           </div>
-          <div class="crypto-section__content crypto-section__content--syrup">
+          <div class="crypto-section__content">
             <div class="crypto-section__item crypto-section__item--first">
               <p class="crypto-section__item-name">Stake CAKE</p>
-              <p class="crypto-section__item-percentage">17.389%</p>
+              <p class="crypto-section__item-percentage">17.389</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item">
               <p class="crypto-section__item-name">Stake CAKE - Earn AXL</p>
-              <p class="crypto-section__item-percentage">46.673%</p>
+              <p class="crypto-section__item-percentage">46.673</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item crypto-section__item--width">
               <p class="crypto-section__item-name">Stake HAY - Earn CAKE</p>
-              <p class="crypto-section__item-percentage">30.135%</p>
+              <p class="crypto-section__item-percentage">30.135</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item">
               <p class="crypto-section__item-name">Stake CAKE - Earn PSTAKE</p>
-              <p class="crypto-section__item-percentage">7.818%</p>
+              <p class="crypto-section__item-percentage">7.818</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
             <div class="crypto-section__item">
               <p class="crypto-section__item-name">Stake CAKE - Earn UNW</p>
-              <p class="crypto-section__item-percentage">7.760%</p>
+              <p class="crypto-section__item-percentage">7.760</p>
               <p class="crypto-section__item-interest">APR</p>
             </div>
           </div>
@@ -1544,7 +1544,7 @@
                 </div>
                 <div class="card-prizes__text">
                   <p>Lottery</p>
-                  <p>$46,269</p>
+                  <p class="count">46,269</p>
                   <p>in CAKE prizes this round</p>
                   <p>Buy tickets with CAKE, win CAKE if your numbers match</p>
                 </div>
@@ -2661,5 +2661,7 @@
       </div>
     </footer>
     <script src="./script/hero-section-carousel.js"></script>
+    <script src="./script/crypto-switch.js"></script>
+    <script src="./script/counter.js"></script>
   </body>
 </html>

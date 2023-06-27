@@ -127,25 +127,42 @@
   font-family: Kanit, sans-serif;
   color: #7645d9;
 }
-.crypto-section__title button {
+.crypto-section__btn {
   border: none;
+  cursor: pointer;
   background-color: transparent;
   padding: 2px 12px;
 }
-.crypto-section__title button svg {
+.crypto-section__btn svg {
   fill: #7a6eaa;
   display: block;
 }
 .crypto-section__bottom {
   display: flex;
   flex-direction: column;
+  position: relative;
+  min-height: 80px;
+  overflow: hidden;
 }
 .crypto-section__content {
   display: flex;
   min-height: 80px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 500ms;
 }
-.crypto-section__content--syrup {
-  display: none;
+.crypto-section__content--active {
+  position: absolute;
+  opacity: 1;
+  transition: 500ms;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
 }
 .crypto-section__item {
   flex: 1 1 25%;
