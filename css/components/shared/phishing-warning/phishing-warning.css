@@ -55,4 +55,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}/*# sourceMappingURL=phishing-warning.css.map */
+}
+
+@media screen and (max-width: 851px) {
+  .phishing-popup__content {
+    padding: 12px;
+    background: linear-gradient(0deg, rgba(39, 38, 44, 0.4), rgba(39, 38, 44, 0.4)), linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+  }
+  .phishing-popup__main {
+    width: unset;
+  }
+  .phishing-popup__main img {
+    display: none;
+  }
+  .phishing-popup__text {
+    width: 100%;
+    height: 100%;
+    background-color: unset;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 851px) {
+  .phishing-popup {
+    max-height: 84px;
+    height: 84px;
+  }
+}
+
+/*# sourceMappingURL=phishing-warning.css.map */

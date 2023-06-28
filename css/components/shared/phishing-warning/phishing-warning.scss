@@ -61,3 +61,36 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 851px) {
+  .phishing-popup {
+    &__content {
+      padding: 12px;
+      background: linear-gradient(
+          0deg,
+          rgba(39, 38, 44, 0.4),
+          rgba(39, 38, 44, 0.4)
+        ),
+        linear-gradient(rgb(128, 81, 214) 0%, rgb(73, 34, 134) 100%);
+    }
+    &__main {
+      width: unset;
+      img {
+        display: none;
+      }
+    }
+    &__text {
+      width: 100%;
+      height: 100%;
+      background-color: unset;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 851px) {
+  .phishing-popup {
+    max-height: 84px;
+    height: 84px;
+  }
+}

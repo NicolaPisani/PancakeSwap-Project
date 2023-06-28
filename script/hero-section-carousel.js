@@ -17,7 +17,7 @@ const $buttons = document.querySelectorAll(".carousel__button");
 let isDragging = false;
 let dragStartX = 0;
 let dragDistance = 0;
-let maxWidth = $carousel.clientWidth;
+let maxWidth;
 let currentIndex = 0;
 let prevSlide;
 let currentSlide;
@@ -30,6 +30,7 @@ let nextButton;
 let mouseScroll = 0;
 let isScrolling = false;
 let intervalId;
+let startTouchX = null;
 
 const indexFunction = () => {
   if (currentIndex >= $items.length - 1) {
@@ -93,6 +94,19 @@ $buttons.forEach((button, i) => {
     $items[i].style.opacity = "1";
     button.classList.add("carousel__button--active");
   });
+  button.addEventListener("touchstart", () => {
+    $items.forEach((item) => {
+      item.classList.remove("carousel__item--selected");
+      item.style.opacity = "0";
+    });
+    $buttons.forEach((button) =>
+      button.classList.remove("carousel__button--active")
+    );
+    currentIndex = i;
+    $items[i].classList.add("carousel__item--selected");
+    $items[i].style.opacity = "1";
+    button.classList.add("carousel__button--active");
+  });
   $items[0].classList.add("carousel__item--selected");
   $buttons[0].classList.add("carousel__button--active");
 });
@@ -110,10 +124,23 @@ const handleMouseDown = (event) => {
   dragStartX = event.clientX;
 };
 
+const handleTouchStart = (event) => {
+  event.preventDefault();
+  if (event.target.classList.contains("carousel__button")) {
+    return;
+  }
+  indexFunction();
+  isDragging = true;
+  isScrolling = true;
+  dragStartX = event.changedTouches[0].clientX;
+  startTouchX = event.touches[0].clientX;
+};
+
 const handleMouseMove = (event) => {
   event.preventDefault();
   const dragCurrentX = event.clientX;
   dragDistance = dragCurrentX - dragStartX;
+  let maxWidth = $carousel.clientWidth;
 
   if (isDragging && isScrolling) {
     if (dragDistance <= 0) {
@@ -132,6 +159,47 @@ const handleMouseMove = (event) => {
       }
     } else {
       if (event.movementX >= 0) {
+        nextSlide.style.opacity = 0;
+        currentSlide.style.opacity = `${(opacitySelected -= 0.00086805555)}`;
+        prevSlide.style.opacity = `${(opacityNonSelected += 0.00086805555)}`;
+        if (dragDistance >= maxWidth / 2) {
+          scroll(1);
+          isScrolling = false;
+        }
+      } else {
+        nextSlide.style.opacity = 0;
+        currentSlide.style.opacity = `${(opacitySelected += 0.00086805555)}`;
+        prevSlide.style.opacity = `${(opacityNonSelected -= 0.00086805555)}`;
+      }
+    }
+  }
+};
+
+const handleTouchMove = (event) => {
+  event.preventDefault();
+  const dragCurrentX = event.changedTouches[0].clientX;
+  dragDistance = dragCurrentX - dragStartX;
+  const touch = event.touches[0];
+  const currentTouchX = touch.clientX;
+  let maxWidth = $carousel.clientWidth;
+  console.log(maxWidth);
+  if (isDragging && isScrolling) {
+    if (dragDistance <= 0) {
+      if (currentTouchX < startTouchX) {
+        prevSlide.style.opacity = 0;
+        currentSlide.style.opacity = `${(opacitySelected -= 0.00086805555)}`;
+        nextSlide.style.opacity = `${(opacityNonSelected += 0.00086805555)}`;
+        if (dragDistance <= -maxWidth / 2) {
+          scroll(-1);
+          isScrolling = false;
+        }
+      } else {
+        prevSlide.style.opacity = 0;
+        currentSlide.style.opacity = `${(opacitySelected += 0.00086805555)}`;
+        nextSlide.style.opacity = `${(opacityNonSelected -= 0.00086805555)}`;
+      }
+    } else {
+      if (currentTouchX > startTouchX) {
         nextSlide.style.opacity = 0;
         currentSlide.style.opacity = `${(opacitySelected -= 0.00086805555)}`;
         prevSlide.style.opacity = `${(opacityNonSelected += 0.00086805555)}`;
@@ -200,3 +268,6 @@ $carousel.addEventListener("mousedown", handleMouseDown);
 $carousel.addEventListener("mousemove", handleMouseMove);
 $carousel.addEventListener("mouseup", handleMouseUp);
 $carousel.addEventListener("mouseleave", handleMouseUp);
+$carousel.addEventListener("touchstart", handleTouchStart);
+$carousel.addEventListener("touchmove", handleTouchMove);
+$carousel.addEventListener("touchend", handleMouseUp);
