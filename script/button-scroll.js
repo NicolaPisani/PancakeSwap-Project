@@ -1,9 +1,7 @@
 window.addEventListener("scroll", () => {
   const $buttonDiv = document.querySelector(".scroll-up");
   const $button = document.querySelector(".scroll-up__button");
-
   let maxHeight = 600;
-  console.log($buttonDiv);
   if (window.pageYOffset >= maxHeight) {
     $buttonDiv.style.display = "block"; // Mostra l'elemento
   } else {

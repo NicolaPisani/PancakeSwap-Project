@@ -3,7 +3,6 @@ let prevScrollPos = window.scrollY;
 
 function handleScroll() {
   const currentScrollPos = window.scrollY;
-  console.log(currentScrollPos);
 
   if (prevScrollPos > currentScrollPos) {
     navbar.style.top = "0";
