@@ -182,7 +182,6 @@ const handleTouchMove = (event) => {
   const touch = event.touches[0];
   const currentTouchX = touch.clientX;
   let maxWidth = $carousel.clientWidth;
-  console.log(maxWidth);
   if (isDragging && isScrolling) {
     if (dragDistance <= 0) {
       if (currentTouchX < startTouchX) {

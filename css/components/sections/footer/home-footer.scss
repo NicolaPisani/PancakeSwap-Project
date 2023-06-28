@@ -11,14 +11,24 @@
 .flex-container {
   padding: 56px 40px 32px;
   background-color: rgb(39, 38, 44);
+  display: flex;
   justify-content: center;
 }
 .small-container {
   height: auto;
+  max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: rgb(39, 38, 44);
+  &__hidden-logo {
+    margin-bottom: 24px;
+    line-height: 1;
+    display: none;
+    svg {
+      fill: white;
+    }
+  }
 }
 .list-container {
   display: flex;
@@ -37,6 +47,8 @@
 
   .footer-title {
     color: #9a6aff;
+    font-weight: 600;
+    line-height: 1;
   }
   .contact-link {
     color: rgb(255, 178, 55);
@@ -54,7 +66,7 @@ ul {
 .svg-container {
   display: flex;
   order: 2;
-  padding-bottom: 32px;
+  padding-bottom: 34px;
   margin-bottom: 32px;
   border-bottom: 1px solid rgb(56, 50, 65);
 }
@@ -66,7 +78,9 @@ ul {
   line-height: 1;
   vertical-align: baseline;
   position: relative;
-  margin-bottom: -10px;
+  display: flex;
+  align-items: center;
+  min-height: 22px;
 }
 .telegram-dropdown:hover .language-menu {
   opacity: 1;
@@ -257,10 +271,10 @@ ul {
   align-items: center;
   flex-direction: row;
   order: 2;
+  gap: 20px;
 }
 .bunny-money-block {
   display: flex;
-  margin-right: 8px;
   a {
     text-decoration: none;
   }
@@ -291,7 +305,6 @@ ul {
   -webkit-box-align: center;
   align-items: center;
   border: 0px;
-  margin-left: 0.5rem;
   flex-shrink: 0;
   border-radius: 16px;
   box-shadow: rgb(14 14 44 / 40%) 0px -1px 0px 0px inset;
@@ -312,19 +325,65 @@ ul {
   align-self: center;
   fill: rgb(255, 255, 255);
   text-decoration: none;
+  gap: 8px;
   &:hover {
     opacity: 0.65;
     transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
   }
 }
-// @media screen and (max-width: 1208px) {
-//   .footer {
-//     padding: 2rem;
-//     margin-bottom: 0px;
-//   }
-// }
-// @media screen and (min-width: 417px) {
-//   .footer {
-//     border-bottom: none;
-//   }
-// }
+
+@media screen and (max-width: 851px) {
+  .list-container {
+    margin-bottom: 76px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .flex-container {
+    padding: 40px 16px;
+    margin-bottom: 44px;
+  }
+  .small-container {
+    &__hidden-logo {
+      display: block;
+      order: 0;
+    }
+  }
+  .bottom-container {
+    order: 1;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid #383241;
+    border-bottom: 1px solid #383241;
+    margin-bottom: 24px;
+  }
+  .left-bottom-container {
+    order: 1;
+  }
+  .right-bottom-container {
+    order: 0;
+  }
+  .list-container {
+    flex-direction: column;
+    order: 2;
+    gap: 40px;
+    margin-bottom: 82px;
+  }
+  .bunny-logo-main {
+    display: none;
+  }
+  .telegram-dropdown {
+    svg {
+      margin-right: 16px;
+    }
+  }
+  .svg-container {
+    margin: 0;
+    order: 3;
+    padding-bottom: 42px;
+    a {
+      margin-right: 16px;
+    }
+  }
+}
