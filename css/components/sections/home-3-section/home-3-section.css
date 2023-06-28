@@ -49,6 +49,7 @@
   color: #1fc7d4;
   text-decoration: none;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: 600;
 }
@@ -114,6 +115,27 @@
   z-index: 2;
 }
 
+.moving-cryptos {
+  --move-duration: 1.5s;
+  max-width: 26rem;
+  max-height: 26rem;
+  animation: 3s ease-in-out 1.66s infinite normal none running stonks;
+}
+
+.moving-cryptos > :nth-child(1) {
+  --move-amount-x: 0%;
+}
+
+.moving-cryptos > :nth-child(2) {
+  --move-amount-x: 1%;
+}
+
+.moving-graphs {
+  --move-duration: 1.5s;
+  max-width: 26rem;
+  max-height: 26rem;
+}
+
 @media screen and (max-width: 851px) {
   .section-3-wrapper {
     flex-direction: column;
@@ -139,6 +161,4 @@
   .section-3-wrapper {
     padding: 16px;
   }
-}
-
-/*# sourceMappingURL=home-3-section.css.map */
+}/*# sourceMappingURL=home-3-section.css.map */

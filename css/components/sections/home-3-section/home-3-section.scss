@@ -128,6 +128,25 @@
   }
 }
 
+      .moving-cryptos {
+    --move-duration: 1.5s;
+    max-width: 26rem;
+    max-height: 26rem;
+    animation: 3s ease-in-out 1.66s infinite normal none running stonks;
+}
+.moving-cryptos > :nth-child(1) {
+            --move-amount-x: 0%;
+        }
+        .moving-cryptos > :nth-child(2) {
+            --move-amount-x: 1%;
+        }
+
+        .moving-graphs {
+            --move-duration: 1.5s;
+            max-width: 26rem;
+            max-height: 26rem;
+        }
+
 @media screen and (max-width: 851px) {
   .section-3-wrapper {
     flex-direction: column;
