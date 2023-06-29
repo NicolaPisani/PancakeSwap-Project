@@ -17,6 +17,8 @@
   overflow: hidden;
   background: linear-gradient(180deg, #6fb6f1 0%, #eaf2f6 100%);
   z-index: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .section-5-wrapper {
   margin: 0 auto;
@@ -26,15 +28,14 @@
   -webkit-box-align: center;
   align-items: center;
   z-index: 1;
-  padding: 48px 0px;
 }
 .section-5-wrapper .glass {
   backdrop-filter: blur(12px);
   border-radius: 4.5rem;
   width: 100%;
   background: rgba(255, 255, 255, 0.6);
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem;
   gap: 2rem;
   max-width: 968px;
   display: flex;
@@ -273,42 +274,40 @@
 }
 
 @media screen and (min-width: 968px) {
-  .glass {
-    margin-right: 48px;
-    margin-left: 48px;
+  .section-5-wrapper {
+    padding: 48px;
   }
 }
 @media screen and (max-width: 851px) {
-  .glass {
+  .section-5-wrapper {
     padding: 40px;
   }
-  .card-prizes-container {
+  .section-5-wrapper .small-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  .section-5-wrapper .card-prizes-container {
     display: flex;
     flex-direction: column;
     max-width: 280px;
     margin: 0 auto;
   }
-  .card-prizes--orange, .card-prizes--purple {
+  .section-5-wrapper .card-prizes--orange, .section-5-wrapper .card-prizes--purple {
     max-width: 275px;
     position: static;
     transform: rotate(0);
   }
-  .card-prizes--orange {
+  .section-5-wrapper .card-prizes--orange {
     margin-bottom: 32px;
   }
 }
-@media screen and (max-width: 576px) {
-  .glass {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin: 0;
-    width: 100%;
-  }
-}
 @media screen and (min-width: 370px) {
-  .glass {
-    min-height: auto;
-    padding: 16px 24px;
+  .section-5-wrapper {
+    padding-right: 24px;
+    padding-left: 24px;
   }
 }
 
