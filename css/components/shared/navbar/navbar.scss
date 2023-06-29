@@ -10,7 +10,7 @@
   position: relative;
   text-decoration: none;
   color: var(--colors-textSubtle);
-  z-index: 999;
+  z-index: 99;
   transition: 200ms;
   transition-timing-function: ease-in-out;
   position: sticky;
@@ -162,6 +162,7 @@
       align-items: center;
       gap: 0.5rem;
       color: var(--colors-textSubtle);
+      cursor: pointer;
     }
     span {
       align-items: center;

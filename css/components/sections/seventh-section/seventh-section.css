@@ -6,6 +6,7 @@
   padding: 48px 0;
   width: 100%;
   background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  overflow: hidden;
 }
 .wallet-section__wrapper {
   max-width: 968px;
@@ -120,6 +121,7 @@
 .wallet-section__btn {
   text-decoration: none;
   font-size: 16px;
+  cursor: pointer;
   font-weight: 600;
 }
 .wallet-section__btn--learn {
