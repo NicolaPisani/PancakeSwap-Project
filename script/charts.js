@@ -2446,6 +2446,9 @@ function minHeight() {
   if (thirdColumn < 0.50002) {
     let lockBottom = `2.00001fr 24px 0fr`;
     $content.style.gridTemplateRows = lockBottom;
+    isMouseDragging = false;
+    document.exitPointerLock();
+
     if ($chart.hasChildNodes()) {
       $chart.classList.remove("open");
       $chart.removeChild($chart.children[0]);
@@ -2459,5 +2462,6 @@ $resizeBar.addEventListener("mousedown", () => {
     isMouseDragging = true;
     $resizeBar.addEventListener("mousemove", onDrag);
     $resizeBar.addEventListener("mouseup", mouseUp);
+    $resizeBar.addEventListener("mouseleave", mouseUp);
   }
 });
