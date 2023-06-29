@@ -108,6 +108,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  margin: 0;
 }
 .popup__checkbox span svg {
   flex-shrink: 0;
@@ -157,6 +158,10 @@
   color: var(--colors-primary);
   margin-top: 4px;
   margin-right: 4px;
+}
+.popup__option--active {
+  background-color: var(--colors-primary);
+  color: var(--colors-invertedContrast);
 }
 .popup__option:hover {
   opacity: 0.65;
