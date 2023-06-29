@@ -7,7 +7,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
   align-items: center;
-  position: relative;
   text-decoration: none;
   color: var(--colors-textSubtle);
   z-index: 99;
@@ -362,19 +361,6 @@
     transform: scale(1, 1);
   }
 }
-@keyframes blink-bunny-logo-small {
-  0% {
-    transform: translate(98.692997px, 117.896004px) scale(1, 1);
-    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  }
-  50% {
-    transform: translate(98.692997px, 117.896004px) scale(1, 0);
-    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  }
-  100% {
-    transform: translate(98.692997px, 117.896004px) scale(1, 1);
-  }
-}
 .bunny-logo-main {
   fill: var(--colors-text);
   width: 160px;
@@ -434,9 +420,6 @@
     justify-content: space-around;
     max-height: 50px;
   }
-  .navbar-l__menu .bunny-logo-small:hover .eye {
-    animation: blink-bunny-logo-small 500ms linear 1 normal forwards;
-  }
   .navbar-l__menu .dropdown {
     position: relative;
     height: 100%;
@@ -487,10 +470,16 @@
     width: 21px;
   }
   .navbar-l__menu .dropdown__content {
-    transform: translate(0, -3rem);
-    bottom: calc(2rem + 1px);
-    width: 100vw;
+    bottom: 112%;
+  }
+  .navbar-l__menu .dropdown__content-left {
     left: 0;
+  }
+  .navbar-l__menu .dropdown__content-right, .navbar-l__menu .dropdown__content-other {
+    right: 0;
+  }
+  .navbar-l__menu .dropdown__content-other {
+    bottom: 140%;
   }
   .sx-block,
   .lg-block {
