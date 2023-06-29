@@ -96,10 +96,16 @@ if (state.theme === "dark") {
   $buttonContainer.forEach((button) => {
     button.innerHTML = moonSvg;
   });
+  $input.forEach((input) => {
+    input.checked = true;
+  });
   $htmlElement.setAttribute("data-theme", "dark");
 } else {
   $buttonContainer.forEach((button) => {
     button.innerHTML = sunSvg;
+  });
+  $input.forEach((input) => {
+    input.checked = false;
   });
   $htmlElement.setAttribute("data-theme", "light");
 }

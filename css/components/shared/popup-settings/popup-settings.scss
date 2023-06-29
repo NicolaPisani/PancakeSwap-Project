@@ -109,6 +109,7 @@
       display: flex;
       align-items: center;
       gap: 4px;
+      margin: 0;
       svg {
         flex-shrink: 0;
         fill: var(--colors-textSubtle);
@@ -159,6 +160,10 @@
     color: var(--colors-primary);
     margin-top: 4px;
     margin-right: 4px;
+    &--active {
+      background-color: var(--colors-primary);
+      color: var(--colors-invertedContrast);
+    }
     &:hover {
       opacity: 0.65;
     }
