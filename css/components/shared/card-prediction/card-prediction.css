@@ -303,7 +303,7 @@
 }
 .card-prediction__arrow-container svg {
   display: block;
-  fill: #eff4f5;
+  fill: var(--colors-tertiary);
 }
 .card-prediction__payout-container {
   position: absolute;
@@ -557,7 +557,7 @@
 }
 .card-prediction__progress-bar--outer {
   position: relative;
-  background-color: #eeeaf4;
+  background-color: var(--colors-input);
 }
 .card-prediction__progress-bar--inner {
   position: absolute;

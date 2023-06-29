@@ -310,7 +310,7 @@
     }
     svg {
       display: block;
-      fill: #eff4f5;
+      fill: var(--colors-tertiary);
     }
   }
 
@@ -572,7 +572,7 @@
     height: 8px;
     &--outer {
       position: relative;
-      background-color: #eeeaf4;
+      background-color: var(--colors-input);
     }
     &--inner {
       position: absolute;
