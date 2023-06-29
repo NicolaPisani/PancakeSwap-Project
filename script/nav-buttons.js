@@ -15,6 +15,11 @@ $walletButton.forEach((button) => {
     $body.style.overflow = "hidden";
     $walletContainer.style.display = "initial";
   });
+  button.addEventListener("touchstart", () => {
+    $modalsContainer.style.display = "flex";
+    $body.style.overflow = "hidden";
+    $walletContainer.style.display = "initial";
+  });
 });
 
 $infoPopup.addEventListener("click", () => {
