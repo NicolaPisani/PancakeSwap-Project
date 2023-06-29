@@ -3,11 +3,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--colors-textSubtle); //var(--colors-textSubtle)
+  background: var(--colors-textSubtle);
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px var(--colors-input); //var(--colors-input)
+  box-shadow: inset 0 0 5px var(--colors-input);
   border-radius: 10px;
 }
