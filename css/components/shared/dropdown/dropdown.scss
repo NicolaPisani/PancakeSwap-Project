@@ -3,7 +3,7 @@
   height: fit-content;
   .dropbtn {
     text-decoration: none;
-    color: #7a6eaa;
+    color: var(--colors-textSubtle);
     padding: 0 16px;
     height: 48px;
     display: flex;
@@ -12,7 +12,7 @@
     border-radius: 16px;
     margin: 4px 0;
     &:hover {
-      background-color: #eff4f5;
+      background-color: var(--colors-tertiary);
     }
   }
   &__content {
@@ -20,14 +20,14 @@
     flex-direction: column;
     width: 175px; //da cambiare in base alle esigenze
     padding: 4px 0;
-    background-color: white;
+    background-color: var(--colors-backgroundAlt);
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid #e7e3eb;
+    border: 1px solid var(--colors-cardBorder);
     a {
       padding: 12px 16px;
       text-decoration: none;
-      color: #7a6eaa;
+      color: var(--colors-textSubtle);
 
       &:hover {
         background-color: #eff4f5;

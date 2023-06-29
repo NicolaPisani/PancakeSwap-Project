@@ -119,7 +119,7 @@
     justify-content: center;
     height: 48px;
     gap: 4px;
-    color: white;
+    color: var(--colors-invertedContrast);
     background-color: #1fc7d4;
     border-radius: 16px;
     box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
@@ -131,7 +131,7 @@
       opacity: 0.65;
     }
     svg {
-      fill: white;
+      color: var(--colors-invertedContrast);
     }
   }
 }

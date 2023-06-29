@@ -1,5 +1,5 @@
 .crypto-section {
-  background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
+  background: var(--colors-gradientCardHeader);
   display: flex;
   flex-direction: column;
   padding-bottom: 48px;
@@ -13,7 +13,7 @@
   height: 100%;
   max-height: 48px;
   display: block;
-  fill: #faf9fa;
+  fill: var(--colors-background);
   flex-shrink: 0;
 }
 .crypto-section__cta {
@@ -64,17 +64,17 @@
 .crypto-section__right h2 {
   font-size: 40px;
   font-weight: 600;
-  color: #280d5f;
+  color: var(--colors-text);
   line-height: 1.1;
   margin-bottom: 24px;
 }
 .crypto-section__right h2 span {
   font-family: Kanit, sans-serif;
   font-weight: 600;
-  color: #7645d9;
+  color: var(--colors-secondary);
 }
 .crypto-section__right p {
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   margin-bottom: 24px;
 }
 .crypto-section__links {
@@ -86,14 +86,14 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  letter-spacing: 0.03em;
 }
 .crypto-section__links a:first-child {
   background-color: #1fc7d4;
-  color: white;
+  color: var(--colors-invertedContrast);
   padding: 12px 24px;
   border-radius: 16px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  letter-spacing: 0.03em;
 }
 .crypto-section__links a:last-child {
   display: flex;
@@ -121,11 +121,11 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 1.1;
-  color: #280d5f;
+  color: var(--colors-text);
 }
 .crypto-section__title p span {
   font-family: Kanit, sans-serif;
-  color: #7645d9;
+  color: var(--colors-secondary);
 }
 .crypto-section__btn {
   border: none;
@@ -134,7 +134,7 @@
   padding: 2px 12px;
 }
 .crypto-section__btn svg {
-  fill: #7a6eaa;
+  fill: var(--colors-textSubtle);
   display: block;
 }
 .crypto-section__bottom {
@@ -175,13 +175,13 @@
 }
 .crypto-section__item-name {
   font-size: 12px;
-  color: #7645d9;
+  color: var(--colors-secondary);
   font-weight: 600;
   line-height: 1.5;
   margin-bottom: 8px;
 }
 .crypto-section__item-percentage {
-  color: #280d5f;
+  color: var(--colors-text);
   font-size: 16px;
   line-height: 1.1;
   font-weight: 600;
@@ -189,7 +189,7 @@
 .crypto-section__item-interest {
   font-size: 16px;
   font-weight: 400;
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   line-height: 1.5;
 }
 

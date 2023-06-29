@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 100%;
   padding: 48px 0;
-  background-color: #faf9fa;
+  background-color: var(--colors-background);
   gap: 24px;
 }
 .cake-token-section__wrapper {
@@ -27,15 +27,15 @@
 }
 .cake-token-section__text--title h2 {
   line-height: 1.1;
-  color: #280d5f;
+  color: var(--colors-text);
   font-size: 40px;
   font-weight: 600;
 }
 .cake-token-section__text--title h2 span {
-  color: #7645d9;
+  color: var(--colors-secondary);
 }
 .cake-token-section__text--descr {
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
@@ -59,6 +59,15 @@
   padding: 0 24px;
   border-radius: 16px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+  color: var(--colors-invertedContrast);
+}
+.cake-token-section__btn--buy:hover {
+  opacity: 0.65;
+}
+.cake-token-section__btn--buy:active {
+  opacity: 0.85;
+  transform: translateY(1px);
+  box-shadow: none;
 }
 .cake-token-section__btn--learn {
   display: flex;
@@ -121,17 +130,17 @@
   flex: 1 1 25%;
 }
 .cake-token-section__item:nth-child(2), .cake-token-section__item:nth-child(3), .cake-token-section__item:nth-child(5), .cake-token-section__item:nth-child(6) {
-  border-left: 1px solid #d7caec;
+  border-left: 1px solid var(--colors-inputSecondary);
   padding: 0 16px;
 }
 .cake-token-section__item-name {
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   font-size: 16px;
   font-weight: 400;
 }
 .cake-token-section__item-number {
   display: block;
-  color: #280d5f;
+  color: var(--colors-text);
   font-weight: 600;
   line-height: 1.1;
   font-size: 24px;
@@ -224,17 +233,17 @@
   }
   .cake-token-section__item:nth-child(4) {
     order: 1;
-    border-left: 1px solid #d7caec;
+    border-left: 1px solidvar(--colors-inputSecondary);
     padding: 0 16px;
   }
   .cake-token-section__item:nth-child(5) {
     order: 3;
-    border-left: 1px solid #d7caec;
+    border-left: 1px solid var(--colors-inputSecondary);
     padding: 0 16px;
   }
   .cake-token-section__item:last-child {
     order: 5;
-    border-left: 1px solid #d7caec;
+    border-left: 1px solid var(--colors-inputSecondary);
     padding: 0 16px;
   }
 }
@@ -273,7 +282,7 @@
     border-left: none;
     padding: 0;
     padding-bottom: 16px;
-    border-bottom: 1px solid #d7caec;
+    border-bottom: 1px solid var(--colors-inputSecondary);
   }
 }
 

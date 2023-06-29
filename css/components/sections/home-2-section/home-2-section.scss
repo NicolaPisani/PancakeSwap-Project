@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 48px 0;
-  background: linear-gradient(180deg, #fff 22%, #d7caec 100%);
+  background: var(--colors-gradient-section-2);
   &__wrapper {
     max-width: 1200px;
     display: flex;
@@ -35,7 +35,7 @@
         font-size: 40px;
         font-weight: 600;
         text-align: center;
-        color: #280d5f;
+        color: var(--colors-text);
         line-height: 1.1;
         &--bottom {
           margin-bottom: 32px;
@@ -43,7 +43,7 @@
       }
 
       .paragraph {
-        color: #7a6eaa;
+        color: var(--colors-textSubtle);
         font-weight: 400;
         line-height: 1.5;
         margin-bottom: 20px;
@@ -55,7 +55,7 @@
       .paragraph-bold {
         font-size: 16px;
         text-align: center;
-        color: #7a6eaa;
+        color: var(--colors-textSubtle);
         font-weight: 600;
         margin-bottom: 16px;
       }

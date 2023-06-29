@@ -21,7 +21,7 @@
     padding: 0px 14px;
     background-color: #1fc7d4;
     svg {
-      fill: white;
+      fill: var(--colors-invertedContrast);
     }
     &:hover {
       opacity: 0.65;

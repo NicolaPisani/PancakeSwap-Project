@@ -2,13 +2,13 @@
   max-width: 402px;
   border-radius: 32px;
   overflow: hidden;
-  border: 1px solid #e7e3eb;
+  border: 1px solid var(--colors-cardBorder);
   &__header {
     padding: 24px;
     background: linear-gradient(139.73deg, #e5fdff, #f3efff);
-    border-bottom: 1px solid #e7e3eb;
+    border-bottom: 1px solid var(--colors-cardBorder);
     p {
-      color: #280d5f;
+      color: var(--colors-text);
       font-size: 24px;
       font-weight: 600;
       line-height: 1.1;
@@ -30,7 +30,7 @@
       font-weight: 600;
     }
     &--details {
-      color: #7a6eaa;
+      color: var(--colors-textSubtle);
       line-height: 1.5;
     }
   }
@@ -44,7 +44,7 @@
       flex-shrink: 0;
       margin: 11px 3px 0px 4px;
       border-radius: 8px;
-      background-color: #e7e3eb;
+      background-color: var(--colors-cardBorder);
       transition: background-color 0.2s ease-in-out 0s;
       cursor: pointer;
       position: relative;
@@ -66,7 +66,7 @@
         border-color: white;
       }
       &:hover {
-        box-shadow: 0px 0px 0px 1px #7645d9,
+        box-shadow: 0px 0px 0px 1px var(--colors-secondary),
           0px 0px 0px 4px rgba(118, 69, 217, 0.6);
       }
       &:checked {
@@ -74,7 +74,7 @@
       }
     }
     span {
-      color: #280d5f;
+      color: var(--colors-text);
       font-size: 16px;
       margin-left: 8px;
     }
@@ -87,7 +87,7 @@
     font-size: 16px;
     font-weight: 600;
     color: white;
-    background-color: #e9eaeb;
+    background-color: var(--colors-backgroundDisabled);
     color: #bdc2c4;
     letter-spacing: 0.48px;
     cursor: not-allowed;

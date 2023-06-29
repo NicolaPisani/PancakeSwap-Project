@@ -127,7 +127,7 @@
   width: 48px;
   border-radius: 10px 10px;
   border: none;
-  background-color: #7a6eaa;
+  background-color: var(--colors-textSubtle);
   fill: white;
 }
 .terza-fila-button #btn-question-mark {
@@ -135,7 +135,7 @@
   width: 48px;
   border-radius: 10px 10px;
   border: none;
-  background-color: #7a6eaa;
+  background-color: var(--colors-textSubtle);
   fill: white;
 }
 .terza-fila-button #btn-arrow-up {

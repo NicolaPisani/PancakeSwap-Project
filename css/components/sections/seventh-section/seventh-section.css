@@ -139,7 +139,7 @@
 }
 .wallet-section__btn--connect {
   background-color: #1fc7d4;
-  color: white;
+  color: var(--colors-invertedContrast);
   line-height: 48px;
   border-radius: 16px;
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;

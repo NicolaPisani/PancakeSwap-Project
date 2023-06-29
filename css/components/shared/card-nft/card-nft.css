@@ -3,9 +3,9 @@
   padding: 8px;
   border-radius: 8px 8px 8px 56px;
   transition: opacity 200ms ease 0s;
-  background-color: white;
-  border: 1px solid #e7e3eb;
-  border-bottom: 3px solid #e7e3eb;
+  background-color: var(--colors-backgroundAlt);
+  border: 1px solid var(--colors-cardBorder);
+  border-bottom: 3px solid var(--colors-cardBorder);
 }
 .card-nft a {
   text-decoration: none;
@@ -37,7 +37,7 @@
 .card-nft__bottom h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #280d5f;
+  color: var(--colors-text);
   line-height: 1.1;
   margin-bottom: 8px;
 }
@@ -61,7 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #280d5f;
+  color: var(--colors-text);
   line-height: 1.5;
   font-weight: 600;
   font-size: 16px;
@@ -71,7 +71,7 @@
   flex-shrink: 0;
 }
 .card-nft__volume {
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   font-weight: 400;
   line-height: 1.5;
   font-size: 12px;
@@ -80,7 +80,7 @@
   line-height: 1.5;
   font-weight: 600;
   font-size: 16px;
-  color: #280d5f;
+  color: var(--colors-text);
 }
 
 @media screen and (max-width: 851px) {

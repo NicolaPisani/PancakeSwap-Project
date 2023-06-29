@@ -1,11 +1,11 @@
 .card-nft--lg {
   padding: 8px;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   border-radius: 8px;
   position: relative;
   flex: 1 1 calc(25% - 16px);
-  border: 1px solid #e7e3eb;
-  border-bottom: 3px solid #e7e3eb;
+  border: 1px solid var(--colors-cardBorder);
+  border-bottom: 3px solid var(--colors-cardBorder);
   max-width: 320px;
   min-width: 0;
   a {
@@ -30,15 +30,15 @@
       }
     }
     &__name {
-      border-bottom: 1px solid #e7e3eb;
+      border-bottom: 1px solid var(--colors-cardBorder);
       p {
         &:first-child {
           font-size: 12px;
-          color: #7a6eaa;
+          color: var(--colors-textSubtle);
           margin-bottom: 8px;
         }
         &:last-child {
-          color: #280d5f;
+          color: var(--colors-text);
           margin-bottom: 8px;
           font-weight: 600;
         }
@@ -58,7 +58,7 @@
         overflow: hidden;
         max-width: 120px;
         font-size: 12px;
-        color: #7a6eaa;
+        color: var(--colors-textSubtle);
       }
     }
     &__right {
@@ -66,7 +66,7 @@
       align-items: center;
       p {
         font-size: 12px;
-        color: #7a6eaa;
+        color: var(--colors-textSubtle);
       }
     }
     &__bnb-price {
@@ -77,7 +77,7 @@
         height: 16px;
       }
       p {
-        color: #280d5f;
+        color: var(--colors-text);
         font-weight: 600;
         font-size: 16px;
       }

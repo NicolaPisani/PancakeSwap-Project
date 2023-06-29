@@ -4,7 +4,7 @@
 }
 .dropdown .dropbtn {
   text-decoration: none;
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   padding: 0 16px;
   height: 48px;
   display: flex;
@@ -14,22 +14,22 @@
   margin: 4px 0;
 }
 .dropdown .dropbtn:hover {
-  background-color: #eff4f5;
+  background-color: var(--colors-tertiary);
 }
 .dropdown__content {
   display: none;
   flex-direction: column;
   width: 175px;
   padding: 4px 0;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #e7e3eb;
+  border: 1px solid var(--colors-cardBorder);
 }
 .dropdown__content a {
   padding: 12px 16px;
   text-decoration: none;
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
 }
 .dropdown__content a:hover {
   background-color: #eff4f5;

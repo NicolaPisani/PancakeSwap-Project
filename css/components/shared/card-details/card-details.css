@@ -6,7 +6,7 @@
   flex: 1 1 0;
   max-width: 280px;
   position: relative;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
 }
 .card-details::after {
   content: "";
@@ -15,7 +15,7 @@
   left: -1px;
   right: -1px;
   bottom: -4px;
-  background-color: #e7e3eb;
+  background-color: var(--colors-cardBorder);
   z-index: -99;
   border-radius: 24px;
 }
@@ -26,7 +26,7 @@
   right: 24px;
 }
 .card-details__image svg {
-  fill: #7645d9;
+  fill: var(--colors-secondary);
 }
 .card-details__content {
   display: flex;
@@ -41,16 +41,16 @@
 }
 .card-details__main p {
   font-size: 40px;
-  color: #280d5f;
+  color: var(--colors-text);
   line-height: 1.1;
   font-weight: 600;
   margin: 0;
 }
 .card-details__main p:last-child {
-  color: #7645d9;
+  color: var(--colors-secondary);
 }
 .card-details__footer p {
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   margin: 0;
 }
 
