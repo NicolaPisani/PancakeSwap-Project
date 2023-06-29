@@ -58,6 +58,15 @@ const sunSvg = `<svg
 
 $buttonContainer.innerHTML = sunSvg;
 
+const state = {
+  theme: internalMemory.get("theme") || "",
+};
+
+if (state.theme === "") {
+  $htmlElement.setAttribute("data-theme", "light");
+  internalMemory.save("theme", "light");
+}
+
 $input.addEventListener("click", () => {
   if ($input.checked) {
     $buttonContainer.innerHTML = moonSvg;
@@ -70,7 +79,7 @@ $input.addEventListener("click", () => {
   }
 });
 
-if (internalMemory.get("theme") === "dark") {
+if (state.theme === "dark") {
   $buttonContainer.innerHTML = moonSvg;
   $htmlElement.setAttribute("data-theme", "dark");
   $input.checked = true;
@@ -79,3 +88,5 @@ if (internalMemory.get("theme") === "dark") {
   $htmlElement.setAttribute("data-theme", "light");
   $input.checked = false;
 }
+
+console.log(state.theme);
