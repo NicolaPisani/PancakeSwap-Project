@@ -1,3 +1,10 @@
+[data-theme=dark] .nav-bottom__scroll-btn--left {
+  background: linear-gradient(90deg, rgb(39, 38, 44) 29.76%, rgba(39, 38, 44, 0) 100%);
+}
+[data-theme=dark] .nav-bottom__scroll-btn--right {
+  background: linear-gradient(270deg, rgb(39, 38, 44) 0%, rgba(39, 38, 44, 0) 87.5%);
+}
+
 .nav-bottom {
   padding-top: 1px;
   background-color: var(--colors-backgroundAlt2);
@@ -68,12 +75,12 @@
 .nav-bottom__scroll-btn--right {
   right: 0px;
   top: 0px;
-  background: linear-gradient(270deg, rgb(39, 38, 44) 0%, rgba(39, 38, 44, 0) 87.5%);
+  background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 87.5%);
 }
 .nav-bottom__scroll-btn--left {
   left: 0px;
   top: 0px;
-  background: linear-gradient(90deg, rgb(39, 38, 44) 29.76%, rgba(39, 38, 44, 0) 100%);
+  background: linear-gradient(90deg, rgb(255, 255, 255) 29.76%, rgba(255, 255, 255, 0) 100%);
 }
 
 .show {

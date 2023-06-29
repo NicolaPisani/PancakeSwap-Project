@@ -1,7 +1,7 @@
 import { internalMemory } from "./internalMemory.mjs";
 
-const $input = document.querySelector("#switch-theme");
-const $buttonContainer = document.querySelector(".theme-switch__button");
+const $input = document.querySelectorAll("#switch-theme");
+const $buttonContainer = document.querySelectorAll(".theme-switch__button");
 const $htmlElement = document.querySelector("html");
 const moonSvg = `
   <svg
@@ -56,37 +56,50 @@ const sunSvg = `<svg
                         ></path>
                       </svg>`;
 
-$buttonContainer.innerHTML = sunSvg;
-
 const state = {
   theme: internalMemory.get("theme") || "",
 };
 
-if (state.theme === "") {
+if (state.theme === "" || state.theme === "light") {
   $htmlElement.setAttribute("data-theme", "light");
   internalMemory.save("theme", "light");
+  $buttonContainer.forEach((button) => {
+    console.log(button);
+    button.innerHTML = sunSvg;
+  });
 }
-
-$input.addEventListener("click", () => {
-  if ($input.checked) {
-    $buttonContainer.innerHTML = moonSvg;
-    $htmlElement.setAttribute("data-theme", "dark");
-    internalMemory.save("theme", "dark");
-  } else {
-    $buttonContainer.innerHTML = sunSvg;
-    $htmlElement.setAttribute("data-theme", "light");
-    internalMemory.save("theme", "light");
-  }
+$input.forEach((input) => {
+  input.addEventListener("click", () => {
+    if (input.checked) {
+      $buttonContainer.forEach((button) => {
+        button.innerHTML = moonSvg;
+      });
+      $htmlElement.setAttribute("data-theme", "dark");
+      internalMemory.save("theme", "dark");
+      $input.forEach((input) => {
+        input.checked = true;
+      });
+    } else {
+      $buttonContainer.forEach((button) => {
+        button.innerHTML = sunSvg;
+      });
+      $htmlElement.setAttribute("data-theme", "light");
+      internalMemory.save("theme", "light");
+      $input.forEach((input) => {
+        input.checked = false;
+      });
+    }
+  });
 });
 
 if (state.theme === "dark") {
-  $buttonContainer.innerHTML = moonSvg;
+  $buttonContainer.forEach((button) => {
+    button.innerHTML = moonSvg;
+  });
   $htmlElement.setAttribute("data-theme", "dark");
-  $input.checked = true;
 } else {
-  $buttonContainer.innerHTML = sunSvg;
+  $buttonContainer.forEach((button) => {
+    button.innerHTML = sunSvg;
+  });
   $htmlElement.setAttribute("data-theme", "light");
-  $input.checked = false;
 }
-
-console.log(state.theme);

@@ -1,3 +1,24 @@
+[data-theme="dark"] {
+  .nav-bottom {
+    &__scroll-btn {
+      &--left {
+        background: linear-gradient(
+          90deg,
+          rgb(39, 38, 44) 29.76%,
+          rgba(39, 38, 44, 0) 100%
+        );
+      }
+      &--right {
+        background: linear-gradient(
+          270deg,
+          rgb(39, 38, 44) 0%,
+          rgba(39, 38, 44, 0) 87.5%
+        );
+      }
+    }
+  }
+}
+
 .nav-bottom {
   padding-top: 1px;
   background-color: var(--colors-backgroundAlt2);
@@ -70,8 +91,8 @@
       top: 0px;
       background: linear-gradient(
         270deg,
-        rgb(39, 38, 44) 0%,
-        rgba(39, 38, 44, 0) 87.5%
+        rgb(255, 255, 255) 0%,
+        rgba(255, 255, 255, 0) 87.5%
       );
     }
     &--left {
@@ -79,8 +100,8 @@
       top: 0px;
       background: linear-gradient(
         90deg,
-        rgb(39, 38, 44) 29.76%,
-        rgba(39, 38, 44, 0) 100%
+        rgb(255, 255, 255) 29.76%,
+        rgba(255, 255, 255, 0) 100%
       );
     }
   }

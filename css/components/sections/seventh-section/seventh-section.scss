@@ -6,6 +6,7 @@
   padding: 48px 0;
   width: 100%;
   background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  overflow: hidden;
   &__wrapper {
     max-width: 968px;
     padding: 48px 24px;
@@ -129,6 +130,7 @@
   &__btn {
     text-decoration: none;
     font-size: 16px;
+    cursor: pointer;
     font-weight: 600;
     &--learn {
       display: flex;
