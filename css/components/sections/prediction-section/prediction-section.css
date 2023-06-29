@@ -190,14 +190,14 @@
   display: none;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   padding: 8px 0;
 }
 .prediction-section__buttons-container--center {
   display: flex;
-  background-color: #eeeaf4;
+  background-color: var(--colors-input);
   border-radius: 16px;
-  border: 1px solid #d7caec;
+  border: 1px solid var(--colors-inputSecondary);
   gap: 2px;
 }
 .prediction-section__center-mobile-button {

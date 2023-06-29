@@ -33,7 +33,35 @@ $downButton.addEventListener("click", () => {
   }
 });
 
+$downButton.addEventListener("touchstart", () => {
+  $cardContainer.style.transform = "rotateY(180deg)";
+  if ($enter.classList.contains("card-prediction-back__enter--up")) {
+    $enter.classList.remove("card-prediction-back__enter--up");
+    $enter.classList.add("card-prediction-back__enter--down");
+    $svg.innerHTML = svgDown;
+    $upDownText.innerHTML = "DOWN";
+  } else {
+    $enter.classList.add("card-prediction-back__enter--down");
+    $svg.innerHTML = svgUp;
+    $upDownText.innerHTML = "UP";
+  }
+});
+
 $upButton.addEventListener("click", () => {
+  $cardContainer.style.transform = "rotateY(180deg)";
+  if ($enter.classList.contains("card-prediction-back__enter--down")) {
+    $enter.classList.remove("card-prediction-back__enter--down");
+    $enter.classList.add("card-prediction-back__enter--up");
+    $svg.innerHTML = svgUp;
+    $upDownText.innerHTML = "UP";
+  } else {
+    $enter.classList.add("card-prediction-back__enter--up");
+    $svg.innerHTML = svgUp;
+    $upDownText.innerHTML = "UP";
+  }
+});
+
+$upButton.addEventListener("touchstart", () => {
   $cardContainer.style.transform = "rotateY(180deg)";
   if ($enter.classList.contains("card-prediction-back__enter--down")) {
     $enter.classList.remove("card-prediction-back__enter--down");
@@ -61,6 +89,24 @@ $enter.addEventListener("click", () => {
   }
 });
 
+$enter.addEventListener("touchstart", () => {
+  if ($enter.classList.contains("card-prediction-back__enter--down")) {
+    $enter.classList.remove("card-prediction-back__enter--down");
+    $enter.classList.add("card-prediction-back__enter--up");
+    $svg.innerHTML = svgUp;
+    $upDownText.innerHTML = "UP";
+  } else {
+    $enter.classList.remove("card-prediction-back__enter--up");
+    $enter.classList.add("card-prediction-back__enter--down");
+    $svg.innerHTML = svgDown;
+    $upDownText.innerHTML = "DOWN";
+  }
+});
+
 $back.addEventListener("click", () => {
+  $cardContainer.style.transform = "rotateY(0deg)";
+});
+
+$back.addEventListener("touchstart", () => {
   $cardContainer.style.transform = "rotateY(0deg)";
 });
