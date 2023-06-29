@@ -6,7 +6,7 @@
   flex: 1 1 0;
   max-width: 280px;
   position: relative;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   &::after {
     content: "";
     position: absolute;
@@ -14,7 +14,7 @@
     left: -1px;
     right: -1px;
     bottom: -4px;
-    background-color: #e7e3eb;
+    background-color: var(--colors-cardBorder);
     z-index: -99;
     border-radius: 24px;
   }
@@ -24,7 +24,7 @@
     top: 24px;
     right: 24px;
     svg {
-      fill: #7645d9;
+      fill: var(--colors-secondary);
     }
   }
   &__content {
@@ -40,17 +40,17 @@
 
     p {
       font-size: 40px;
-      color: #280d5f;
+      color: var(--colors-text);
       line-height: 1.1;
       font-weight: 600;
       margin: 0;
       &:last-child {
-        color: #7645d9;
+        color: var(--colors-secondary);
       }
     }
   }
   &__footer p {
-    color: #7a6eaa;
+    color: var(--colors-textSubtle);
     margin: 0;
   }
 }

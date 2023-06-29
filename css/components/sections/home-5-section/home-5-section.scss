@@ -6,6 +6,13 @@
   --star-blink-duration: 2s;
 }
 
+[data-theme="dark"] .section-5 {
+  background: linear-gradient(180deg, #0b4576 0%, #091115 100%);
+  .glass {
+    background: rgba(8, 6, 11, 0.6);
+  }
+}
+
 .section-5 {
   position: relative;
   overflow: hidden;
@@ -34,7 +41,7 @@
       max-width: 968px;
       display: flex;
       justify-content: center;
-
+      border: 1px solid var(--colors-cardBorder);
       &::after {
         content: "";
         position: absolute;
@@ -59,13 +66,13 @@
         font-size: 40px;
         font-weight: 600;
         line-height: 1.1;
-        color: #280d5f;
+        color: var(--colors-text);
 
         &-color {
-          color: #7645d9;
+          color: var(--colors-secondary);
         }
         &-sub {
-          color: #280d5f;
+          color: var(--colors-textSubtle);
           font-weight: 400;
           line-height: 1.5;
           font-size: 16px;
@@ -270,7 +277,7 @@
     justify-content: center;
     height: 48px;
     gap: 4px;
-    color: white;
+    color: var(--colors-invertedContrast);
     background-color: #1fc7d4;
     border-radius: 16px;
     box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
@@ -283,7 +290,8 @@
       opacity: 0.65;
     }
     svg {
-      fill: white;
+      fill: var(--colors-invertedContrast);
+      flex-shrink: 0;
     }
   }
 }

@@ -1,6 +1,6 @@
 .prediction-section {
   height: calc(100vh - 100px);
-  background: linear-gradient(180deg, #cbd7ef, #9a9fd0);
+  background: var(--colors-gradientVioletAlt);
   display: flex;
 }
 .prediction-section__content {
@@ -34,7 +34,7 @@
 }
 .prediction-section__timer {
   display: flex;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   padding: 8px 40px 8px 8px;
   border-radius: 24px;
   align-items: center;
@@ -50,19 +50,19 @@
 .prediction-section__time-left {
   font-size: 20px;
   line-height: 22px;
-  color: #7645d9;
+  color: var(--colors-secondary);
   font-weight: 600;
 }
 .prediction-section__total-time {
   font-weight: 400;
   line-height: 1.5;
   font-size: 12px;
-  color: #280d5f;
+  color: var(--colors-text);
   padding: 0 8px;
   max-width: 32px;
 }
 .prediction-section__info-util {
-  background-color: #7a6eaa;
+  background-color: var(--colors-textSubtle);
   max-height: 48px;
   max-width: 48px;
   padding: 12px 12px;
@@ -85,7 +85,7 @@
   box-shadow: none;
 }
 .prediction-section__leaderboard-util {
-  background-color: #7a6eaa;
+  background-color: var(--colors-textSubtle);
   max-height: 48px;
   max-width: 48px;
   padding: 14px 14px;
@@ -110,7 +110,7 @@
   box-shadow: none;
 }
 .prediction-section__history-util {
-  background-color: #e9eaeb;
+  background-color: var(--colors-backgroundDisabled);
   max-height: 48px;
   max-width: 48px;
   padding: 12px 12px;
@@ -130,7 +130,7 @@
   flex: 0 0 auto;
 }
 .prediction-section__currency-name {
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   border-radius: 24px;
   width: fit-content;
   margin-left: 40px;
@@ -143,13 +143,13 @@
   font-size: 20px;
   line-height: 22px;
   font-weight: 600;
-  color: #280d5f;
+  color: var(--colors-text);
 }
 .prediction-section__currency-name span:last-child {
   font-weight: 400;
   line-height: 1.5;
   font-size: 12px;
-  color: #280d5f;
+  color: var(--colors-text);
   padding: 0 16px;
   max-width: 70px;
 }
@@ -157,7 +157,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   border-radius: 24px;
   width: 128px;
   position: relative;
@@ -209,10 +209,10 @@
   border-radius: 16px;
 }
 .prediction-section__center-mobile-button svg {
-  fill: #7a6eaa;
+  fill: var(--colors-textSubtle);
 }
 .prediction-section__center-mobile-button--active {
-  background-color: #7a6eaa;
+  background-color: var(--colors-textSubtle);
 }
 .prediction-section__center-mobile-button--active svg {
   fill: white;
@@ -245,7 +245,7 @@
 .prediction-section__resize-bar {
   position: relative;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--colors-backgroundAlt);
   height: 100%;
 }
 .prediction-section__resize-bar::before {
@@ -257,7 +257,7 @@
   height: 4px;
   width: 64px;
   border-radius: 8px;
-  background-color: #7a6eaa;
+  background-color: var(--colors-textSubtle);
 }
 .prediction-section__chainlink-anchor {
   max-width: 170px;
@@ -289,8 +289,8 @@
   border-radius: 24px 24px 0px 0px;
   font-size: 16px;
   font-weight: 600;
-  color: #7a6eaa;
-  background-color: #eeeaf4;
+  color: var(--colors-textSubtle);
+  background-color: var(--colors-input);
   padding: 16px;
   display: flex;
   align-items: center;
@@ -305,11 +305,12 @@
   letter-spacing: 0.00009em;
 }
 .prediction-section__chart-button--selected {
-  color: #280d5f;
-  background-color: white;
+  color: var(--colors-text);
+  background-color: var(--colors-backgroundAlt);
 }
 .prediction-section__chart-button--selected svg {
   display: initial;
+  fill: var(--colors-text);
 }
 .prediction-section__ref {
   display: flex;
@@ -322,7 +323,7 @@
   font-weight: 400;
   line-height: 1.5;
   font-size: 14px;
-  color: #280d5f;
+  color: var(--colors-text);
 }
 .prediction-section__ref a {
   display: flex;
@@ -358,20 +359,20 @@
   display: block;
 }
 .prediction-section__chart svg circle {
-  fill: #7645d9;
+  fill: var(--colors-secondary);
 }
 .prediction-section__chart svg .yAxis .recharts-cartesian-axis-tick-value {
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   font-size: 12px;
   stroke: none;
-  fill: #7a6eaa;
+  fill: var(--colors-textSubtle);
   text-anchor: start;
 }
 .prediction-section__chart svg .xAxis .recharts-cartesian-axis-tick .recharts-cartesian-axis-tick-value {
-  color: #280d5f;
+  color: var(--colors-text);
   font-size: 12px;
   stroke: none;
-  fill: #280d5f;
+  fill: var(--colors-text);
   text-anchor: middle;
 }
 .prediction-section__chart--active {

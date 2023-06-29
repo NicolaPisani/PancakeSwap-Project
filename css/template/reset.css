@@ -6,3 +6,7 @@
   box-sizing: border-box;
   font-family: "Kanit", sans-serif;
 }
+
+body {
+  background-color: var(--colors-background);
+}

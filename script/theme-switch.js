@@ -1,5 +1,8 @@
+import { internalMemory } from "./internalMemory.mjs";
+
 const $input = document.querySelector("#switch-theme");
 const $buttonContainer = document.querySelector(".theme-switch__button");
+const $htmlElement = document.querySelector("html");
 const moonSvg = `
   <svg
     viewBox="0 0 24 24"
@@ -53,16 +56,26 @@ const sunSvg = `<svg
                         ></path>
                       </svg>`;
 
-if ($input.checked) {
-  $buttonContainer.innerHTML = moonSvg;
-} else {
-  $buttonContainer.innerHTML = sunSvg;
-}
+$buttonContainer.innerHTML = sunSvg;
 
 $input.addEventListener("click", () => {
   if ($input.checked) {
     $buttonContainer.innerHTML = moonSvg;
+    $htmlElement.setAttribute("data-theme", "dark");
+    internalMemory.save("theme", "dark");
   } else {
     $buttonContainer.innerHTML = sunSvg;
+    $htmlElement.setAttribute("data-theme", "light");
+    internalMemory.save("theme", "light");
   }
 });
+
+if (internalMemory.get("theme") === "dark") {
+  $buttonContainer.innerHTML = moonSvg;
+  $htmlElement.setAttribute("data-theme", "dark");
+  $input.checked = true;
+} else {
+  $buttonContainer.innerHTML = sunSvg;
+  $htmlElement.setAttribute("data-theme", "light");
+  $input.checked = false;
+}

@@ -4,7 +4,7 @@
   flex-direction: column;
   width: 100%;
   padding: 48px 0;
-  background-color: #faf9fa;
+  background-color: var(--colors-background);
   gap: 24px;
   &__wrapper {
     display: flex;
@@ -28,16 +28,16 @@
     &--title {
       h2 {
         line-height: 1.1;
-        color: #280d5f;
+        color: var(--colors-text);
         font-size: 40px;
         font-weight: 600;
         span {
-          color: #7645d9;
+          color: var(--colors-secondary);
         }
       }
     }
     &--descr {
-      color: #7a6eaa;
+      color: var(--colors-textSubtle);
       font-weight: 400;
       line-height: 1.5;
       font-size: 16px;
@@ -62,6 +62,15 @@
       padding: 0 24px;
       border-radius: 16px;
       box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+      color: var(--colors-invertedContrast);
+      &:hover {
+        opacity: 0.65;
+      }
+      &:active {
+        opacity: 0.85;
+        transform: translateY(1px);
+        box-shadow: none;
+      }
     }
     &--learn {
       display: flex;
@@ -129,17 +138,17 @@
     &:nth-child(3),
     &:nth-child(5),
     &:nth-child(6) {
-      border-left: 1px solid #d7caec;
+      border-left: 1px solid var(--colors-inputSecondary);
       padding: 0 16px;
     }
     &-name {
-      color: #7a6eaa;
+      color: var(--colors-textSubtle);
       font-size: 16px;
       font-weight: 400;
     }
     &-number {
       display: block;
-      color: #280d5f;
+      color: var(--colors-text);
       font-weight: 600;
       line-height: 1.1;
       font-size: 24px;
@@ -247,17 +256,17 @@
       }
       &:nth-child(4) {
         order: 1;
-        border-left: 1px solid#d7caec;
+        border-left: 1px solidvar(--colors-inputSecondary);
         padding: 0 16px;
       }
       &:nth-child(5) {
         order: 3;
-        border-left: 1px solid #d7caec;
+        border-left: 1px solid var(--colors-inputSecondary);
         padding: 0 16px;
       }
       &:last-child {
         order: 5;
-        border-left: 1px solid #d7caec;
+        border-left: 1px solid var(--colors-inputSecondary);
         padding: 0 16px;
       }
     }
@@ -309,7 +318,7 @@
         border-left: none;
         padding: 0;
         padding-bottom: 16px;
-        border-bottom: 1px solid #d7caec;
+        border-bottom: 1px solid var(--colors-inputSecondary);
       }
     }
   }

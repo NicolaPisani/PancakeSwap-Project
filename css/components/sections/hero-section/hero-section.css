@@ -1,3 +1,13 @@
+[data-theme=dark] .hero-section {
+  background: radial-gradient(103.12% 50% at 50% 50%, #21193a 0%, #191326 100%);
+}
+[data-theme=dark] .hero-section__image-curve--light {
+  display: none;
+}
+[data-theme=dark] .hero-section__image-curve--dark {
+  display: block;
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -5,10 +15,10 @@
   align-items: center;
   padding-top: 65px;
   padding-bottom: 49px;
-  background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
   position: relative;
   z-index: 1;
   overflow: hidden;
+  background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
 }
 .hero-section__carousel-container {
   display: flex;
@@ -32,7 +42,7 @@
 }
 .hero-section__left h1 {
   font-size: 64px;
-  color: #7645d9;
+  color: var(--colors-secondary);
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 24px;
@@ -41,7 +51,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 1.1;
-  color: #280d5f;
+  color: var(--colors-text);
   margin-bottom: 24px;
 }
 .hero-section__buttons {
@@ -52,7 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--colors-invertedContrast);
   border-radius: 16px;
   font-size: 16px;
   font-weight: 600;
@@ -63,6 +73,7 @@
   box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
   letter-spacing: 0.03em;
   line-height: 1;
+  cursor: pointer;
 }
 .hero-section__buttons a {
   display: flex;
@@ -137,16 +148,18 @@
   max-height: 512px;
   display: block;
 }
-.hero-section__image-curve--light {
+.hero-section__image-curve {
   position: absolute;
   width: 100%;
   bottom: -3px;
   z-index: -3;
-  fill: #280d5f;
-  color: #280d5f;
 }
-.hero-section__image-curve--light svg {
+.hero-section__image-curve svg {
   display: block;
+  fill: var(--colors-text);
+}
+.hero-section__image-curve--dark {
+  display: none;
 }
 
 @keyframes starTransparent {

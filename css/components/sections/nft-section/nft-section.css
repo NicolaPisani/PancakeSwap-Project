@@ -2,27 +2,27 @@
   padding-top: 32px;
   padding-bottom: 18px;
   margin-bottom: -18px;
-  background: linear-gradient(139.73deg, #e5fdff, #f3efff);
+  background: var(--colors-gradientBubblegum);
 }
 .nft-searchbox form input {
   padding: 0 40px 0 16px;
-  border: 1px solid #d7caec;
+  border: 1px solid var(--colors-inputSecondary);
   border-radius: 16px;
   box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
   outline: none;
-  color: #280d5f;
+  color: var(--colors-text);
   font-size: 16px;
   line-height: 38px;
-  background-color: #eeeaf4;
+  background-color: var(--colors-input);
   max-height: 40px;
   width: 100%;
 }
 .nft-searchbox form input::placeholder {
-  color: #280d5f;
+  color: var(--colors-text);
   opacity: 0.67;
 }
 .nft-searchbox form input:focus {
-  box-shadow: 0px 0px 0px 1px #7645d9, 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+  box-shadow: 0px 0px 0px 1px var(--colors-secondary), 0px 0px 0px 4px rgba(118, 69, 217, 0.6);
 }
 .nft-searchbox__content {
   display: flex;
@@ -38,13 +38,13 @@
   margin-bottom: 24px;
   font-weight: 600;
   line-height: 1.1;
-  color: #7645d9;
+  color: var(--colors-secondary);
 }
 .nft-searchbox__title p {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
-  color: #280d5f;
+  color: var(--colors-text);
 }
 
 .nft-section {
@@ -107,14 +107,14 @@
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
-  color: #280d5f;
+  color: var(--colors-text);
 }
 
 .nft-curve-bg {
   width: 100%;
   height: 20px;
   clip-path: url(#topConcaveCurve);
-  background-color: #faf9fa;
+  background-color: var(--colors-background);
   transform: translate(0px, 1px);
   z-index: 1;
   position: relative;
@@ -126,7 +126,7 @@
 
 .faq-section {
   padding: 64px 0;
-  background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
+  background: var(--colors-gradientCardHeader);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -135,9 +135,10 @@
   background-color: white;
   overflow: hidden;
   position: relative;
-  border: 1px solid #e7e3eb;
-  border-bottom: 3px solid #e7e3eb;
+  border: 1px solid var(--colors-cardBorder);
+  border-bottom: 3px solid var(--colors-cardBorder);
   border-radius: 24px;
+  background-color: var(--colors-backgroundAlt);
 }
 .faq-section__body {
   padding: 24px;
@@ -147,14 +148,14 @@
   width: 100%;
 }
 .faq-section__header {
-  background: linear-gradient(111.68deg, #f2ecf2, #e8f2f6);
+  background: var(--colors-gradientCardHeader);
   padding: 24px;
 }
 .faq-section__header h4 {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
-  color: #7645d9;
+  color: var(--colors-secondary);
 }
 .faq-section__container {
   margin-bottom: 24px;
@@ -170,7 +171,7 @@
   cursor: pointer;
 }
 .faq-section__question {
-  color: #280d5f;
+  color: var(--colors-text);
   opacity: 0.99;
   line-height: 1.5;
   font-weight: 600;
@@ -226,7 +227,7 @@
   text-decoration: underline;
 }
 .faq-section__hidden-text {
-  color: #7a6eaa;
+  color: var(--colors-textSubtle);
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
