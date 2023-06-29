@@ -15,7 +15,7 @@ $walletButton.forEach((button) => {
     $body.style.overflow = "hidden";
     $walletContainer.style.display = "initial";
   });
-  button.addEventListener("touchstart", () => {
+  button.addEventListener("touch", () => {
     $modalsContainer.style.display = "flex";
     $body.style.overflow = "hidden";
     $walletContainer.style.display = "initial";
