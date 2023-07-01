@@ -1,0 +1,549 @@
+.navbar {
+  display: flex;
+  max-width: 100vw;
+  height: 56px;
+  background-color: var(--colors-backgroundAlt);
+  border-bottom: var(--colors-cardBorder);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  text-decoration: none;
+  color: var(--colors-textSubtle);
+  z-index: 99;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--colors-cardBorder);
+
+  &-l,
+  &-r {
+    display: flex;
+
+    &__logo {
+      display: flex;
+      align-items: center;
+    }
+    &__menu {
+      display: flex;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+  }
+  .dropdown {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    &--settings {
+      margin: 0 4px;
+    }
+    .sx-block {
+      display: none;
+      color: var(--colors-text);
+    }
+    .lg-block {
+      display: block;
+      color: var(--colors-text);
+    }
+    &btn__link {
+      text-decoration: none;
+      color: var(--colors-textSubtle);
+      height: 48px;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 16px;
+      margin: 4px 0;
+      padding: 0 1rem;
+      &--green-dot {
+        &::after {
+          content: "";
+          border-radius: 100%;
+          background: var(--colors-success);
+          height: 8px;
+          width: 8px;
+          margin-left: 12px;
+        }
+      }
+      &--red-dot {
+        &:after {
+          content: "";
+          border-radius: 100%;
+          background: var(--colors-failure);
+          height: 8px;
+          width: 8px;
+          margin-left: 12px;
+        }
+      }
+      &--active {
+        color: var(--colors-secondary) !important;
+        font-weight: 600;
+        svg {
+          fill: var(--colors-secondary) !important;
+        }
+      }
+      &:hover {
+        background-color: var(--colors-tertiary);
+      }
+      svg {
+        fill: var(--colors-textSubtle);
+      }
+    }
+    &__content {
+      display: none;
+      flex-direction: column;
+      width: 250px;
+      background-color: var(--colors-backgroundAlt);
+      border-radius: 16px;
+      border: 1px solid var(--colors-cardBorder);
+      z-index: 100 !important;
+      position: absolute;
+      &.full-width {
+        width: 50%;
+      }
+      a {
+        display: inline-flex;
+        text-decoration: none;
+        color: var(--colors-textSubtle);
+        margin-top: 5px;
+        list-style-type: none;
+        height: 2rem;
+        z-index: 2;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        transition: height 1s ease;
+        min-height: 50px;
+        &:hover {
+          background-color: var(--colors-tertiary);
+          display: flex;
+        }
+      }
+    }
+  }
+  .icona {
+    display: none;
+    height: 3rem;
+  }
+  img,
+  svg {
+    display: block;
+    height: 1.5rem;
+  }
+  .logo-details .eye {
+    transform-origin: 50% 60%;
+    &:hover {
+      animation: blink 500ms linear 1 normal forwards;
+    }
+  }
+  .bunny-logo-small {
+    display: none;
+
+    &:hover {
+      animation: blink-logo-small 500ms linear 1 normal forwards;
+    }
+  }
+  &-l__menu .perpetual,
+  &-l__menu .bridge {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    fill: var(--colors-textSubtle);
+  }
+  &-r {
+    margin-left: auto;
+    height: 100%;
+    &__content,
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--colors-textSubtle);
+      cursor: pointer;
+    }
+    span {
+      align-items: center;
+    }
+    .dropdownbtn {
+      svg {
+        fill: var(--colors-textSubtle);
+      }
+    }
+    .dropdownbtn:hover {
+      opacity: 0.65;
+      transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    }
+    &__currency {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      color: inherit;
+      text-decoration: none;
+      margin-right: 4px;
+      &--value {
+        font-weight: 600;
+      }
+      img {
+        transition: transform 0.3s ease 0s;
+        align-self: center;
+        fill: var(--colors-text);
+        color: var(--colors-text);
+        flex-shrink: 0;
+        margin-right: 8px;
+        width: 24px;
+        &:hover {
+          transform: scale(1.3);
+          cursor: pointer;
+        }
+      }
+    }
+    &__content-lang {
+      margin: 0 8px;
+      .dropdown__content {
+        width: max-content;
+        -webkit-font-smoothing: antialiased;
+        flex-direction: column;
+        position: absolute;
+        transform: translate(-50%, 0px);
+        left: 50%;
+        bottom: auto;
+        box-shadow: 0px 2px 12px -8px rgba(25, 19, 38, 0.1),
+          0px 1px 1px rgba(25, 19, 38, 0.05);
+        padding: 16px;
+        overflow: hidden;
+        z-index: 10;
+        border-radius: 4px;
+        opacity: 0;
+        transition: max-height 0s ease 0.3s, opacity 0.3s ease-in-out 0s;
+        will-change: opacity;
+        pointer-events: none;
+        opacity: 1;
+        max-height: 400px;
+        overflow-y: auto;
+        transition: max-height 0s ease 0s, opacity 0.3s ease-in-out 0s;
+        pointer-events: auto;
+        a {
+          color: var(--colors-text);
+          padding: 0px 8px !important;
+          min-height: 32px;
+          margin: 0 auto;
+          position: relative;
+          -webkit-box-align: center;
+          align-items: center;
+          border: 0px;
+          border-radius: 16px;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: inherit;
+          font-size: 16px;
+          font-weight: 600;
+          -webkit-box-pack: center;
+          justify-content: center;
+          letter-spacing: 0.03em;
+          line-height: 1;
+          opacity: 1;
+          outline: 0px;
+          transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+          background-color: transparent;
+          &:hover {
+            background-color: unset;
+            opacity: 0.65;
+          }
+        }
+      }
+    }
+    .bnb-smart-chain {
+      height: 100%;
+      .dropdown {
+        height: 100%;
+        .dropdown-bnb {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          .dropdownbtn__link {
+            position: relative;
+            display: flex;
+            padding-left: 2.5rem;
+            padding-right: 8px;
+            background-color: var(--colors-tertiary);
+            height: 2rem;
+            gap: 0.25rem;
+
+            a {
+              flex-direction: row;
+            }
+          }
+          img {
+            height: 45px;
+          }
+        }
+      }
+    }
+    .bnb-smart-chain .dropdown {
+      .dropdownbtn__link {
+        border-radius: 2rem;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+          border-color 0.15s ease-in-out;
+        box-shadow: inset 0px -1px 0px 0px rgba(14, 14, 44, 0.4);
+        cursor: pointer;
+        font: 600 16px/1 "Kanit";
+        box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px inset;
+        color: var(--colors-text);
+        gap: 5px;
+        margin: 0;
+        img {
+          position: absolute;
+          left: 0;
+          height: 32px;
+          width: 32px;
+        }
+        svg {
+          flex-shrink: 0;
+          fill: var(--colors-text);
+        }
+        &:hover {
+          opacity: 0.65;
+        }
+      }
+      .dropdown__content {
+        background-color: var(--colors-backgroundAlt);
+        color: var(--colors-textSubtle);
+        font-weight: 400;
+        line-height: 1.5;
+        top: 100%;
+        font-size: 16px;
+        span {
+          color: var(--colors-textSubtle);
+          font-weight: 400;
+          line-height: 1.5;
+          font-size: 16px;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          margin-left: 1rem;
+        }
+        img {
+          height: 2rem;
+        }
+        .bnb {
+          color: var(--colors-secondary);
+          font-weight: 500;
+          line-height: 1.5;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .my-1 {
+    border-color: var(--colors-cardBorder);
+    border-style: solid;
+    border-width: 1px 0px 0px;
+  }
+  .connect-wallet .menu-button {
+    display: block;
+    border: 0px;
+    border-radius: 16px;
+    box-shadow: rgba(14, 14, 44, 0.4) 0px -1px 0px 0px inset;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 32px;
+    padding: 0px 16px;
+    background-color: #1fc7d4;
+    color: var(--colors-invertedContrast);
+    &:hover {
+      opacity: 0.65;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1, 1);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  }
+  50% {
+    transform: scale(1, 0);
+    animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.bunny-logo {
+  &-main {
+    fill: var(--colors-text);
+    width: 160px;
+    height: auto !important;
+    .eye {
+      transform-origin: 50% 60%;
+    }
+    &:hover .eye {
+      animation: blink 500ms linear 1 normal forwards;
+    }
+  }
+  &-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1078px) {
+  .bnb-smart-chain .dropdown {
+    & .sx-block {
+      display: block;
+    }
+    & .lg-block {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 967px) {
+  .navbar-r__currency {
+    display: none;
+  }
+  .navbar-l {
+    &__logo {
+      .bunny-logo {
+        &-small {
+          display: block !important;
+          width: 32px;
+          height: auto !important;
+        }
+
+        &-main {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 853px) {
+  .connect-wallet-sx {
+    display: none;
+  }
+}
+@media screen and (max-width: 852px) {
+  .navbar {
+    &-l {
+      &__menu {
+        display: flex;
+        row-gap: 2rem;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: unset;
+        border-top: 1px solid var(--colors-cardBorder);
+        background-color: var(--colors-backgroundAlt);
+        z-index: 1;
+        padding: 5px 8px 0 8px;
+        margin: 0;
+        left: 0;
+        align-items: center;
+        justify-content: space-around;
+        max-height: 50px;
+
+        .dropdown {
+          position: relative;
+          height: 100%;
+          & > a {
+            font-size: 10px;
+          }
+          &btn__link {
+            top: unset;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding: 3.5px 12px;
+            justify-content: center;
+            text-decoration: none;
+            height: unset;
+            color: var(--colors-textSubtle);
+            > .icona {
+              display: block !important;
+            }
+            &--green-dot {
+              &::after {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 10px;
+                height: 10px;
+                pointer-events: none;
+                border: 2px solid var(--colors-invertedContrast);
+                border-radius: 50%;
+                background-color: var(--colors-success);
+                box-sizing: border-box;
+              }
+            }
+            &--red-dot {
+              &::after {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                width: 10px;
+                height: 10px;
+                pointer-events: none;
+                border: 2px solid var(--colors-invertedContrast);
+                border-radius: 50%;
+                background-color: var(--colors-failure);
+                box-sizing: border-box;
+              }
+            }
+            svg {
+              height: 22px;
+              width: 21px;
+            }
+          }
+          &__content {
+            bottom: 112%;
+
+            &-left {
+              left: 0;
+            }
+
+            &-right,
+            &-other {
+              right: 0;
+            }
+            &-other {
+              bottom: 140%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sx-block,
+  .lg-block {
+    display: none !important;
+  }
+  .icona {
+    display: block !important;
+  }
+  .connect-wallet {
+    &-lg {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .bnb-smart-chain__dropdown {
+    padding: 0.25rem 0.5rem 0.25rem 1rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .navbar {
+    padding: 0;
+  }
+}

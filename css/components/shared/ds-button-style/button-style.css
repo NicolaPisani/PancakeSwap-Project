@@ -1,0 +1,150 @@
+.title-button-style {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: lightgray;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+.button {
+  margin-top: 10px;
+}
+
+.container-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 376px;
+}
+
+.prima-fila-butt {
+  display: flex;
+  flex-direction: column;
+}
+.prima-fila-butt .connect-wallet-button {
+  padding-bottom: 10px;
+}
+.prima-fila-butt .connect-wallet-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.prima-fila-butt .trade-now-button {
+  padding-bottom: 10px;
+}
+.prima-fila-butt .trade-now-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.prima-fila-butt .play-button {
+  padding-bottom: 10px;
+}
+.prima-fila-butt .play-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.prima-fila-butt #btn-wallet {
+  width: 128px;
+  height: 26px;
+  color: white;
+  border: none;
+  background-color: rgb(31, 199, 212);
+  border-radius: 10px 10px;
+  font-weight: 600;
+}
+.prima-fila-butt #button-trade {
+  width: 128px;
+  height: 26px;
+  color: rgb(31, 199, 212);
+  border: solid 1px rgb(31, 199, 212);
+  background-color: transparent;
+  border-radius: 10px 10px;
+  font-weight: 600;
+}
+.prima-fila-butt #btn-play {
+  width: 128px;
+  height: 26px;
+  color: white;
+  border: none;
+  background-color: rgb(31, 199, 212);
+  border-radius: 10px 10px;
+  font-weight: 600;
+}
+.prima-fila-butt #btn-tickets {
+  width: 128px;
+  height: 26px;
+  color: white;
+  border: none;
+  background-color: rgb(31, 199, 212);
+  border-radius: 10px 10px;
+  font-weight: 600;
+}
+.prima-fila-butt .buy-tickets-button span {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.seconda-fila-button .enter-up {
+  padding-bottom: 10px;
+}
+.seconda-fila-button .enter-down {
+  padding-bottom: 10px;
+}
+.seconda-fila-button #btn-enter-up {
+  width: 200px;
+  height: 50px;
+  color: white;
+  border: none;
+  background-color: #31d0aa;
+  border-radius: 10px 10px;
+  font-weight: 600;
+}
+.seconda-fila-button #btn-enter-down {
+  width: 200px;
+  height: 50px;
+  color: white;
+  border: none;
+  background-color: #ed4b9e;
+  border-radius: 10px 10px;
+  font-weight: 600;
+}
+
+.terza-fila-button .cup {
+  padding-bottom: 10px;
+}
+.terza-fila-button .punto-inter {
+  padding-bottom: 10px;
+}
+.terza-fila-button .arrow-up {
+  padding-bottom: 10px;
+}
+.terza-fila-button #btn-cup {
+  height: 48px;
+  width: 48px;
+  border-radius: 10px 10px;
+  border: none;
+  background-color: var(--colors-textSubtle);
+  fill: white;
+}
+.terza-fila-button #btn-question-mark {
+  height: 48px;
+  width: 48px;
+  border-radius: 10px 10px;
+  border: none;
+  background-color: var(--colors-textSubtle);
+  fill: white;
+}
+.terza-fila-button #btn-arrow-up {
+  height: 48px;
+  width: 48px;
+  border-radius: 10px 10px;
+  border: none;
+  background-color: rgb(31, 199, 212);
+  color: white;
+}
+
+/*# sourceMappingURL=button-style.css.map */

@@ -1,0 +1,83 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__content {
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    display: flex;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-color: lightgray;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+  }
+
+  &__svg {
+    &-content {
+      // Classe per il contenuto SVG del logo
+      &--main {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem;
+
+        img {
+          max-height: 100px;
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+            background-color: #f5f5f5;
+            box-shadow: 11 11 15px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            opacity: 0.9;
+          }
+        }
+        svg {
+          max-height: 100px;
+
+          &:last-child {
+            max-width: 500px;
+          }
+
+          &:hover {
+            transform: scale(1.3);
+            transition: trasform 1s ease;
+            box-shadow:  rgba(0, 0, 0, 0.3);
+            border: radius 1px;
+            opacity: 0.9;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 1919px) {
+//  main .logo {
+//   }
+// }
+
+// @media screen and (max-width: 1365px) {
+//     main .logo{
+//   }
+// }
+// @media screen and (max-width: 767px) {
+//   main .logo {
+//   }
+// }
+
+// @media (max-width: 479px) {
+//   main .logo{
+//   }
+// }

@@ -1,0 +1,103 @@
+[data-theme=dark] .nav-bottom__scroll-btn--left {
+  background: linear-gradient(90deg, rgb(39, 38, 44) 29.76%, rgba(39, 38, 44, 0) 100%);
+}
+[data-theme=dark] .nav-bottom__scroll-btn--right {
+  background: linear-gradient(270deg, rgb(39, 38, 44) 0%, rgba(39, 38, 44, 0) 87.5%);
+}
+
+.nav-bottom {
+  padding-top: 1px;
+  background-color: var(--colors-backgroundAlt2);
+  box-shadow: rgba(133, 133, 133, 0.1) 0px -2px 0px -8px inset;
+  position: relative;
+}
+.nav-bottom__items-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.nav-bottom__items-container::-webkit-scrollbar {
+  display: none;
+}
+.nav-bottom__item {
+  line-height: 42px;
+  font-size: 16px;
+  white-space: nowrap;
+  font-weight: 400;
+  color: var(--colors-textSubtle);
+  text-decoration: none;
+  padding: 0 4px;
+  scroll-snap-align: start;
+}
+.nav-bottom__item:hover {
+  background-color: var(--colors-tertiary);
+}
+.nav-bottom__item--active {
+  color: var(--colors-secondary);
+  font-weight: 600;
+  position: relative;
+}
+.nav-bottom__item--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #1fc7d4;
+  border-radius: 2px 2px 0px 0px;
+}
+.nav-bottom__item:last-child {
+  margin-right: 20px;
+}
+.nav-bottom__scroll-btn {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease-out 0s;
+  border: none;
+}
+.nav-bottom__scroll-btn svg {
+  fill: var(--colors-text);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.nav-bottom__scroll-btn--right {
+  right: 0px;
+  top: 0px;
+  background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 87.5%);
+}
+.nav-bottom__scroll-btn--left {
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(90deg, rgb(255, 255, 255) 29.76%, rgba(255, 255, 255, 0) 100%);
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 0.25s ease-in 0s;
+  pointer-events: all;
+}
+
+@media screen and (max-width: 851px) {
+  .nav-bottom__items-container {
+    justify-content: flex-start;
+  }
+}
+@media screen and (max-width: 575px) {
+  .nav-bottom__items-container {
+    padding-left: 12px;
+  }
+}
+
+/*# sourceMappingURL=nav-bottom.css.map */

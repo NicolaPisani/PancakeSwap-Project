@@ -1,0 +1,56 @@
+.components {
+  padding: 0 10px;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100%;
+  overflow: hidden;
+}
+.components__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: lightgray;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+.components__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px 0;
+}
+.components__description:nth-child(6) {
+  width: 175px;
+}
+.components__description--width {
+  width: 100%;
+}
+.components__description--carousel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.components__description--carousel .components__text {
+  margin: 0;
+}
+.components__text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.components__carousel-container {
+  display: flex;
+  max-width: 1200px;
+  padding: 0 24px;
+  justify-content: center;
+  margin-bottom: 31px;
+  width: 100%;
+}
+
+/*# sourceMappingURL=design-system-components.css.map */

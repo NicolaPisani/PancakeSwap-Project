@@ -1,0 +1,98 @@
+.card-nft {
+  flex: 1 1 calc(33.3333% - 16px);
+  padding: 8px;
+  border-radius: 8px 8px 8px 56px;
+  transition: opacity 200ms ease 0s;
+  background-color: var(--colors-backgroundAlt);
+  border: 1px solid var(--colors-cardBorder);
+  border-bottom: 3px solid var(--colors-cardBorder);
+  a {
+    text-decoration: none;
+    transition: opacity 200ms ease 0s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__banner {
+    img {
+      display: block;
+      height: 125px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 4px;
+      object-position: 50%;
+      image-rendering: optimizeQuality;
+      filter: blur(0);
+      transform: translateZ(0px);
+    }
+  }
+  &__bottom {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 0;
+    align-items: flex-end;
+    max-height: 65px;
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--colors-text);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+  }
+  &__avatar {
+    position: absolute;
+    overflow: hidden;
+    top: -32px;
+    left: 0;
+    border-radius: 50%;
+    border: 4px solid white;
+    img {
+      display: block;
+      max-width: 88px;
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--colors-text);
+      line-height: 1.5;
+      font-weight: 600;
+      font-size: 16px;
+      svg {
+        margin: 0 4px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__volume {
+    color: var(--colors-textSubtle);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+  &__value {
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--colors-text);
+  }
+}
+
+@media screen and (max-width: 851px) {
+  .card-nft {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .card-nft {
+    flex: 1 1 100%;
+  }
+}

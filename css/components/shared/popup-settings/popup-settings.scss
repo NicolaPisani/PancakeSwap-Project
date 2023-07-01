@@ -1,0 +1,188 @@
+.popup {
+  position: absolute;
+  max-width: unset !important;
+  border-radius: 32px;
+  overflow: hidden;
+  display: none;
+  background: var(--colors-backgroundAlt);
+  box-shadow: rgba(14, 14, 44, 0.1) 0px 20px 36px -8px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1px;
+  &__header {
+    padding: 24px;
+    background: var(--colors-gradientCardHeader);
+    border-bottom: 1px solid var(--colors-cardBorder);
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      padding: 2px;
+      width: 48px;
+      path {
+        align-self: center;
+        fill: #1fc7d4;
+        color: #1fc7d4;
+        flex-shrink: 0;
+      }
+    }
+    p {
+      color: var(--colors-text);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.1;
+      margin: 0;
+    }
+  }
+  &__close {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    background: var(--colors-backgroundAlt);
+    padding: 24px;
+  }
+  &__text {
+    line-height: 1.1;
+    margin: 0 !important;
+    &--warning {
+      color: var(--colors-secondary);
+      font-weight: 600;
+      line-height: 1.5;
+      font-size: 12px;
+      margin-bottom: 24px !important;
+    }
+    &--details {
+      color: #7a6eaa;
+      line-height: 1.5;
+      color: var(--colors-contrast) !important;
+    }
+  }
+  &__checkbox {
+    margin-bottom: 24px;
+    display: flex;
+    .checkbox {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin: 11px 3px 0px 4px;
+      border-radius: 8px;
+      background-color: #e7e3eb;
+      transition: background-color 0.2s ease-in-out 0s;
+      cursor: pointer;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 32%;
+        left: 0px;
+        right: 0px;
+        width: 40.5%;
+        height: 18.1%;
+        margin: auto;
+        border-bottom: 2px solid transparent;
+        border-left: 2px solid transparent;
+        transform: rotate(-50deg);
+        transition: border-color 0.2s ease-in-out 0s;
+      }
+      &:checked::after {
+        border-color: white;
+      }
+      &:hover {
+        box-shadow: 0px 0px 0px 1px #7645d9,
+          0px 0px 0px 4px rgba(118, 69, 217, 0.6);
+      }
+      &:checked {
+        background-color: #31d0aa;
+      }
+    }
+    span {
+      color: var(--colors-contrast);
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 0;
+      svg {
+        flex-shrink: 0;
+        fill: var(--colors-textSubtle);
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    color: var(--colors-contrast);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-bottom: 16px;
+    svg {
+      flex-shrink: 0;
+      fill: var(--colors-textSubtle);
+    }
+  }
+  &__buttons {
+    display: flex;
+    padding-bottom: 24px;
+  }
+  &__option {
+    border: none;
+    position: relative;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    -webkit-box-pack: center;
+    justify-content: center;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    opacity: 1;
+    outline: 0px;
+    transition: background-color 0.2s ease 0s, opacity 0.2s ease 0s;
+    height: 32px;
+    padding: 0px 16px;
+    background-color: var(--colors-tertiary);
+    box-shadow: none;
+    color: var(--colors-primary);
+    margin-top: 4px;
+    margin-right: 4px;
+    &--active {
+      background-color: var(--colors-primary);
+      color: var(--colors-invertedContrast);
+    }
+    &:hover {
+      opacity: 0.65;
+    }
+    &:active {
+      opacity: 0.85;
+      transform: translateY(1px);
+    }
+  }
+  &-submit {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #e9eaeb;
+    color: #bdc2c4;
+    letter-spacing: 0.48px;
+    cursor: not-allowed;
+  }
+}
